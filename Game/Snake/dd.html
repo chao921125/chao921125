@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+ <style>
+      *{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+body{
+	position: relative;
+}
+.background{
+	position: relative;
+	top: 50px;
+	z-index: -1;
+	margin: 20px auto;
+	width: 1000px;
+	height: 600px;
+	border: solid 2px ;
+	background-color: #8cc63e;
+}
+.snake{
+	display: inline-block;
+	border: solid 1px;
+	width: 20px;
+	height: 20px;
+	background-color: gray;
+	position: absolute;
+	z-index: 10px;
+}
+.start{
+	top:300px;
+	left: 100px;
+}
+.snake_boby{
+	display: inline-block;
+	border: solid 1px;
+	width: 20px;
+	height: 20px;
+	background-color: #7dbb32;
+	position: absolute;
+	border-radius: 40%;
+	z-index: 10px;
+}
+.foot{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	/* background: url(../img/food.png) no-repeat ; */
+	background-size:20px ;	
+	position: absolute;
+	border-radius: 40%;
+	z-index: 10px;
+}
+.begin,.GameOver{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: solid 1px;
+	/* background: url(../img/贪吃蛇.jpg) no-repeat; */
+	background-size: 600px ;
+	width: 600px;
+	height: 450px;
+}
+.begin ul{
+	position: absolute;
+	top: 200px;
+	left:420px;
+}
+.begin ul li{
+	margin-bottom: 20px;
+	/*background: red;*/
+	
+}
+.begin ul li input{
+	width: 150px;
+	height: 50px;
+	line-height: 30px;
+	border: none;
+	background-color: #7dbb32;
+	cursor: pointer;
+	border-radius: .3em;
+    box-shadow: 0 1px white inset;
+    text-align: center;
+    text-shadow: 0 1px 1px black;
+    color:white;
+    font-weight: bold;
+    outline: none;
+}
+.begin ul li input:hover,.begin ul li select:hover,.GameOver input:hover{
+	background: #a3d35b;
+}
+.begin ul li input:active,.begin ul li select:active,.GameOver input:active{
+	box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
+}
+.begin ul li select{
+	width: 150px;
+	height: 50px;
+	line-height: 30px;
+	/*padding-left: 55px;*/
+	text-indent: 55px;;
+	background-color: #7dbb32;
+	border-radius: .3em;
+    box-shadow: 0 1px white inset;
+    text-align: center;
+    text-shadow: 0 1px 1px black;
+    color:white;
+    font-weight: bold;
+	 outline: none;
+}
+
+.GameOver{
+	display: none;
+}
+.GameOver input{
+	width: 180px;
+	height: 60px;
+	line-height: 60px;
+	border: none;
+	/*background-color: #7dbb32;*/
+	background: transparent;
+	cursor: pointer;
+	border-radius: .3em;
+    box-shadow: 0 1px white inset;
+    text-align: center;
+    text-shadow: 0 1px 1px black;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    position: absolute;
+    top: 220px;
+	left:400px;
+}
+.score{
+	position: absolute;
+	font-size: 20px;
+	top: -30px;
+	left: 0px;
+}
+.grade{
+	position: absolute;
+	font-size: 20px;
+	top: -30px;
+	left: 800px;
+}
+
+  </style>
+	</head>
+	<body>
+		<div class="background">
+			<p class="score">您的成绩：<span>0</span></p>
+			<p class="grade">当前难度：<span></span></p>
+			<div class="snake start"></div>
+		</div>
+		<div class="begin">
+			<ul>
+				<li><input type="button" id="btn_begin" value="开始"/></li>
+				<li>
+					<select>
+						<option value="1" selected="selected">简单</option>
+						<option value="2">困难</option>
+						<option value="3">地狱</option>
+					</select>
+				</li>
+				<li><input type="button" id="btn_exit" value="退出"/></li>
+			</ul>
+		</div>
+		<div class="GameOver">
+			<input type="button" value="重新开始" id="btn_restart"/>
+		</div>
+    
+    <script crossorigin="anonymous" integrity="sha384-KcyRSlC9FQog/lJsT+QA8AUIFBgnwKM7bxm7/YaX+NTr4D00npYawrX0h+oXI3a2" src="https://lib.baomitu.com/jquery/1.12.4/jquery.js"></script>
+
+    <script>
+      var $background = $('.background') //该全局变量用于获取背景图，因为背景图在游戏中不会发生变化，可在最开始获取就行
+var coordinate_x = new Array() //创建一个数组，用于存放蛇的每个身体节点的x坐标值
+var coordinate_y = new Array() //创建一个数组，用于存放蛇的每个身体节点的y坐标值
+var status = 'Right' //该全局变量用于存放贪吃蛇行走的方向，默认为向右走
+var Time //该全局变量用于存放setInterval(Auto_walk,$grade)，用于游戏停止
+var $grade //该全局变量用于存在游戏等级的数字变量，主要用于设置行走的快慢
+var $score = 0 //建个全局变量用于存放分数
+
+$(document).ready(function () {
+	Grade() //初始化等级显示
+
+	$('.start').hide() //页面加载后，在游戏未开始前隐藏蛇头
+
+	$('.begin select').click(function () {
+		//给select标签添加单击事件，用于显示等级
+		Grade()
+	})
+
+	$('#btn_begin').click(function () {
+		//为开始游戏按钮添加单击事件
+		$('.start').show()
+		Crate_start_snake_boby()
+		Crate_start_snake_boby()
+		create_foot()
+		Time = setInterval(Auto_walk, $grade) //使用setInterval()方法，实现蛇的自动行走
+		$('.begin').hide()
+	})
+
+	$('#btn_exit').click(function () {
+		//为退出按钮添加单击事件，实现当前窗口关闭
+		window.close()
+	})
+
+	$('#btn_restart').click(function () {
+		//为重新开始按钮添加单击事件，实现窗口重新加载
+		window.location.reload()
+	})
+
+	$(window).keydown(function (event) {
+		//为窗口添加键盘事件，
+		switch (event.keyCode) {
+			case 38:
+				{
+					//判断单击按键是否为上
+					move_top() //为真，则向上移动
+					if (status != 'Bottom') {
+						//判断将要移动的方向是否与现在的移动方向相反，相反则status不变
+						status = 'Top'
+					}
+				}
+				break
+			case 40:
+				{
+					move_bottom()
+					if (status != 'Top') {
+						status = 'Bottom'
+					}
+				}
+				break
+			case 37:
+				{
+					move_left()
+					if (status != 'Right') {
+						status = 'Left'
+					}
+				}
+				break
+			case 39:
+				{
+					move_right()
+					if (status != 'Left') {
+						status = 'Right'
+					}
+				}
+				break
+		}
+	})
+})
+
+// 游戏初始化时创建一节蛇身
+function Crate_start_snake_boby() {
+	var $newSnake_boby = $("<div class='snake_boby'></div>") //创建一个新节点（蛇身）
+	var $snakes = $('.background>div') //获取全部的蛇身
+	var L_left = parseInt($snakes.eq($snakes.length - 1).css('left')) - 20 + 'px' //查到蛇尾节点，获取x,y坐标值，赋给新建的蛇身节点
+	var L_Top = $snakes.eq($snakes.length - 1).css('top')
+	$newSnake_boby.css('left', L_left)
+	$newSnake_boby.css('top', L_Top)
+	$background.append($newSnake_boby) //把新建的蛇身节点添加到背景中
+}
+
+// 创建一节蛇身
+function Crate_snake_boby() {
+	var $newSnake_boby = $("<div class='snake_boby'></div>")
+	var $snakes = $('.background>div')
+	var Last_boby_x = parseInt($snakes.eq($snakes.length - 1).css('left')) //获取蛇尾的坐标
+	var LastButOne_boby_x = parseInt($snakes.eq($snakes.length - 2).css('left')) //获取倒数第二节蛇身的坐标
+	var Last_boby_y = parseInt($snakes.eq($snakes.length - 1).css('top'))
+	var LastButOne_boby_y = parseInt($snakes.eq($snakes.length - 2).css('top'))
+	//判断最后两节蛇身是否处在垂直
+	if (Last_boby_x == LastButOne_boby_x) {
+		//通过判断最后两节蛇身的y坐标来确定新蛇身的添加方向
+		if (Last_boby_y > LastButOne_boby_y) {
+			$newSnake_boby.css('left', Last_boby_x)
+			$newSnake_boby.css('top', Last_boby_y + 20 + 'px')
+		} else if (Last_boby_y < LastButOne_boby_y) {
+			$newSnake_boby.css('left', Last_boby_x)
+			$newSnake_boby.css('top', Last_boby_y - 20 + 'px')
+		}
+	} else if (Last_boby_y == LastButOne_boby_y) {
+		if (Last_boby_x > LastButOne_boby_x) {
+			$newSnake_boby.css('left', Last_boby_x + 20 + 'px')
+			$newSnake_boby.css('top', Last_boby_y)
+		} else if (Last_boby_x < LastButOne_boby_x) {
+			$newSnake_boby.css('left', Last_boby_x - 20 + 'px')
+			$newSnake_boby.css('top', Last_boby_y)
+		}
+	}
+	$background.append($newSnake_boby)
+}
+
+// 生成食物
+function create_foot() {
+	var status = true //新建一个变量用来判断是否生成新的食物
+	var $snakes = $('.background>div')
+	do {
+		this.foot_x = Math.floor(Math.random() * 50) * 20 //随机生成一个坐标值
+		this.foot_y = Math.floor(Math.random() * 30) * 20
+		for (var i = 0; i < $snakes.length; i++) {
+			coordinate_y[i] = $snakes.eq(i).css('top')
+			coordinate_x[i] = $snakes.eq(i).css('left')
+			if (
+				foot_x != parseInt(coordinate_x[i]) &&
+				foot_y != parseInt(coordinate_y[i])
+			) {
+				//判断新坐标值是否跟蛇身重叠
+				status = false //不存在重叠，转化status的值，跳出循环
+			}
+		}
+	} while (status)
+	var $foot = $("<span class='foot'></span>")
+	$foot.css('top', foot_y + 'px')
+	$foot.css('left', foot_x + 'px')
+	$background.append($foot)
+}
+
+// 吃动作
+function eat() {
+	var $snakes = $('.background>div')
+	var $H_Top1 = parseInt($snakes.eq(0).css('top')) //获取蛇头的坐标
+	var $H_Left1 = parseInt($snakes.eq(0).css('left'))
+	if ($H_Top1 == foot_y && $H_Left1 == foot_x) {
+		//判断蛇头的坐标和食物的坐标是否重叠，重叠，添加一节蛇身，新建一个食物，分数加一，刷新分数
+		$('.foot').remove()
+		Crate_snake_boby()
+		create_foot()
+		++$score
+		$('.score span').html($score)
+	}
+}
+
+// 游戏数据初始化
+function Grade() {
+	var value = $('.begin select').val() //获取游戏等级
+	var $grade_show //该变量用于存放游戏等级的文本内容
+	switch (
+		parseInt(value) //根据游戏等级设置setInterval的时间
+	) {
+		case 1:
+			{
+				$grade = 500
+				$grade_show = '简单'
+			}
+			break
+		case 2:
+			{
+				$grade = 200
+				$grade_show = '困难'
+			}
+			break
+		case 3:
+			{
+				$grade = 50
+				$grade_show = '地狱'
+			}
+			break
+	}
+	$('.grade span').html($grade_show)
+}
+
+// 右转
+function move_right() {
+	var $snakes = $('.background>div')
+	var $H_Top = parseInt($snakes.eq(0).css('top'))
+	var $H_Left = parseInt($snakes.eq(0).css('left'))
+	for (var i = 0; i < $snakes.length; i++) {
+		coordinate_y[i] = $snakes.eq(i).css('top')
+		coordinate_x[i] = $snakes.eq(i).css('left')
+	}
+	if (
+		!(
+			$H_Top == parseInt(coordinate_y[1]) &&
+			$H_Left + 20 == parseInt(coordinate_x[1])
+		)
+	) {
+		$snakes.eq(0).css('left', $H_Left + 20 + 'px')
+		for (var i = 1; i < $snakes.length; i++) {
+			$snakes.eq(i).css('top', coordinate_y[i - 1])
+			$snakes.eq(i).css('left', coordinate_x[i - 1])
+		}
+		eat()
+		collide_dead()
+	} else {
+		return false
+	}
+}
+
+// 左转
+function move_left() {
+	var $snakes = $('.background>div')
+	var $H_Top = parseInt($snakes.eq(0).css('top'))
+	var $H_Left = parseInt($snakes.eq(0).css('left'))
+
+	// 获取当前贪吃蛇全部蛇身及蛇头的坐标
+	for (var i = 0; i < $snakes.length; i++) {
+		coordinate_y[i] = $snakes.eq(i).css('top')
+		coordinate_x[i] = $snakes.eq(i).css('left')
+	}
+
+	// 贪吃蛇移动一次
+	// 首先判断本次移动是否回头
+	// 如果不是回头，则进行移动
+	if (
+		!(
+			$H_Top == parseInt(coordinate_y[1]) &&
+			$H_Left - 20 == parseInt(coordinate_x[1])
+		)
+	) {
+		$snakes.eq(0).css('left', $H_Left - 20 + 'px')
+		for (var i = 1; i < $snakes.length; i++) {
+			$snakes.eq(i).css('top', coordinate_y[i - 1])
+			$snakes.eq(i).css('left', coordinate_x[i - 1])
+		}
+
+		// 移动完成后判断是否发生碰撞
+		collide_dead()
+		eat()
+	} else {
+		return false
+	}
+}
+
+// 上转
+function move_top() {
+	var $snakes = $('.background>div')
+	var $H_Top = parseInt($snakes.eq(0).css('top'))
+	var $H_Left = parseInt($snakes.eq(0).css('left'))
+	for (var i = 0; i < $snakes.length; i++) {
+		coordinate_y[i] = $snakes.eq(i).css('top')
+		coordinate_x[i] = $snakes.eq(i).css('left')
+	}
+	if (
+		!(
+			$H_Top - 20 == parseInt(coordinate_y[1]) &&
+			$H_Left == parseInt(coordinate_x[1])
+		)
+	) {
+		$snakes.eq(0).css('top', $H_Top - 20 + 'px')
+		for (var i = 1; i < $snakes.length; i++) {
+			$snakes.eq(i).css('top', coordinate_y[i - 1])
+			$snakes.eq(i).css('left', coordinate_x[i - 1])
+		}
+		collide_dead()
+		eat()
+	} else {
+		return false
+	}
+}
+
+// 下转
+function move_bottom() {
+	var $snakes = $('.background>div')
+	var $H_Top = parseInt($snakes.eq(0).css('top'))
+	var $H_Left = parseInt($snakes.eq(0).css('left'))
+	for (var i = 0; i < $snakes.length; i++) {
+		coordinate_y[i] = $snakes.eq(i).css('top')
+		coordinate_x[i] = $snakes.eq(i).css('left')
+	}
+	if (
+		!(
+			$H_Top + 20 == parseInt(coordinate_y[1]) &&
+			$H_Left == parseInt(coordinate_x[1])
+		)
+	) {
+		$snakes.eq(0).css('top', $H_Top + 20 + 'px')
+		for (var i = 1; i < $snakes.length; i++) {
+			$snakes.eq(i).css('top', coordinate_y[i - 1])
+			$snakes.eq(i).css('left', coordinate_x[i - 1])
+		}
+		collide_dead()
+		eat()
+	} else {
+		return false
+	}
+}
+
+// 碰撞死亡判定
+function collide_dead() {
+	var $snakes = $('.background>div')
+	var $H_Top1 = parseInt($snakes.eq(0).css('top')) //获取蛇头坐标
+	var $H_Left1 = parseInt($snakes.eq(0).css('left'))
+	for (var i = 0; i < $snakes.length; i++) {
+		//遍历全部蛇身节点坐标
+		coordinate_y[i] = $snakes.eq(i).css('top')
+		coordinate_x[i] = $snakes.eq(i).css('left')
+	}
+	for (var j = 1; j < $snakes.length; j++) {
+		//判断蛇头坐标是否跟蛇身任意节点坐标重叠，重叠则认为吃到自己，清空setInterval，显示GameOver
+		if (
+			$H_Top1 == parseInt(coordinate_y[j]) &&
+			$H_Left1 == parseInt(coordinate_x[j])
+		) {
+			clearTimeout(Time)
+			$('.GameOver').show()
+			return false
+		}
+		//判断是否超出边界
+		if ($H_Top1 > 580 || $H_Top1 < 0 || $H_Left1 > 980 || $H_Left1 < 0) {
+			clearTimeout(Time)
+			$('.GameOver').show()
+			return false
+		}
+	}
+}
+
+// 依照当前前进方向自动行走
+function Auto_walk() {
+	if (status == 'Right') {
+		move_right()
+	} else if (status == 'Left') {
+		move_left()
+	} else if (status == 'Top') {
+		move_top()
+	} else if (status == 'Bottom') {
+		move_bottom()
+	}
+}
+
+
+        </script>
+	</body>
+</html>
