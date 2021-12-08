@@ -1,10 +1,23 @@
+<!-- 声明文档结构类型 -->
 <!DOCTYPE html>
-<!-- html语法开始 -->
+<!-- html语法开始 zh-cn -->
 <html lang="en">
 <!-- 头部信息 -->
 <head>
+    <!--  字符集  -->
+
+    <!--    -->
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="description" content="demo html">
+    <meta name="author" content="demo">
+    <meta name="copyright" content="demo">
+    <!--    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="https://static.runoob.com/images/icon/mobile-icon.png">
+    <link rel="shortcut icon" href="https://static.runoob.com/images/favicon.ico" mce_href="//static.runoob.com/images/favicon.ico" type="image/x-icon">
+
+    <title>demo html</title>
     <link rel="stylesheet" href="./common/reset.css" />
     <style>
         .logo-box {
@@ -24,12 +37,37 @@
 </head>
 <!-- 主体内容，包含着你显示在网页的内容 -->
 <body>
-    <div class="logo-box">
-        <div>LOGO</div>
-        <div><input type="text" value=""/></div>
-    </div>
-    <div class="menu-box">
-        <a href="http://www.runoob.com">这是一个链接</a>
-    </div>
+    <!-- 结构性元素 确定HTML结构完整性 -->
+    <section>section</section>
+    <header>header</header>
+    <footer>footer</footer>
+    <nav>nav</nav>
+    <article>article</article>
+    <!-- 块级性元素 -->
+    <aside>aside</aside>
+    <figure>figure</figure>
+    <code>code</code>
+    <dialog>dialog</dialog>
+    <!-- 行内语义性元素 -->
+    <meter value="3" min="0" max="10"></meter>
+    <time>9:00</time>
+    <time datetime="2008-02-14">情人节</time>
+    <progress value="22" max="100"></progress>
+    <video></video>
+    <audio></audio>
+    <!-- 交互性元素 -->
+    <details>details</details>
+    <form>
+        <input id="myCar" list="cars" />
+        <datalist id="cars">
+            <option value="BMW">
+            <option value="Ford">
+            <option value="Volvo">
+        </datalist>
+    </form>
+
+    <!--  脚本  -->
+    <script>
+    </script>
 </body>
 </html>
