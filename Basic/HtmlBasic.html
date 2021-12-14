@@ -20,52 +20,53 @@
     <title>demo html</title>
     <link rel="stylesheet" href="./common/reset.css" />
     <style>
-        .logo-box {
-            background-color: #f0ad4e;
-            padding: 10px 20px;
+         /*
+            width px vw % auto
+            height px vh % auto
+            em 相对于父元素的font-size大小
+            rem 相对于body的font-size大小
+            px 固定像素值
+            vw 可视化窗口比例
+            %
+            auto 根据内部实际的内容所占用空间
+
+            css解析原则
+            1、自上而下解析
+            2、行内优先级高于外部样式优先级
+            3、!important 优先级高于其他
+         */
+         div {
+             background-color: #0c0510;
+         }
+        .div-box {
+            width: 100%;
+            height: auto;
+            background-color: #6dd5fa;
             display: flex;
             display: -webkit-flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
-        .menu-box {
-            width: 100%;
-            height: 50px;
-            background-color: aqua;
+        .demo-div {
+            /*margin: 0 auto;*/
+            width: 100px;
+            height: 100px;
+            /* margin padding 上 右 下 左 | 上下 右左 | 上 右左 下*/
+            margin: 20px;
+            padding: 40px;
+            border: 1px solid #00ff00;
+            background-color: #1a2a6c !important;
+            font-size: 20px !important;
         }
     </style>
 </head>
 <!-- 主体内容，包含着你显示在网页的内容 -->
 <body>
     <!-- 结构性元素 确定HTML结构完整性 -->
-    <section>section</section>
-    <header>header</header>
-    <footer>footer</footer>
-    <nav>nav</nav>
-    <article>article</article>
-    <!-- 块级性元素 -->
-    <aside>aside</aside>
-    <figure>figure</figure>
-    <code>code</code>
-    <dialog>dialog</dialog>
-    <!-- 行内语义性元素 -->
-    <meter value="3" min="0" max="10"></meter>
-    <time>9:00</time>
-    <time datetime="2008-02-14">情人节</time>
-    <progress value="22" max="100"></progress>
-    <video></video>
-    <audio></audio>
-    <!-- 交互性元素 -->
-    <details>details</details>
-    <form>
-        <input id="myCar" list="cars" />
-        <datalist id="cars">
-            <option value="BMW">
-            <option value="Ford">
-            <option value="Volvo">
-        </datalist>
-    </form>
-
+    <div class="div-box">
+<!--         style="background-color: #f0ad4e;"-->
+        <div class="demo-div" id="demoDiv" style="background-color: #f0ad4e;"><span>123123</span></div>
+    </div>
     <!--  脚本  -->
     <script>
     </script>
