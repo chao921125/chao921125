@@ -30,4 +30,26 @@ html, body {
     /* 水平方向居中 space-between */
     justify-content: center;
 }
+.flex-between {
+    flex-direction: row;
+    /* 垂直方向居中 flex-start flex-end */
+    align-items: center;
+    /* 水平方向居中 space-between */
+    justify-content: space-between;
+}
 /* flex end */
+/* grid start */
+.grid-base {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    /*grid-template-columns: 100px 100px 100px;*/
+    /*grid-template-rows: 100px 100px 100px;*/
+    /*grid-template-columns: 33.33% 33.33% 33.33%;*/
+    /*grid-template-rows: 33.33% 33.33% 33.33%;*/
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(3, 33.33%);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+/* grid end */
