@@ -10,3 +10,5 @@
 │   └─root
 └─root
 ```
+
+[适合做页面背景动效的js](http://paperjs.org/)
