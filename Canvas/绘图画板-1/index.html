@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id='demo' width="600" height="600">
+    </canvas>
+    <script>
+        //第一步：拿到canvas的标签
+        var canvas = document.getElementById('demo');
+        canvas.style.border ='1px solid red';
+        //第三步：拿到canvas的上下文
+        var ctx =canvas.getContext('2d');
+        //第二步：绘制
+        ctx.moveTo(100,100);
+        ctx.lineTo(200,100);
+        ctx.lineTo(100,200);
+        ctx.closePath();  //闭合路径
+
+        //设置线宽
+        ctx.lineWidth = 4;
+
+        //设置描边的样式  
+        ctx.strokeStyle = 'red';
+        ctx.stroke();  //描边
+        //填充的颜色
+        ctx.fillStyle = 'green';
+        //进行填充
+        ctx.fill();
+    </script>
+</body>
+</html>

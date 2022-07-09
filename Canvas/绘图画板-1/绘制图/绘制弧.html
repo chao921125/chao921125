@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id='canvasElem'>
+
+        </canvas>
+    </div>
+
+    <script>
+        var canvas = document.querySelector('#canvasElem')
+        var ctx=canvas.getContext('2d');
+
+        canvas.width = 600;
+        canvas.height = 600;
+        canvas.style.border ="1px solid #000";
+
+       //绘制一条0到30度的弧
+       //弧度和角度的转换公式：rad = 30*Math.PI/180 
+       //false代表顺时针，true代表逆时针
+        ctx.moveTo(300,300);
+        ctx.arc(300,300,100,0*Math.PI/180,30*Math.PI/180,false);
+        // ctx.arc(300,300,100,0*Math.PI/180,30*Math.PI/180,true);
+        ctx.closePath();
+        //填充颜色
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>

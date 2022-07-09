@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>绘制表格</title>
+    <style>
+        #container {
+            background-color: #3F3F3F;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div>
+            <canvas id="reduceTable">
+
+            </canvas>
+        </div>
+        <div>
+            <!-- 绘制时间段 -->
+            <canvas id="timeRange"></canvas>
+        </div>
+        <!-- 绘制航班表格 -->
+        <canvas id="cavsElem">
+            你的浏览器不支持canvas，请升级浏览器
+        </canvas>
+    </div>
+    <script>
+        (function () {
+            //以下是绘制凋减表格
+            var canvasReduce = document.querySelector('#reduceTable')
+            var ctxReduce = canvasReduce.getContext('2d');
+            var reduceData = [{
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: '',
+                    range6: '',
+                    range7: '',
+                    range8: '',
+                    range9: '',
+                    range10: '',
+                    range11: '',
+                    range12: '',
+                    range13: '',
+                    range14: '',
+                    range15: '',
+                    range16: '',
+                    range17: '',
+                    range18: '',
+                    range19: '',
+                    range20: '',
+                    range21: '',
+                }, {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: '',
+                    range6: '',
+                    range7: '',
+                    range8: '',
+                    range9: '',
+                    range10: '',
+                    range11: '',
+                    range12: 'CA8929',
+                    range13: '',
+                    range14: '',
+                    range15: '',
+                    range16: '',
+                    range17: '',
+                    range18: '',
+                    range19: '',
+                    range20: '',
+                    range21: '',
+                }, {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: '',
+                    range6: '',
+                    range7: '',
+                    range8: '',
+                    range9: '',
+                    range10: 'CA8690',
+                    range11: '',
+                    range12: '',
+                    range13: '',
+                    range14: '',
+                    range15: '',
+                    range16: '8L9888',
+                    range17: '',
+                    range18: '',
+                    range19: '',
+                    range20: '',
+                    range21: '',
+                },
+                {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: '8L91L',
+                    range6: '',
+                    range7: '',
+                    range8: '',
+                    range9: '',
+                    range10: '',
+                    range11: 'SL898',
+                    range12: '',
+                    range13: '',
+                    range14: 'AL6719',
+                    range15: '',
+                    range16: '',
+                    range17: '',
+                    range18: '',
+                    range19: '',
+                    range20: '',
+                    range21: '',
+                },
+                {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: 'MU251',
+                    range6: '',
+                    range7: 'WO991',
+                    range8: 'DR6558',
+                    range9: 'MU23',
+                    range10: '',
+                    range11: '',
+                    range12: '',
+                    range13: '',
+                    range14: '',
+                    range15: '',
+                    range16: '',
+                    range17: '',
+                    range18: '',
+                    range19: '',
+                    range20: '',
+                    range21: '',
+                },
+                {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: '',
+                    range6: '',
+                    range7: '',
+                    range8: 'MU5711',
+                    range9: 'MU2596',
+                    range10: '',
+                    range11: '',
+                    range12: '',
+                    range13: '',
+                    range14: '',
+                    range15: '',
+                    range16: 'CA889',
+                    range17: 'CZ766',
+                    range18: '',
+                    range19: '',
+                    range20: 'JUL89',
+                    range21: '',
+                },
+                {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: '',
+                    range6: '',
+                    range7: '',
+                    range8: 'CA8929',
+                    range9: 'MU5822',
+                    range10: '',
+                    range11: '',
+                    range12: '',
+                    range13: '',
+                    range14: '',
+                    range15: '',
+                    range16: 'NA889',
+                    range17: 'KLU666',
+                    range18: '',
+                    range19: '',
+                    range20: 'JUL88',
+                    range21: '',
+                },
+                {
+                    range1: '',
+                    range2: '',
+                    range3: '',
+                    range4: '',
+                    range5: 'JUL88',
+                    range6: '',
+                    range7: '',
+                    range8: '8L91L',
+                    range9: 'CZ3470',
+                    range10: '',
+                    range11: 'WR6559',
+                    range12: '',
+                    range13: 'DR6559',
+                    range14: '',
+                    range15: '',
+                    range16: 'WA889',
+                    range17: 'KLU66',
+                    range18: '',
+                    range19: '',
+                    range20: '',
+                    range21: '',
+                }
+            ]
+
+            canvasReduce.width = 924 * 1.5;
+            canvasReduce.height = reduceData.length * 40;
+            var rectRH = 20;
+            var rectRW = 44;
+            ctxReduce.scale(1.5, 1.5)
+            ctxReduce.strokeStyle = "#ccc";
+            ctxReduce.textAlign = "center";
+            //填充数据
+            for (var i = 0; i < reduceData.length; i++) {
+                //第一列
+                ctxReduce.fillStyle = "white";
+                ctxReduce.fillText(i + 1, 22, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range1, 22 + 44, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range2, 22 + 44 * 2, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range3, 22 + 44 * 3, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range4, 22 + 44 * 4, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range5, 22 + 44 * 5, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range6, 22 + 44 * 6, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range7, 22 + 44 * 7, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range8, 22 + 44 * 8, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range9, 22 + 44 * 9, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range10, 22 + 44 * 10, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range11, 22 + 44 * 11, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range12, 22 + 44 * 12, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range13, 22 + 44 * 13, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range14, 22 + 44 * 14, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range15, 22 + 44 * 15, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range16, 22 + 44 * 16, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range17, 22 + 44 * 17, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range18, 22 + 44 * 18, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range19, 22 + 44 * 19, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range20, 22 + 44 * 20, rectRH * i + 15);
+                ctxReduce.fillText(reduceData[i].range21, 22 + 44 * 21, rectRH * i + 15);
+
+            }
+
+            // for (var i = 0; i < reduceData.length + 12; i++) {
+            //     //绘画竖线
+
+            //         ctxReduce.moveTo(rectRW * i, 0);
+            //         ctxReduce.lineTo(rectRW * i, canvasReduce.height);
+            //         //绘画横线
+            //         ctxReduce.moveTo(0, rectRH * i);
+            //         ctxReduce.lineTo(canvasReduce.width, rectRH * i);
+            //     //描边
+            //     ctxReduce.stroke();
+            // }
+
+            //以下是绘制时间段
+            var canvasTime = document.querySelector('#timeRange')
+            var ctxT = canvasTime.getContext('2d');
+            canvasTime.width = 924 * 1.5;
+            canvasTime.height = 40;
+            // canvasTime.style.background = "grey";
+            var rectTH = 20;
+            var rectTW = 44;
+            ctxT.scale(1.5, 1.5)
+            ctxT.strokeStyle = "#ccc";
+            ctxT.textAlign = "center";
+            var dataTime = [{
+                time1: "06 - 07",
+                time2: "07 - 08",
+                time3: "08 - 09",
+                time4: "09 - 10",
+                time5: "10 - 11",
+                time6: "11 - 12",
+                time7: "12 - 13",
+                time8: "13 - 14",
+                time9: "14 - 15",
+                time10: "15 - 16",
+                time11: "16 - 17",
+                time12: "17 - 18",
+                time13: "18 - 19",
+                time14: "19 - 20",
+                time15: "20 - 21",
+                time16: "21 - 22",
+                time17: "22 - 23",
+                time18: "23 - 00",
+                time19: "00 - 01",
+                time20: "01 - 02",
+                time21: "02 - 03",
+                // time22: "03 - 04",
+                // time23: "04 - 05",
+                // time24: "05 - 06",
+            }]
+            for (var n = 0; n < dataTime.length; n++) {
+                ctxT.fillStyle = "white";
+                ctxT.fillText(dataTime[n].time1, 66, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time2, 66 + 44, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time3, 66 + 44 * 2, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time4, 66 + 44 * 3, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time5, 66 + 44 * 4, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time6, 66 + 44 * 5, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time7, 66 + 44 * 6, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time8, 66 + 44 * 7, rectTH * n + 15);
+
+                ctxT.fillText(dataTime[n].time9, 66 + 44 * 8, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time10, 66 + 44 * 9, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time11, 66 + 44 * 10, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time12, 66 + 44 * 11, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time13, 66 + 44 * 12, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time14, 66 + 44 * 13, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time15, 66 + 44 * 14, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time16, 66 + 44 * 15, rectTH * n + 15);
+
+                ctxT.fillText(dataTime[n].time17, 66 + 44 * 16, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time18, 66 + 44 * 17, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time19, 66 + 44 * 18, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time20, 66 + 44 * 19, rectTH * n + 15);
+                ctxT.fillText(dataTime[n].time21, 66 + 44 * 20, rectTH * n + 15);
+                // ctxT.fillText(dataTime[n].time22, 66 + 44 * 21, rectTH * n + 15);
+                // ctxT.fillText(dataTime[n].time23, 66 + 44 * 22, rectTH * n + 15);
+                // ctxT.fillText(dataTime[n].time24, 66 + 44 * 23, rectTH * n + 15);
+            }
+
+            //以下是绘制航班表格
+            var data = [{
+                    flightName: "MU",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 2,
+                    consultNum5: 1,
+
+                    targetNum6: 4,
+                    consultNum6: 2,
+                    targetNum7: '',
+                    consultNum7: '',
+                    targetNum8: 1,
+                    consultNum8: 2,
+                    targetNum9: 1,
+                    consultNum9: 1,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: '',
+                    consultNum11: '',
+                    targetNum12: 3,
+                    consultNum12: 1,
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: 1,
+                    consultNum14: 1,
+                    targetNum15: 1,
+                    consultNum15: 2,
+
+                    targetNum16: 2,
+                    consultNum16: 2,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "8L",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+                    targetNum6: 3,
+                    consultNum6: 2,
+                    targetNum7: 3,
+                    consultNum7: 1,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: 3,
+                    consultNum9: 1,
+                    targetNum10: 2,
+                    consultNum10: 1,
+
+                    targetNum11: '',
+                    consultNum11: '',
+                    targetNum12: 3,
+                    consultNum12: 1,
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: 3,
+                    consultNum14: 1,
+                    targetNum15: '',
+                    consultNum15: '',
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: 3,
+                    consultNum17: 1,
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "CZ",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 2,
+                    consultNum5: 5,
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 3,
+                    consultNum7: 3,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: 1,
+                    consultNum9: 1,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: 3,
+                    consultNum11: 3,
+                    targetNum12: '',
+                    consultNum12: '',
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: 1,
+                    consultNum14: 1,
+                    targetNum15: '',
+                    consultNum15: '',
+
+                    targetNum16: 3,
+                    consultNum16: 9,
+                    targetNum17: 3,
+                    consultNum17: 1,
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+                },
+                {
+                    flightName: "KY",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 1,
+                    consultNum5: 6,
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 3,
+                    consultNum7: 3,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: 3,
+                    consultNum9: 3,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: 3,
+                    consultNum12: 3,
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: 3,
+                    consultNum14: 5,
+                    targetNum15: '',
+                    consultNum15: '',
+
+                    targetNum16: 3,
+                    consultNum16: 4,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "CA",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+
+                    targetNum6: 3,
+                    consultNum6: 2,
+                    targetNum7: 3,
+                    consultNum7: 1,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: '',
+                    consultNum9: '',
+                    targetNum10: 2,
+                    consultNum10: 1,
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: '',
+                    consultNum12: '',
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: 3,
+                    consultNum14: '',
+                    targetNum15: '',
+                    consultNum15: 1,
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "DR",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 3,
+                    consultNum7: 1,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: '',
+                    consultNum9: '',
+                    targetNum10: 2,
+                    consultNum10: 1,
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: '',
+                    consultNum12: '',
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: '',
+                    consultNum14: '',
+                    targetNum15: 2,
+                    consultNum15: 1,
+
+                    targetNum16: '',
+                    consultNum16: '',
+                    targetNum17: 3,
+                    consultNum17: 1,
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "3U",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+
+                    targetNum6: 3,
+                    consultNum6: 2,
+                    targetNum7: '',
+                    consultNum7: '',
+                    targetNum8: 1,
+                    consultNum8: 2,
+                    targetNum9: 1,
+                    consultNum9: 1,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: 3,
+                    consultNum12: 1,
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: '',
+                    consultNum14: '',
+                    targetNum15: 2,
+                    consultNum15: 1,
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: 3,
+                    consultNum17: 1,
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "ZH",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 2,
+                    consultNum5: 1,
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 3,
+                    consultNum7: 1,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: 3,
+                    consultNum9: 9,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: '',
+                    consultNum11: '',
+                    targetNum12: 3,
+                    consultNum12: 1,
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: 3,
+                    consultNum14: 8,
+                    targetNum15: '',
+                    consultNum15: '',
+
+                    targetNum16: '',
+                    consultNum16: '',
+                    targetNum17: 3,
+                    consultNum17: 1,
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "9C",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 3,
+                    consultNum7: 1,
+                    targetNum8: 1,
+                    consultNum8: 2,
+                    targetNum9: 3,
+                    consultNum9: 1,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: '',
+                    consultNum12: '',
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: '',
+                    consultNum14: '',
+                    targetNum15: 2,
+                    consultNum15: 1,
+
+                    targetNum16: '',
+                    consultNum16: '',
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "PN",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 3,
+                    consultNum7: '',
+                    targetNum8: '',
+                    consultNum8: 2,
+                    targetNum9: 3,
+                    consultNum9: 1,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: '',
+                    consultNum12: '',
+                    targetNum13: 1,
+                    consultNum13: 2,
+                    targetNum14: '',
+                    consultNum14: '',
+                    targetNum15: 2,
+                    consultNum15: 1,
+
+                    targetNum16: '',
+                    consultNum16: '',
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "FM",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 2,
+                    consultNum5: 1,
+
+                    targetNum6: '',
+                    consultNum6: '',
+                    targetNum7: 2,
+                    consultNum7: 1,
+                    targetNum8: '',
+                    consultNum8: '',
+                    targetNum9: '',
+                    consultNum9: '',
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: '',
+                    consultNum11: '',
+                    targetNum12: '',
+                    consultNum12: '',
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: '',
+                    consultNum14: '',
+                    targetNum15: 2,
+                    consultNum15: 2,
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "SX",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 4,
+                    consultNum5: 2,
+
+                    targetNum6: 3,
+                    consultNum6: 2,
+                    targetNum7: '',
+                    consultNum7: '',
+                    targetNum8: 1,
+                    consultNum8: 2,
+                    targetNum9: 3,
+                    consultNum9: 1,
+                    targetNum10: '',
+                    consultNum10: '',
+
+                    targetNum11: 3,
+                    consultNum11: 2,
+                    targetNum12: 1,
+                    consultNum12: 1,
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: 0,
+                    consultNum14: 1,
+                    targetNum15: '',
+                    consultNum15: '',
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "A3",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: '',
+                    consultNum5: '',
+
+                    targetNum6: 3,
+                    consultNum6: 9,
+                    targetNum7: '',
+                    consultNum7: '',
+                    targetNum8: 1,
+                    consultNum8: 2,
+                    targetNum9: '',
+                    consultNum9: '',
+                    targetNum10: 2,
+                    consultNum10: 1,
+
+                    targetNum11: '',
+                    consultNum11: '',
+                    targetNum12: 3,
+                    consultNum12: 3,
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: '',
+                    consultNum14: '',
+                    targetNum15: 2,
+                    consultNum15: 1,
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+                {
+                    flightName: "D3",
+                    targetNum1: '',
+                    consultNum1: '',
+                    targetNum2: '',
+                    consultNum2: '',
+                    targetNum3: '',
+                    consultNum3: '',
+                    targetNum4: '',
+                    consultNum4: '',
+                    targetNum5: 1,
+                    consultNum5: 1,
+
+                    targetNum6: 3,
+                    consultNum6: 2,
+                    targetNum7: '',
+                    consultNum7: '',
+                    targetNum8: 1,
+                    consultNum8: 2,
+                    targetNum9: '',
+                    consultNum9: '',
+                    targetNum10: 2,
+                    consultNum10: 1,
+
+                    targetNum11: '',
+                    consultNum11: '',
+                    targetNum12: 3,
+                    consultNum12: 1,
+                    targetNum13: '',
+                    consultNum13: '',
+                    targetNum14: 3,
+                    consultNum14: 1,
+                    targetNum15: 2,
+                    consultNum15: 1,
+
+                    targetNum16: 3,
+                    consultNum16: 2,
+                    targetNum17: '',
+                    consultNum17: '',
+                    targetNum18: '',
+                    consultNum18: '',
+                    targetNum19: '',
+                    consultNum19: '',
+                    targetNum20: '',
+                    consultNum20: '',
+                    targetNum21: '',
+                    consultNum21: '',
+
+                },
+            ];
+
+            var canvas = document.querySelector('#cavsElem');
+            var ctx = canvas.getContext('2d');
+            canvas.width = 924 * 1.5;
+            canvas.height = data.length * 30;
+            canvas.style.border = "1px solid #ccc";
+            canvas.style.background = "grey";
+            var rectH = 20;
+            var rectW = 44;
+            //缩放当前绘图，ctx.scale(2,2)设置绘图将定位于距离画布左上角两倍远的位置。1=100%，0.5=44%，2=200%
+            ctx.scale(1.5, 1.5)
+            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = "#ccc";
+            ctx.textAlign = "center";
+            var j = 44;
+
+            //填充数据
+            for (var i = 0; i < data.length; i++) {
+                //第一列
+                ctx.fillStyle = "white";
+                ctx.fillText(data[i].flightName, 22, rectH * i + 15);
+
+                //第二列及以后数据
+                this.j = 22 + 44
+                this.colorChange(data[i].targetNum1, data[i].consultNum1, i, j)
+
+                this.j = 22 + 44 * 2
+                this.colorChange(data[i].targetNum2, data[i].consultNum2, i, j)
+
+                this.j = 22 + 44 * 3
+                this.colorChange(data[i].targetNum3, data[i].consultNum3, i, j)
+
+                this.j = 22 + 44 * 4
+                this.colorChange(data[i].targetNum4, data[i].consultNum4, i, j)
+
+                this.j = 22 + 44 * 5
+                this.colorChange(data[i].targetNum5, data[i].consultNum5, i, j)
+
+                this.j = 22 + 44 * 6
+                this.colorChange(data[i].targetNum6, data[i].consultNum6, i, j)
+
+                this.j = 22 + 44 * 7
+                this.colorChange(data[i].targetNum7, data[i].consultNum7, i, j)
+
+                this.j = 22 + 44 * 8
+                this.colorChange(data[i].targetNum8, data[i].consultNum8, i, j)
+
+                this.j = 22 + 44 * 9
+                this.colorChange(data[i].targetNum9, data[i].consultNum9, i, j)
+
+                this.j = 22 + 44 * 10
+                this.colorChange(data[i].targetNum10, data[i].consultNum10, i, j)
+
+                this.j = 22 + 44 * 11
+                this.colorChange(data[i].targetNum11, data[i].consultNum11, i, j)
+
+                this.j = 22 + 44 * 12
+                this.colorChange(data[i].targetNum12, data[i].consultNum12, i, j)
+
+                this.j = 22 + 44 * 13
+                this.colorChange(data[i].targetNum13, data[i].consultNum13, i, j)
+
+                this.j = 22 + 44 * 14
+                this.colorChange(data[i].targetNum14, data[i].consultNum14, i, j)
+
+                this.j = 22 + 44 * 15
+                this.colorChange(data[i].targetNum15, data[i].consultNum15, i, j)
+
+                this.j = 22 + 44 * 16
+                this.colorChange(data[i].targetNum16, data[i].consultNum16, i, j)
+
+                this.j = 22 + 44 * 17
+                this.colorChange(data[i].targetNum17, data[i].consultNum17, i, j)
+
+                this.j = 22 + 44 * 18
+                this.colorChange(data[i].targetNum18, data[i].consultNum18, i, j)
+
+                this.j = 22 + 44 * 19
+                this.colorChange(data[i].targetNum19, data[i].consultNum19, i, j)
+
+                this.j = 22 + 44 * 20
+                this.colorChange(data[i].targetNum20, data[i].consultNum20, i, j)
+
+                this.j = 22 + 44 * 21
+                this.colorChange(data[i].targetNum21, data[i].consultNum21, i, j)
+
+            }
+            for (var i = 0; i < data.length + 10; i++) {
+                //绘画竖线
+                ctx.moveTo(rectW * i, 0);
+                ctx.lineTo(rectW * i, canvas.height);
+                //绘画横线
+                ctx.moveTo(0, rectH * i);
+                ctx.lineTo(canvas.width, rectH * i);
+                //描边
+                ctx.stroke();
+            }
+
+        }())
+
+        function colorChange(target, consult, i, j) {
+            var canvas = document.querySelector('#cavsElem');
+            var ctx = canvas.getContext('2d');
+             //改变颜色
+             if (target > consult) {
+                    ctx.fillStyle = "#ff0000";
+                    ctx.strokeRect(this.j-22, 20 * i,44,20)  
+                } else if (target < consult) {
+                    ctx.fillStyle = "blue";
+                } else if (target = consult) {
+                    ctx.fillStyle = "#000000";
+             }
+            //填充数据    
+            if (target == '' && consult == '') {
+                ctx.fillText(target + consult, this.j, 20 * i + 15);
+                // ctx.fillStyle = "white";
+            } else {
+                ctx.fillText(target + '/' + consult, this.j, 20 * i + 15);
+                
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

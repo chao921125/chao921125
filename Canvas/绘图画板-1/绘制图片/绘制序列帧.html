@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="canvasEle">
+        </canvas>
+    </div>
+        <button id="up">前</button>
+        <button id="down">后</button>
+        <button id="left">左</button>
+        <button id="right">右</button>
+       
+    <script>
+        (function () {
+            var canvas = document.querySelector("#canvasEle")
+            var ctx = canvas.getContext('2d');
+
+            canvas.width = 600;
+            canvas.height = 600;
+            canvas.style.border = "1px solid #000";
+            var  dirIndex = 0; 
+            var img = new Image();
+            img.src = '../image/小哥哥.jpg';
+            img.onload = function () {
+                var frameIndex = 0;
+                setInterval(function(){
+                  
+                    //清除之前的图片墨迹
+                      //frameIndex是帧
+                    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+                    ctx.drawImage(
+                        img, 
+                        frameIndex*40,  //截取原始图片的x坐标
+                        dirIndex*166.25,  //截取原始图片的y坐标
+                         102,      //截取原始图片的宽度
+                         166.25,      //截取原始图片的高度
+                         200,      //图片在canvas画布上的x坐标
+                         200,      //图片在canvas画布上的y坐标
+                         51,       //绘制图片的宽度
+                         83    //绘制图片的高度
+                    );
+                    frameIndex++ //添加到下一帧
+                    frameIndex %= 4;
+                }, 1000 / 5);   //10帧，100毫秒绘制一动作
+            };
+        
+              //绑定按钮的点击事件
+              var btntop = document.getElementById('up');
+              btntop.onclick=function(){
+                  dirIndex = 0;
+              };
+
+        
+              var btndown = document.getElementById('down');
+              btndown.onclick=function(){
+                  dirIndex = 3;
+              };
+
+             
+              var btnleft = document.getElementById('left');
+              btnleft.onclick=function(){
+                  dirIndex = 1;
+              };
+
+             
+              var btnright = document.getElementById('right');
+              btnright.onclick=function(){
+                  dirIndex = 2;
+              };
+
+        }());
+    </script>
+</body>
+
+</html>

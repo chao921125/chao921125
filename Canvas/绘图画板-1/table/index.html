@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <canvas id="cavsElem">
+
+        </canvas>
+    </div>
+
+    <script>
+
+        (function(){
+           // querySelector() 方法仅仅返回匹配指定选择器的第一个元素。如果你需要返回所有的元素，使用 querySelectorAll() 方法替代。
+            var canvas = document.querySelector('#cavsElem');
+            var ctx = canvas.getContext('2d');
+           
+            canvas.width = 1750;
+            canvas.height = 600;
+            canvas.style.border ="1px solid #000";
+            canvas.style.background="grey";
+
+            //绘制表格
+             var rectH =40;
+             var rectW =70;
+             ctx.lineWidth = 0.5
+             //描边颜色
+             ctx.strokeStyle = "#ccc";
+             //字体居中
+             ctx.textAlign = "center";   
+            //  ctx.scale(2,2)
+            
+             for(var i=0;i<canvas.width/rectH;i++){
+                  //第一步：绘制横线
+                 ctx.moveTo(0,i*rectH);  //如果不设置moveTo，当前画笔没有位置
+                 ctx.lineTo(canvas.width,i*rectH);
+
+                 //第二步：绘制竖线
+                 ctx.moveTo(i*rectW,0);
+                 ctx.lineTo(i*rectW,canvas.height);
+                 //描边
+                 ctx.stroke();
+             } 
+            
+
+        }());
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id='canvasElem'>
+
+        </canvas>
+    </div>
+
+    <script>
+        var canvas = document.querySelector('#canvasElem')
+        var ctx=canvas.getContext('2d');
+
+        canvas.width = 600;
+        canvas.height = 600;
+        // canvas.style.border ="1px solid #000";
+        var data=[{
+            "value":0.4,
+            "color":"pink",
+            "title":"数学课" 
+        },{
+            "value":0.2,
+            "color":"#f00",
+            "title":"英语课"   
+        },
+        {
+            "value":0.1,
+            "color":"green",
+            "title":"语文课"    
+        },
+        {
+            "value":0.3,
+            "color":"blue",
+            "title":"公开课" 
+        }
+        ]
+        //从-90度开始绘制
+        var tempAngle = -90;
+        var x0 =300,y0=300;
+        var radius =200;
+        //从-90度开始绘制
+        for(var i=0;i<data.length;i++){
+            ctx.beginPath();
+            ctx.moveTo(300,300);
+            //当前扇形的角度
+            var angle = data[i].value*360;
+            ctx.fillStyle = data[i].color;
+            var startAngle = tempAngle*Math.PI/180;
+            var endAngle = (tempAngle+angle)*Math.PI/180;
+            ctx.arc(x0,y0,radius,startAngle,endAngle);
+           
+           //绘制文字
+            var txt = data[i].value*100+'%';
+            var x,y;
+            var txtAngle = tempAngle+1/2*angle;
+            x= x0+Math.cos(txtAngle*Math.PI/180)*(radius+20);
+            y = y0+Math.sin(txtAngle*Math.PI/180)*(radius+20);
+            if(txtAngle>90&&txtAngle<270){
+                ctx.textAlign = 'end';
+            }
+            ctx.fillText(txt,x,y);
+            ctx.fill();
+            tempAngle+=angle;
+        }
+        ctx.stroke();
+    </script>
+</body>
+</html>

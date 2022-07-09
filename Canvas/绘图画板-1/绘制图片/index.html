@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="canvasEle">
+
+        </canvas>
+    </div>
+    <script>
+        (function () {
+            var canvas = document.querySelector("#canvasEle")
+            var ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 600;
+            canvas.style.border = "1px solid #000"
+            //第一步:创建图片对象
+            var img = new Image();
+            img.src = '../image/timg.jpg';
+
+            img.onload = function(){
+                //图片加载完成后，把图片绘制到canvas上
+                var ow = img.width;
+                var oh = img.height;
+                //绘制指定宽高比的图片
+                // ctx.drawImage(img, 100, 100); 
+                // for(var i =0;i<10;i++){
+                //     ctx.drawImage(img, 100+20*i, 100+i*20);
+                // }
+                ctx.drawImage(img, 100, 100, 40, 40 * oh/ow);  //100,100,40,40*oh/ow分别代表原来的宽高，绘制的宽高
+            }
+
+
+        }());
+    </script>
+</body>
+
+</html>

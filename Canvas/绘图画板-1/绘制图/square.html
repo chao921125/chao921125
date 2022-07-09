@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id='canvasElem'>
+
+        </canvas>
+    </div>
+
+    <script>
+        var canvas = document.querySelector('#canvasElem')
+        var ctx=canvas.getContext('2d');
+
+        canvas.width = 600;
+        canvas.height = 600;
+        canvas.style.border ="1px solid #000";
+        //前两个参数是矩形的x,y坐标，后面两个参数：矩形的宽高
+         ctx.rect(100,100,50,50);
+         ctx.stroke(); 
+       //描边矩形
+         ctx.strokeRect(200,200,100,100); 
+       //填充矩形
+         ctx.fillRect(300,300,200,200)  
+         //清除矩形
+         clearRect(100,100,50,50)
+    </script>
+</body>
+</html>
