@@ -1,24 +1,26 @@
-https://hu-snail.github.io/vue3-resource/
-
-
 # 基础核心依赖
+## 推荐一个插件比较全的网站
+https://hu-snail.github.io/vue3-resource/
+### 无特殊说明均对应最新版
+### 名称为npm库地址
 ## 核心库 https://vue3js.cn/
 [vue-cli](https://www.npmjs.com/package/@vue/cli) \
-[vite](https://www.npmjs.com/package/vite) [官网](https://cn.vitejs.dev/) \
-[vue3](https://www.npmjs.com/package/vue) [官网](https://v3.cn.vuejs.org/) \
-[vue-router](https://www.npmjs.com/package/vue-router) [官网](https://vue3js.cn/) \
-[vuex](https://www.npmjs.com/package/vuex) [官网](https://next.vuex.vuejs.org/) \
+[vite](https://www.npmjs.com/package/vite) || [官网](https://cn.vitejs.dev/) \
+[vue3](https://www.npmjs.com/package/vue) || [官网](https://v3.cn.vuejs.org/) \
+[vue-router](https://www.npmjs.com/package/vue-router) || [官网](https://vue3js.cn/) \
+[vuex](https://www.npmjs.com/package/vuex) || [官网](https://next.vuex.vuejs.org/) \
+[Pinia](https://www.npmjs.com/package/pinia) || [官网](https://pinia.web3doc.top/) \
 [core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
-[axios](https://www.npmjs.com/package/axios) [官网](http://axios-js.com/) \
+[axios](https://www.npmjs.com/package/axios) || [官网](http://axios-js.com/) \
 [qs](https://www.npmjs.com/package/qs)
 
 # 解析相关
 ## TS
-[typescript](https://www.npmjs.com/package/typescript)
+[typescript](https://www.npmjs.com/package/typescript) || [官网](https://www.tslang.cn/)
 
-## 样式组件 -D // 注意重写组件样式的引用
+## 样式组件 -D || 注意重写组件样式的引用
 [sass<=>坑逼一个，小心慎用](https://www.npmjs.com/package/sass) \
 [sass-loader](https://www.npmjs.com/package/sass-loader) \
 [node-sass](https://www.npmjs.com/package/node-sass) \
@@ -31,8 +33,8 @@ https://hu-snail.github.io/vue3-resource/
 [vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler)
 
 ## 语法检查 -D
-[eslint](https://www.npmjs.com/package/eslint)
-[prettier](https://www.npmjs.com/package/prettier) \
+[eslint](https://www.npmjs.com/package/eslint) \
+[prettier](https://www.npmjs.com/package/prettier) || 个人推荐这个 \
 [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
 
 ## 节点和浏览器的BDD / TDD断言库
@@ -42,35 +44,37 @@ https://hu-snail.github.io/vue3-resource/
 ## 环境配置获取
 [dotenv](https://www.npmjs.com/package/dotenv)
 
-# UI相关 https://madewith.cn/
+# UI相关
+[小插件合集](https://madewith.cn/)
 ## UI 官方
-[elementUI](https://www.npmjs.com/package/element-ui) // V2 PC [官网](https://element.eleme.io/) \
-[element-plus](https://www.npmjs.com/package/element-plus) // PC [官网](https://element-plus.org/) \
-[ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC [官网](https://2x.antdv.com/components/overview/) \
-[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ? [官网](https://dev.bootstrap-vue.org/docs/) \
-[vuetifyjs](https://www.npmjs.com/package/vuetify) // PC [官网](https://vuetifyjs.com/) \
-[arco 字节](https://www.npmjs.com/package/vuetify) // PC [官网](https://arco.design/) \
+[element-plus](https://www.npmjs.com/package/element-plus) || PC [官网](https://element-plus.org/) \
+[elementUI](https://www.npmjs.com/package/element-ui) || vue2 PC [官网](https://element.eleme.io/) \
+[ant-design-vue](https://www.npmjs.com/package/ant-design-vue) || PC 社区维护 请自行斟酌 [官网](https://2x.antdv.com/components/overview/) \
+[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) || vue2 PC [官网](https://dev.bootstrap-vue.org/docs/) \
+[vuetifyjs](https://www.npmjs.com/package/vuetify) || PC [官网](https://vuetifyjs.com/) \
+[vuetifyjs](https://www.npmjs.com/package/vuetify) || PC [官网](https://next.vuetifyjs.com/en/) \
+[arco 字节](https://www.npmjs.com/package/vuetify) || PC [官网](https://arco.design/) \
 
-[vant@next](https://www.npmjs.com/package/vant) // M [官网](https://vant-contrib.gitee.io/vant/v3/) \
-[mui uni-app](https://www.npmjs.com/package/mui) // M [官网](https://dev.dcloud.net.cn/mui/) \
-[mui](https://www.npmjs.com/package/mui) // M [官网](https://mui.com/) \
-[mint-ui](https://www.npmjs.com/package/mint-ui) // M [官网](http://mint-ui.github.io/) \
-[nutui @nutui/nutui@next](https://www.npmjs.com/package/@nutui/nutui) // M [官网](https://nutui.jd.com/) \
-https://varlet.gitee.io/varlet-ui/#/zh-CN/home \
-https://antoniandre.github.io/wave-ui/ \
-[ionicframework](https://www.npmjs.com/package/ionicframework) // [官网](https://ionicframework.com/docs/) \
-https://next.vuetifyjs.com/en/ \
+[vant@next](https://www.npmjs.com/package/vant) || M [官网](https://vant-contrib.gitee.io/vant/v3/) \
+[mui uni-app](https://www.npmjs.com/package/mui) || M [官网](https://dev.dcloud.net.cn/mui/) \
+[mui](https://www.npmjs.com/package/mui) || M [官网](https://mui.com/) \
+[mint-ui](https://www.npmjs.com/package/mint-ui) || M [官网](http://mint-ui.github.io/) \
+[nutui @nutui/nutui@next](https://www.npmjs.com/package/@nutui/nutui) || M [官网](https://nutui.jd.com/) \
+[VARLET](https://www.npmjs.com/package/@varlet/ui) || M [官网](https://varlet.gitee.io/varlet-ui/#/zh-CN/home) \
+[Wave UI](https://www.npmjs.com/package/wave-ui) || M [官网](https://antoniandre.github.io/wave-ui/) \
+[ionicframework](https://www.npmjs.com/package/ionicframework) || M [官网](https://ionicframework.com/docs/) \
 
-[quasar](https://www.npmjs.com/package/quasar) // [官网](https://quasar.dev/) \
-[balmjs](https://www.npmjs.com/package/balmjs) // [官网](https://next-material.balmjs.com/#/) \
-[antoniandre](https://www.npmjs.com/package/antoniandre) // [官网](https://antoniandre.github.io/wave-ui/) \
-[naiveui](https://www.npmjs.com/package/naiveui) // [官网](https://www.naiveui.com/zh-CN/os-theme) \
-[primefaces](https://www.npmjs.com/package/primefaces) // [官网](https://primefaces.org/primevue/showcase/#/setup) \
-https://vuestic.dev/ \
-https://idux.site/ \
-https://bsie.gitee.io/relaxplus/#/ \
+[quasar](https://www.npmjs.com/package/quasar) || [官网](https://quasar.dev/) \
+[heyui](https://www.npmjs.com/package/heyui@next) || [官网](https://v2.heyui.top/) \
+[BalmUI](https://www.npmjs.com/package/balm-core) || [官网](https://next-material.balmjs.com/#/) \
+[antoniandre](https://www.npmjs.com/package/antoniandre) || [官网](https://antoniandre.github.io/wave-ui/) \
+[naive ui](https://www.npmjs.com/package/naiveui) || [官网](https://www.naiveui.com/zh-CN/os-theme) \
+[primefaces](https://www.npmjs.com/package/primefaces) || [官网](https://primefaces.org/primevue/showcase/#/setup) \
+[Vuestic UI](https://www.npmjs.com/package/vuestic-ui) || [官网](https://vuestic.dev/) \
+[iDux](https://www.npmjs.com/package/@idux/cdk) || [官网](https://idux.site/) \
+[relaxplus](https://www.npmjs.com/package/relaxplus) || [官网](https://bsie.gitee.io/relaxplus/#/) \
 
-[iviewui 付费](https://www.npmjs.com/package/ant-design-vue) // ？PC [官网](https://www.iviewui.com/)
+[iviewui 付费](https://www.npmjs.com/package/ant-design-vue) || ？PC [官网](https://www.iviewui.com/)
 
 ## 静态UI PC H5
 [H5 zeptojs](https://www.zeptojs.com.cn/) \
@@ -82,11 +86,10 @@ https://bsie.gitee.io/relaxplus/#/ \
 [Bootstrap](https://getbootstrap.com/)
 
 ## 图标
-[iconpark](https://iconpark.oceanengine.com/home)
+[iconpark 官网](https://iconpark.oceanengine.com/home)
 
 ## 其他三方库
-[vxe-table](https://www.npmjs.com/package/vxe-table)
-[官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install) \
+[vxe-table](https://www.npmjs.com/package/vxe-table) || [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install) \
 [vue-grid-layout](https://www.npmjs.com/package/vue-grid-layout)
 
 ## 加载 loading
@@ -127,8 +130,10 @@ https://bsie.gitee.io/relaxplus/#/ \
 ## cookie管理
 [js-cookie](https://www.npmjs.com/package/js-cookie)
 
-## 文件保存
+## 文件上传及保存
 [file-saver](https://www.npmjs.com/package/file-saver)
+[Uppy 官网](https://uppy.io/docs/vue/)
+[Vue-filepond 官网](https://github.com/pqina/vue-filepond#readme)
 
 ## 二维码
 [qrcode](https://www.npmjs.com/package/qrcode) \
@@ -146,9 +151,18 @@ https://bsie.gitee.io/relaxplus/#/ \
 
 ## 富文本编辑器
 [tiptap](https://www.npmjs.com/package/tiptap) \
-[wangeditor](https://www.npmjs.com/package/wangeditor) [官网](https://www.wangeditor.com/) \
+[wangeditor](https://www.npmjs.com/package/@wangeditor/editor-for-vue@next) || vue3 [官网](https://www.wangeditor.com/) \
+[wangeditor](https://www.npmjs.com/package/@wangeditor/editor-for-vue) || vue2 [官网](https://www.wangeditor.com/) \
+[wangeditor](https://www.npmjs.com/package/@wangeditor/editor-for-react) || react [官网](https://www.wangeditor.com/) \
+[wangeditor](https://www.npmjs.com/package/@wangeditor/editor) || js [官网](https://www.wangeditor.com/) \
 [vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor) \
-[ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
+[ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue) \
+[TinyMCE 6 官网](https://www.tiny.cloud/docs/tinymce/6/)
+
+## Markdown编辑器
+[Vditor 官网](https://b3log.org/vditor/) \
+[Vue-markdown-editor 官网](https://code-farmer-i.github.io/vue-markdown-editor/zh/) \
+[Md-editor-v3 官网](https://imzbf.github.io/md-editor-v3/index)
 
 ## 剪切板
 [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
@@ -202,14 +216,14 @@ https://bsie.gitee.io/relaxplus/#/ \
 [vue-socialmedia-share](https://www.npmjs.com/package/vue-socialmedia-share) \
 [@vue/shared](https://www.npmjs.com/package/@vue/shared) \
 [@vue/cli-shared-utils](https://www.npmjs.com/package/@vue/cli-shared-utils) \
-[nativeshare](https://www.npmjs.com/package/nativeshare) // 唤起浏览器自身分享组件
+[nativeshare](https://www.npmjs.com/package/nativeshare) || 唤起浏览器自身分享组件
 
 ## 地图
-[vue-amap](https://www.npmjs.com/package/vue-amap) // 高德 \
-[vue-baidu-map](https://www.npmjs.com/package/vue-baidu-map) // 百度
+[vue-amap](https://www.npmjs.com/package/vue-amap) || 高德 \
+[vue-baidu-map](https://www.npmjs.com/package/vue-baidu-map) || 百度
 
 ## 绘图 3D
-[three.js](https://www.npmjs.com/package/three) // three.js
+[three.js](https://www.npmjs.com/package/three) || three.js
 
 
 ## 代码提交信息校验 -D
@@ -221,7 +235,7 @@ https://bsie.gitee.io/relaxplus/#/ \
 ## 适配移动端 -D
 **rem方案过时啦，用vw方案解决吧** \
 [postcss](https://www.npmjs.com/package/postcss)
-[postcss-loader](https://www.npmjs.com/package/postcss-loader) // 将px转rem \
+[postcss-loader](https://www.npmjs.com/package/postcss-loader) || 将px转rem \
 **vw方案 需要依赖style-loader 且需要删除@vue/cli-plugin-eslint** \
 [cssnano](https://www.npmjs.com/package/cssnano) \
 [cssnano-preset-advanced](https://www.npmjs.com/package/cssnano-preset-advanced) \
@@ -233,7 +247,7 @@ https://bsie.gitee.io/relaxplus/#/ \
 [postcss-viewport-units](https://www.npmjs.com/package/postcss-viewport-units) \
 [postcss-write-svg](https://www.npmjs.com/package/postcss-write-svg) \
 **rem方案** \
-[~~amfe-flexible~~](https://www.npmjs.com/package/amfe-flexible) // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值 \
+[~~amfe-flexible~~](https://www.npmjs.com/package/amfe-flexible) || 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值 \
 [~~autoprefixer~~](https://www.npmjs.com/package/autoprefixer) \
 [~~postcss-pxtorem~~](https://www.npmjs.com/package/postcss-pxtorem) \
 [~~postcss-plugin-px2rem~~](https://www.npmjs.com/package/postcss-plugin-px2rem) \
@@ -272,10 +286,10 @@ https://bsie.gitee.io/relaxplus/#/ \
 [vconsole](https://www.npmjs.com/package/vconsole)
 
 ## 跨端框架推荐：包含小程序啥的
-[uni-app 官网](https://uniapp.dcloud.net.cn/) // 全平台跨端含APP等等 \
-[taro 官网](https://taro.jd.com/) // 3.x已支持vue \
-[~~mpvue 官网~~](https://mpvue.com/) // 美团 \
-[~~wepyjs 官网~~](https://wepyjs.github.io/wepy-docs/) // 腾讯 需要学习wepy
+[uni-app 官网](https://uniapp.dcloud.net.cn/) || 全平台跨端含APP等等 \
+[taro 官网](https://taro.jd.com/) || 3.x已支持vue \
+[~~mpvue 官网~~](https://mpvue.com/) || 美团 \
+[~~wepyjs 官网~~](https://wepyjs.github.io/wepy-docs/) || 腾讯 需要学习wepy
 
 ## APP开发
 [cordova 官网](http://cordova.axuer.com/) \
