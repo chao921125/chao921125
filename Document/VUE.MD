@@ -173,7 +173,10 @@ https://hu-snail.github.io/vue3-resource/
 [angrytools](https://angrytools.com/) \
 [animista](https://animista.net/) \
 [minimamente](https://www.minimamente.com/project/magic/) \
-[vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
+[vue-kinesis](https://www.npmjs.com/package/vue-kinesis@next) \
+[tsparticles 粒子动画](https://www.npmjs.com/package/tsparticles) \
+[vue-prlx 滚动视觉差](https://www.npmjs.com/package/vue-prlx) \
+[vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition) \
 [three-dots 等待效果](https://nzbin.github.io/three-dots/) \
 [elrumordelaluz 鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
 [ianlunn 鼠标放上效果](http://ianlunn.github.io/Hover/) \
