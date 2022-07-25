@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas</title>
+  <style>
+    canvas{
+      border: 1px solid #000;
+      margin: auto;
+    }
+  </style>
+</head>
+<body style="width: 100%;">
+<!-- canvas负责在网页中绘制图形 -->
+<!-- 图表 -->
+<!-- <canvas>标签只是图形容器你必须用脚本来绘制图形 -->
+<!-- API方法 -->
+<canvas id="canvas" width="1400" height="800"></canvas>
+<script type="text/javascript">
+  ;(() => {
+    //获得画板
+    let canvas = document.getElementById('canvas');
+    //获得绘画环境
+    let context = canvas.getContext('2d');
+
+
+    //指定填充颜色
+    // context.fillStyle="blue";
+    //绘制一个填充矩形
+    // context.fillRect(200,100,260,199);
+    // 绘制空心矩形
+    // cv.strokeRect(200,100,260,199);
+    // cv.lineWidth='10';
+    // // 指定线条颜色
+    // cv.strokeStyle='#F9264C';
+    // // 清除矩形像素
+    // context.clearRect(200,100,100,50);
+
+
+    context.save();
+
+    drawGrid(context,'lightgray',8,8);
+
+    context.restore();
+    context.lineWidth=1;
+    context.beginPath();
+    context.moveTo(10,10);
+    context.lineTo(100,10);
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(10.5,30.5);
+    context.lineTo(100.5,30.5);
+    context.stroke();
+
+  })(window);
+
+  function drawGrid(context, color, stepX, stepY) {
+    context.strokeStyle = color;
+    context.lineWidth = 0.5;
+
+    for (let i = stepX + 0.5; i < context.canvas.width; i += stepX) {
+      context.beginPath();
+      context.moveTo(i, 0);
+      context.lineTo(i, context.canvas.height);
+      context.stroke();
+    }
+
+    for (let i = stepY + 0.5; i < context.canvas.height; i += stepY) {
+      context.beginPath();
+      context.moveTo(0, i);
+      context.lineTo(context.canvas.width, i);
+      context.stroke();
+    }
+  }
+</script>
+</body>
+</html>
