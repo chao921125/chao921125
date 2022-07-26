@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Pixel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        .map-box {
+            width: 100%;
+            height: 100%;
+            background-color: #262539;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(1, 1);
+        }
+        canvas {
+            display: block;
+            background-color: #262539;
+            border: 1px solid #1D1C2D;
+            margin: 0 auto;
+            /*transform: rotateX(180deg);*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="map-box" id="mapBox">
+    <canvas id="canvas">你的浏览器不支持 canvas，请升级你的浏览器。</canvas>
+</div>
+
+
+<script type="text/javascript">
+  ;(() => {
+    resizeWindow();
+    window.onresize = () => {
+      resizeWindow();
+    };
+  })(window);
+
+  function resizeWindow() {
+    // 固定容易的大小
+    // const configWindow = {
+    //   maxWidth: 4000,
+    //   maxHeight: 2000,
+    //   minWidth: 2000,
+    //   minHeight: 1000,
+    // }
+    let cWidth = document.body.clientWidth;
+    // if (cWidth > configWindow.maxWidth) cWidth = configWindow.maxWidth;
+    // if (cWidth < configWindow.minWidth) cWidth = configWindow.minWidth;
+
+    let cHeight = document.body.clientHeight;
+    // if (cHeight > configWindow.maxHeight) cHeight = configWindow.maxHeight;
+    // if (cHeight < configWindow.minHeight) cHeight = configWindow.minHeight;
+
+    document.querySelector("#mapBox").setAttribute("width", cWidth.toString());
+    document.querySelector("#mapBox").setAttribute("height", cHeight.toString());
+    document.querySelector("#canvas").setAttribute("width", cWidth.toString());
+    document.querySelector("#canvas").setAttribute("height", cHeight.toString());
+    initDraw();
+  }
+
+  function initDraw() {
+    //获得画板
+    let canvas = document.getElementById('canvas');
+    if(!canvas.getContext) return false;
+    //获得绘画环境
+    let ctx = canvas.getContext('2d');
+    ctx.save();
+    drawContentBg(canvas, ctx);
+  }
+
+  // 绘画容器的背景
+  function drawContentBg(canvas, ctx) {
+    const configBg = {
+      left: 100,
+      top: 100,
+      size: 550,
+      width: 550,
+      height: 550,
+      step: 5,
+      stepX: 5,
+      stepY: 5,
+      colorLine: "#1D1C2D",
+      lineWidth: 0.5,
+    }
+    ctx.fillStyle = configBg.colorLine;
+    ctx.lineWidth = configBg.lineWidth;
+
+    for (let i = configBg.step + configBg.lineWidth; i < configBg.size; i += configBg.step) {
+      // 新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。
+      ctx.beginPath();
+      // 把画笔移动到指定的坐标
+      ctx.moveTo(i + configBg.left, configBg.top);
+      // 绘制一条从当前位置到指定坐标(200, 50)的直线.
+      ctx.lineTo(i + configBg.left, configBg.height + configBg.top);
+      //闭合路径。会拉一条从当前点到path起始点的直线。如果当前点与起始点重合，则什么都不做
+      ctx.closePath();
+      // 绘制路径。
+      ctx.stroke();
+    }
+    for (let i = configBg.top + configBg.lineWidth; i < configBg.size + configBg.top; i += configBg.step) {
+      ctx.beginPath();
+      ctx.moveTo(configBg.top, i);
+      ctx.lineTo(configBg.left, i);
+      ctx.stroke();
+    }
+  }
+
+</script>
+</body>
+</html>
