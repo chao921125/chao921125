@@ -106,24 +106,8 @@
     })(window);
 
     function resizeWindow() {
-        // 固定容易的大小
-        // const configWindow = {
-        //   maxWidth: 4000,
-        //   maxHeight: 2000,
-        //   minWidth: 2000,
-        //   minHeight: 1000,
-        // }
-
-        // let divWidth = document.body.clientWidth;
-        // let divHeight = document.body.clientHeight;
-
         let cWidth = document.body.clientWidth;
-        // if (cWidth > configWindow.maxWidth) cWidth = configWindow.maxWidth;
-        // if (cWidth < configWindow.minWidth) cWidth = configWindow.minWidth;
-
         let cHeight = document.body.clientHeight;
-        // if (cHeight > configWindow.maxHeight) cHeight = configWindow.maxHeight;
-        // if (cHeight < configWindow.minHeight) cHeight = configWindow.minHeight;
         document.querySelector("#mapBox").setAttribute("width", cWidth.toString());
         document.querySelector("#mapBox").setAttribute("height", cHeight.toString());
         document.querySelector("#canvas").setAttribute("width", cWidth.toString());
@@ -176,10 +160,11 @@
             // 拖拽指定对象
             const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
             const dragImgRef = isDragTarget(canvasPosition, canvasTarget.dragTargetArray);
-            // 点击对象的时候进行鼠标变形
+            // 点击对象的时候进行鼠标变形，同时记录数据
             if (dragImgRef && canvasTarget.targetStatus === initConfig.INIT) {
                 canvas.style.cursor = "all-scroll";
                 canvasTarget.dragTarget = dragImgRef;
+
                 canvasTarget.targetStatus = initConfig.DRAG_START;
                 canvasTarget.targetLastPosition = canvasPosition;
                 canvasTarget.targetOffsetPosition = canvasPosition;
@@ -195,7 +180,7 @@
                 canvasTarget.dragTarget.x += (canvasPosition.x - canvasTarget.targetOffsetPosition.x);
                 canvasTarget.dragTarget.y += (canvasPosition.y - canvasTarget.targetOffsetPosition.y);
 
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.clearRect(0, 0, canvas.width * canvasTarget.clear, canvas.height * canvasTarget.clear);
                 canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
                 canvasTarget.targetOffsetPosition = canvasPosition;
 
