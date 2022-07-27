@@ -27,6 +27,8 @@
             background-color: #262539;
             border: 1px solid #1D1C2D;
             margin: 0 auto;
+            overflow: hidden;
+            /*scroll-behavior: unset;*/
             /*transform: rotateX(180deg);*/
         }
     </style>
@@ -39,6 +41,10 @@
 
 
 <script type="text/javascript">
+  let isDragFlag = false;
+  let zoomLimit = [0.1, 2];
+  let zoomCurrent = 1;
+  let zoomTimes = 200;
   ;(() => {
     resizeWindow();
     window.onresize = () => {
@@ -76,43 +82,134 @@
     //获得绘画环境
     let ctx = canvas.getContext('2d');
     ctx.save();
-    drawContentBg(canvas, ctx);
+    canvasEvent(canvas, ctx);
+    drawCanvasBox(canvas, ctx);
+    drawCanvasContent(canvas, ctx);
   }
 
   // 绘画容器的背景
-  function drawContentBg(canvas, ctx) {
-    const configBg = {
+  function drawCanvasBox(canvas, ctx) {
+    const canvasOptions = {
       left: 100,
       top: 100,
-      size: 550,
+      // 正方形
+      size: 1100,
+      // 非正方形
       width: 550,
       height: 550,
+      // 正方形
       step: 5,
+      // 非正方形
       stepX: 5,
       stepY: 5,
       colorLine: "#1D1C2D",
       lineWidth: 0.5,
     }
-    ctx.fillStyle = configBg.colorLine;
-    ctx.lineWidth = configBg.lineWidth;
+    ctx.fillStyle = canvasOptions.colorLine;
+    ctx.lineWidth = canvasOptions.lineWidth;
 
-    for (let i = configBg.step + configBg.lineWidth; i < configBg.size; i += configBg.step) {
+    ctx.beginPath();
+    ctx.strokeRect(canvasOptions.left, canvasOptions.top, canvasOptions.size, canvasOptions.size);
+    // row
+    for (let i = canvasOptions.step + canvasOptions.lineWidth; i < canvasOptions.size; i += canvasOptions.step) {
+      ctx.beginPath();
+      ctx.moveTo(canvasOptions.left, i + canvasOptions.top);
+      ctx.lineTo(canvasOptions.size + canvasOptions.left, i + canvasOptions.top);
+      ctx.closePath();
+      ctx.stroke();
+    }
+    // column
+    for (let i = canvasOptions.step + canvasOptions.lineWidth; i < canvasOptions.size; i += canvasOptions.step) {
       // 新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。
       ctx.beginPath();
       // 把画笔移动到指定的坐标
-      ctx.moveTo(i + configBg.left, configBg.top);
+      ctx.moveTo(i + canvasOptions.left, canvasOptions.top);
       // 绘制一条从当前位置到指定坐标(200, 50)的直线.
-      ctx.lineTo(i + configBg.left, configBg.height + configBg.top);
+      ctx.lineTo(i + canvasOptions.left, canvasOptions.size + canvasOptions.top);
       //闭合路径。会拉一条从当前点到path起始点的直线。如果当前点与起始点重合，则什么都不做
       ctx.closePath();
       // 绘制路径。
       ctx.stroke();
     }
-    for (let i = configBg.top + configBg.lineWidth; i < configBg.size + configBg.top; i += configBg.step) {
-      ctx.beginPath();
-      ctx.moveTo(configBg.top, i);
-      ctx.lineTo(configBg.left, i);
-      ctx.stroke();
+  }
+
+  function drawCanvasContent(canvas, ctx) {
+    ctx.beginPath();
+    ctx.fillStyle = "red";
+    ctx.fillRect(222, 222, 20, 20);
+    ctx.fillStyle = "blue";
+    ctx.fillRect(262, 222, 40, 40);
+    // ctx.strokeRect(canvasOptions.left, canvasOptions.top, canvasOptions.size, canvasOptions.size);
+  }
+
+  // 注册事件
+  function canvasEvent(canvas, ctx) {
+    canvas.onmousedown = () => {
+      canvas.style.cursor = "pointer";
+      isDragFlag = false;
+      canvasDrag(canvas, ctx);
+    }
+    canvas.onmousewheel = (event) => {
+      let zoom = event.deltaY > 0 ? -0.01 : 0.01;
+      zoomCurrent += zoom;
+      if (zoomCurrent > zoomLimit[0] && zoomCurrent < zoomLimit[1]) {
+        canvasZoom(canvas, ctx, event.offsetX, event.offsetY, zoom);
+      } else if (zoomCurrent < zoomLimit[0]) {
+        zoomCurrent = zoomLimit[0];
+      } else if (zoomCurrent > zoomLimit[1]) {
+        zoomCurrent = zoomLimit[1];
+      }
+    }
+    // 区分出来点击事件和拖拽事件
+    canvas.onclick = () => {
+      canvas.style.cursor = "default";
+    }
+    // 双击放大不做
+    canvas.ondblclick = () => {
+      canvas.style.cursor = "default";
+    }
+  }
+
+  // 缩放
+  function canvasZoom(canvas, ctx, offsetX, offsetY, zoom) {
+    let obj = {
+      fontX: 0,
+      fontY: 0,
+      fontZoom: 1,
+      curZoom: 1,
+      translateX: 0,
+      translateY: 0,
+    }
+    obj.curZoom = obj.fontZoom + zoom;
+    obj.translateX = offsetX - (offsetX - obj.translateX) * obj.curZoom / obj.fontZoom;
+    obj.translateY = offsetY - (offsetY - obj.translateY) * obj.curZoom / obj.fontZoom;
+
+    ctx.translate(obj.translateX, obj.translateY)
+    ctx.scale(obj.curZoom, obj.curZoom);
+    ctx.clearRect(0, 0, canvas.width * zoomTimes, canvas.height * zoomTimes);
+    // 绘画网格
+    drawCanvasBox(canvas, ctx);
+    drawCanvasContent(canvas, ctx);
+    ctx.restore();
+    obj.fontY = offsetY;
+    obj.fontX = offsetX;
+    obj.fontZoom = obj.curZoom;
+  }
+  
+  // 拖拽
+  function canvasDrag(canvas, ctx) {
+    canvas.onmousemove = (event) => {
+      console.log("onmousemove", event.offsetX, event.offsetY);
+      isDragFlag = true;
+    }
+    canvas.onmouseup = (event) => {
+      canvas.style.cursor = "default";
+      console.log("onmouseup", event.offsetX, event.offsetY);
+      if (isDragFlag) {
+        console.log("drag");
+      } else {
+        console.log("no drag");
+      }
     }
   }
 
