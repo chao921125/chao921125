@@ -232,7 +232,8 @@ function canvasEvent(canvas, ctx) {
       canvasTarget.dragTarget.y += (canvasPosition.y - canvasTarget.targetOffsetPosition.y);
 
       ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-      canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+      drawDragImg(canvas, ctx, canvasTarget.dragTarget.x, canvasTarget.dragTarget.x, canvasTarget.dragTarget.r);
+      // canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
       canvasTarget.targetOffsetPosition = canvasPosition;
 
     } else if (canvasTarget.targetStatus === initConfig.MOVE_START && getDistance(mouseOffsetPosition, canvasTarget.targetLastPosition) > canvasTarget.scaleStepNum) {
@@ -260,24 +261,24 @@ function canvasEvent(canvas, ctx) {
     }
   }
   canvas.onwheel = (event) => {
-    // const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
-    //
-    // const dealX = canvasPosition.x / canvasTarget.scale * canvasTarget.scaleStep;
-    // const dealY = canvasPosition.y / canvasTarget.scale * canvasTarget.scaleStep;
-    // if (event.wheelDelta > 0 && canvasTarget.scale < canvasTarget.scaleMax) {
-    //   canvasTarget.scaleOffset.x -= dealX;
-    //   canvasTarget.scaleOffset.y -= dealY;
-    //   canvasTarget.scale += canvasTarget.scaleStep;
-    // } else if (event.wheelDelta <= 0 && canvasTarget.scale > canvasTarget.scaleMin) {
-    //   canvasTarget.scaleOffset.x += dealX;
-    //   canvasTarget.scaleOffset.y += dealY;
-    //   canvasTarget.scale -= canvasTarget.scaleStep;
-    // }
-    // ctx.setTransform(canvasTarget.scale, 0, 0, canvasTarget.scale, canvasTarget.scaleOffset.x, canvasTarget.scaleOffset.y);
-    //
-    // ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-    // canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
-    // canvasTarget.targetOffsetPosition = canvasPosition;
+    const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
+    
+    const dealX = canvasPosition.x / canvasTarget.scale * canvasTarget.scaleStep;
+    const dealY = canvasPosition.y / canvasTarget.scale * canvasTarget.scaleStep;
+    if (event.wheelDelta > 0 && canvasTarget.scale < canvasTarget.scaleMax) {
+      canvasTarget.scaleOffset.x -= dealX;
+      canvasTarget.scaleOffset.y -= dealY;
+      canvasTarget.scale += canvasTarget.scaleStep;
+    } else if (event.wheelDelta <= 0 && canvasTarget.scale > canvasTarget.scaleMin) {
+      canvasTarget.scaleOffset.x += dealX;
+      canvasTarget.scaleOffset.y += dealY;
+      canvasTarget.scale -= canvasTarget.scaleStep;
+    }
+    ctx.setTransform(canvasTarget.scale, 0, 0, canvasTarget.scale, canvasTarget.scaleOffset.x, canvasTarget.scaleOffset.y);
+    
+    ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
+    canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+    canvasTarget.targetOffsetPosition = canvasPosition;
   }
   // 区分出来点击事件和拖拽事件
   canvas.onclick = () => {
