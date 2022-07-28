@@ -1,24 +1,26 @@
-let zoomLimit = [0.1, 2];
-let zoomCurrent = 1;
-let zoomTimes = 200;
-
-const dragEnum = {
-  IDLE: 0,
+// 定义状态枚举
+const initConfig = {
+  // 初始状态
+  INIT: 0,
+  // 拖动状态
   DRAG_START: 1,
-  DRAGGING: 12,
+  DRAG_ING: 12,
+  // 移动状态
   MOVE_START: 2,
-  MOVING: 21,
+  MOVE_ING: 21,
 };
 
+// 操作的对象
 let canvasTarget = {
   // 清除画布
-  clear: 1000,
+  clear: 100,
   // 全局标记是否拖拽
   isDragFlag: false,
   // 缩放倍数 默认 1
   scale: 1,
   // 缩放步长 默认 1
   scaleStep: 0.1,
+  // 移动或缩放执行的最小距离
   scaleStepNum: 5,
   // 缩放倍数 最大
   scaleMax: 2,
@@ -29,16 +31,26 @@ let canvasTarget = {
     x: 0,
     y: 0,
   },
-  // 拖拽对象的数据
-  dragData: [],
-  // 拖拽对象是否开始拖拽
-  dragStatus: dragEnum.IDLE,
+  canvasOffset: {
+    x: 0,
+    y: 0,
+  },
+  // 操作对象是否开始拖拽、缩放
+  targetStatus: initConfig.INIT,
+  // 操作对象 最后一次的位置
+  targetLastPosition: {
+    x: 0,
+    y: 0,
+  },
+  // 操作对象的偏移量
+  targetOffsetPosition: {
+    x: 0,
+    y: 0,
+  },
   // 拖拽对象
   dragTarget: null,
-  // 拖拽对象 最后一次拖拽的位置
-  dragLastPosition: null,
-  // 拖拽对象的偏移量
-  dragOffsetPosition: null,
+  // 拖拽对象的数据
+  dragTargetArray: [],
 };
 
 ;(() => {
@@ -83,13 +95,19 @@ function initDraw() {
   let ctx = canvas.getContext('2d');
   ctx.save();
 
-  drawDragImg(canvas, ctx, 200, 200, 20);
-  canvasTarget.dragData.push({
-    x: 200,
-    y: 200,
+  drawDragImg(canvas, ctx, 100, 100, 20);
+  canvasTarget.dragTargetArray.push({
+    x: 100,
+    y: 100,
     r: 20
   });
-  drawImg(canvas, ctx);
+  drawDragImg(canvas, ctx, 200, 200, 40);
+  canvasTarget.dragTargetArray.push({
+    x: 200,
+    y: 200,
+    r: 40
+  });
+  // drawImg(canvas, ctx);
   // drawCanvasGrid(canvas, ctx);
 
   canvasEvent(canvas, ctx);
@@ -157,80 +175,83 @@ function drawImg(canvas, ctx) {
 function drawDragImg(canvas, ctx, cx, cy, r) {
   ctx.save();
   ctx.beginPath();
-  // if (canvasTarget.dragTarget) {
-  //   ctx.clearRect(canvasTarget.dragLastPosition.x, canvasTarget.dragLastPosition.y, cx, cy);
-  // }
+
   ctx.strokeStyle = "blue";
-  ctx.arc(cx, cy, r, 0, Math.PI * 3);
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
   ctx.stroke();
 
   ctx.closePath();
   ctx.restore();
 }
 
+function resetDraw() {
+
+}
+
+// 判断当前鼠标活动位置是否是图形还是画布
+function isDragTarget(position, targetArray) {
+  if (targetArray) {
+    // 计算当前鼠标活动点与目标点的距离
+    for (let o of targetArray) {
+      if (getDistance(o, position) < o.r) return o;
+    }
+    return false;
+  }
+}
+
 // 注册事件
 function canvasEvent(canvas, ctx) {
   canvas.onmousedown = (event) => {
-    canvas.style.cursor = "pointer";
     canvasTarget.isDragFlag = false;
+    canvas.style.cursor = "grab";
     // canvasDrag(canvas, ctx);
     // 拖拽指定对象
     const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
-    const dragImgRef = isDrag(canvasPosition, canvasTarget.dragData);
-    if (dragImgRef && canvasTarget.dragStatus === dragEnum.IDLE) {
+    const dragImgRef = isDragTarget(canvasPosition, canvasTarget.dragTargetArray);
+    // 点击对象的时候进行鼠标变形
+    if (dragImgRef && canvasTarget.targetStatus === initConfig.INIT) {
+      canvas.style.cursor = "all-scroll";
       canvasTarget.dragTarget = dragImgRef;
-      canvasTarget.dragStatus = dragEnum.DRAG_START;
-      canvasTarget.dragLastPosition = canvasPosition;
-      canvasTarget.dragOffsetPosition = canvasPosition;
+      canvasTarget.targetStatus = initConfig.DRAG_START;
+      canvasTarget.targetLastPosition = canvasPosition;
+      canvasTarget.targetOffsetPosition = canvasPosition;
     } else if (!dragImgRef) {
-      canvasTarget.dragStatus = dragEnum.MOVE_START;
-      canvasTarget.dragLastPosition = canvasPosition;
-      canvasTarget.dragOffsetPosition = canvasPosition;
+      canvasTarget.targetStatus = initConfig.MOVE_START;
+      canvasTarget.canvasOffset = getMousePosition(event);
     }
   }
   canvas.onmousemove = (event) => {
     canvasTarget.isDragFlag = true;
     const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
-    if (isDrag(canvasPosition, canvasTarget.dragData)) {
-      canvas.style.cursor = "all-scroll";
-    } else {
-      canvas.style.cursor = "default";
-    }
-    if (canvasTarget.dragStatus === dragEnum.DRAG_START && getDistance(canvasPosition, canvasTarget.dragLastPosition) > canvasTarget.scaleStepNum) {
-      canvasTarget.dragStatus = dragEnum.DRAGGING;
-      canvasTarget.dragOffsetPosition = canvasPosition;
-    } else if (canvasTarget.dragStatus === dragEnum.DRAGGING) {
-      canvasTarget.dragTarget.x += canvasPosition.x - canvasTarget.dragOffsetPosition.x;
-      canvasTarget.dragTarget.y += canvasPosition.y - canvasTarget.dragOffsetPosition.y;
+    const mouseOffsetPosition = getMousePosition(event);
+    if (canvasTarget.targetStatus === initConfig.DRAG_START && getDistance(canvasPosition, canvasTarget.targetLastPosition) > canvasTarget.scaleStepNum) {
+      canvasTarget.targetStatus = initConfig.DRAG_ING;
+      canvasTarget.targetOffsetPosition = canvasPosition;
+    } else if (canvasTarget.targetStatus === initConfig.DRAG_ING) {
+      canvasTarget.dragTarget.x += (canvasPosition.x - canvasTarget.targetOffsetPosition.x);
+      canvasTarget.dragTarget.y += (canvasPosition.y - canvasTarget.targetOffsetPosition.y);
+
       ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-      drawDragImg(canvas, ctx, canvasTarget.dragTarget.x, canvasTarget.dragTarget.y, canvasTarget.dragTarget.r);
-      canvasTarget.dragOffsetPosition = canvasPosition;
-      drawImg(canvas, ctx);
-    } else if (canvasTarget.dragStatus === dragEnum.MOVE_START && getDistance(canvasPosition, canvasTarget.dragLastPosition) > canvasTarget.scaleStepNum) {
-      canvasTarget.dragStatus = dragEnum.MOVING;
-      canvasTarget.dragOffsetPosition = canvasPosition;
-    } else if (canvasTarget.dragStatus === dragEnum.MOVING) {
-      canvasTarget.scaleOffset.x += canvasPosition.x - canvasTarget.dragOffsetPosition.x;
-      canvasTarget.scaleOffset.y += canvasPosition.y - canvasTarget.dragOffsetPosition.y;
+      canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+      canvasTarget.targetOffsetPosition = canvasPosition;
+
+    } else if (canvasTarget.targetStatus === initConfig.MOVE_START && getDistance(mouseOffsetPosition, canvasTarget.targetLastPosition) > canvasTarget.scaleStepNum) {
+      canvasTarget.targetStatus = initConfig.MOVE_ING;
+      canvasTarget.canvasOffset = mouseOffsetPosition;
+    } else if (canvasTarget.targetStatus === initConfig.MOVE_ING) {
+      canvasTarget.scaleOffset.x += mouseOffsetPosition.x - canvasTarget.canvasOffset.x;
+      canvasTarget.scaleOffset.y += mouseOffsetPosition.y - canvasTarget.canvasOffset.y;
 
       ctx.setTransform(canvasTarget.scale, 0, 0, canvasTarget.scale, canvasTarget.scaleOffset.x, canvasTarget.scaleOffset.y);
-
       ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-      canvasTarget.dragData.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
-      canvasTarget.dragOffsetPosition = canvasPosition;
-
-      drawImg(canvas, ctx);
+      canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+      canvasTarget.targetOffsetPosition = mouseOffsetPosition;
     }
   }
   canvas.onmouseup = (event) => {
     canvas.style.cursor = "default";
-    if (canvasTarget.dragStatus === dragEnum.DRAG_START || canvasTarget.dragStatus === dragEnum.DRAGGING
-      || canvasTarget.dragStatus === dragEnum.MOVE_START || canvasTarget.dragStatus === dragEnum.MOVING
-    ) {
-      canvasTarget.dragStatus = dragEnum.IDLE;
-      canvasTarget.dragTarget = null;
-      canvasTarget.dragLastPosition = null;
-      canvasTarget.dragOffsetPosition = null;
+    if (canvasTarget.targetStatus !== initConfig.INIT) {
+      canvasTarget.targetStatus = initConfig.INIT;
     }
     if (canvasTarget.isDragFlag) {
       console.log("drag");
@@ -238,39 +259,25 @@ function canvasEvent(canvas, ctx) {
       console.log("no drag");
     }
   }
-  canvas.onmousewheel = (event) => {
-    // console.log("onmousewheel", event.offsetX, event.offsetY);
-    // let zoom = event.deltaY > 0 ? -0.01 : 0.01;
-    // zoomCurrent += zoom;
-    // if (zoomCurrent > zoomLimit[0] && zoomCurrent < zoomLimit[1]) {
-    //   canvasZoom(canvas, ctx, event.offsetX, event.offsetY, zoom);
-    // } else if (zoomCurrent < zoomLimit[0]) {
-    //   zoomCurrent = zoomLimit[0];
-    // } else if (zoomCurrent > zoomLimit[1]) {
-    //   zoomCurrent = zoomLimit[1];
-    // }
-  }
   canvas.onwheel = (event) => {
-    const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
-
-    const dealX = canvasPosition.x / canvasTarget.scale * canvasTarget.scaleStep;
-    const dealY = canvasPosition.y / canvasTarget.scale * canvasTarget.scaleStep;
-    if (event.wheelDelta > 0 && canvasTarget.scale < canvasTarget.scaleMax) {
-      canvasTarget.scaleOffset.x -= dealX;
-      canvasTarget.scaleOffset.y -= dealY;
-      canvasTarget.scale += canvasTarget.scaleStep;
-    } else if (event.wheelDelta <= 0 && canvasTarget.scale > canvasTarget.scaleMin) {
-      canvasTarget.scaleOffset.x += dealX;
-      canvasTarget.scaleOffset.y += dealY;
-      canvasTarget.scale -= canvasTarget.scaleStep;
-    }
-    ctx.setTransform(canvasTarget.scale, 0, 0, canvasTarget.scale, canvasTarget.scaleOffset.x, canvasTarget.scaleOffset.y);
-
-    ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-    canvasTarget.dragData.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
-    canvasTarget.dragOffsetPosition = canvasPosition;
-
-    drawImg(canvas, ctx);
+    // const canvasPosition = getCanvasPosition(event, canvasTarget.scaleOffset, canvasTarget.scale);
+    //
+    // const dealX = canvasPosition.x / canvasTarget.scale * canvasTarget.scaleStep;
+    // const dealY = canvasPosition.y / canvasTarget.scale * canvasTarget.scaleStep;
+    // if (event.wheelDelta > 0 && canvasTarget.scale < canvasTarget.scaleMax) {
+    //   canvasTarget.scaleOffset.x -= dealX;
+    //   canvasTarget.scaleOffset.y -= dealY;
+    //   canvasTarget.scale += canvasTarget.scaleStep;
+    // } else if (event.wheelDelta <= 0 && canvasTarget.scale > canvasTarget.scaleMin) {
+    //   canvasTarget.scaleOffset.x += dealX;
+    //   canvasTarget.scaleOffset.y += dealY;
+    //   canvasTarget.scale -= canvasTarget.scaleStep;
+    // }
+    // ctx.setTransform(canvasTarget.scale, 0, 0, canvasTarget.scale, canvasTarget.scaleOffset.x, canvasTarget.scaleOffset.y);
+    //
+    // ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
+    // canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+    // canvasTarget.targetOffsetPosition = canvasPosition;
   }
   // 区分出来点击事件和拖拽事件
   canvas.onclick = () => {
@@ -283,36 +290,13 @@ function canvasEvent(canvas, ctx) {
 }
 
 // 缩放
-function canvasZoom(canvas, ctx, offsetX, offsetY, zoom) {
-  let obj = {
-    fontX: 0,
-    fontY: 0,
-    fontZoom: 1,
-    curZoom: 1,
-    translateX: 0,
-    translateY: 0,
-  }
-  obj.curZoom = obj.fontZoom + zoom;
-  obj.translateX = offsetX - (offsetX - obj.translateX) * obj.curZoom / obj.fontZoom;
-  obj.translateY = offsetY - (offsetY - obj.translateY) * obj.curZoom / obj.fontZoom;
+function canvasZoom(canvas, ctx, offsetX, offsetY, scale) {
 
-  // 不使用 translate + scale 个缩放 会存在某些问题。
-  ctx.translate(obj.translateX, obj.translateY);
-  ctx.scale(obj.curZoom, obj.curZoom);
-  ctx.clearRect(0, 0, canvas.width * zoomTimes, canvas.height * zoomTimes);
-  // 绘画网格
-  drawDragImg(canvas, ctx, 200, 200, 20);
-  drawImg(canvas, ctx);
-  // drawCanvasGrid(canvas, ctx);
-  ctx.restore();
-  obj.fontY = offsetY;
-  obj.fontX = offsetX;
-  obj.fontZoom = obj.curZoom;
 }
 
 // 拖拽 开始
 function canvasDragStart(canvas, ctx) {
-  
+
 }
 // 拖拽 中
 function canvasDragIng(canvas, ctx) {
@@ -331,18 +315,15 @@ function getCanvasPosition(event, offset = { x: 0, y: 0}, scale = 1) {
   }
 }
 
+// 获取鼠标的位置
+function getMousePosition(event) {
+  return {
+    x: event.offsetX,
+    y: event.offsetY,
+  }
+}
+
 // 计算距离
 function getDistance(pStart, pEnd) {
   return Math.sqrt((pStart.x - pEnd.x) ** 2 + (pStart.y - pEnd.y) ** 2);
-}
-
-// 判断当前鼠标活动位置是否是图形还是画布
-function isDrag(position, data) {
-  if (data) {
-    // 计算当前鼠标活动点与目标点的距离
-    for (let o of data) {
-      if (getDistance(o, position) < o.r) return o;
-    }
-    return false;
-  } else {}
 }
