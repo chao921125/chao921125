@@ -232,8 +232,7 @@ function canvasEvent(canvas, ctx) {
       canvasTarget.dragTarget.y += (canvasPosition.y - canvasTarget.targetOffsetPosition.y);
 
       ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-      drawDragImg(canvas, ctx, canvasTarget.dragTarget.x, canvasTarget.dragTarget.x, canvasTarget.dragTarget.r);
-      // canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+      canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.y, item.r);});
       canvasTarget.targetOffsetPosition = canvasPosition;
 
     } else if (canvasTarget.targetStatus === initConfig.MOVE_START && getDistance(mouseOffsetPosition, canvasTarget.targetLastPosition) > canvasTarget.scaleStepNum) {
@@ -245,7 +244,7 @@ function canvasEvent(canvas, ctx) {
 
       ctx.setTransform(canvasTarget.scale, 0, 0, canvasTarget.scale, canvasTarget.scaleOffset.x, canvasTarget.scaleOffset.y);
       ctx.clearRect(0, 0, canvas.width * canvasTarget.clear * canvasTarget.scale, canvas.height * canvasTarget.clear * canvasTarget.scale);
-      canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.x, item.r);});
+      canvasTarget.dragTargetArray.forEach((item) => {drawDragImg(canvas, ctx, item.x, item.y, item.r);});
       canvasTarget.targetOffsetPosition = mouseOffsetPosition;
     }
   }
