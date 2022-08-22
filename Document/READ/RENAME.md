@@ -4,6 +4,6 @@
   |  接口  |  前端  |  后端  |
   |  ----  |  ----  |  ----  |
   |  读取  |  search  |  read/get  |
-  |  写入  |  add  |  create  |
+  |  写入  |  add  |  create/set  |
   |  编辑  |  edit  |  update  |
   |  删除  |  remove  |  delete  |
