@@ -169,6 +169,7 @@ https://hu-snail.github.io/vue3-resource/
 
 ## 动画
 [animate css库](https://www.npmjs.com/package/animate.css/) [官网](https://animate.style/) \
+[gsap库](https://www.npmjs.com/package/gsap/) [官网](https://greensock.com/) \
 [vivify](http://vivify.mkcreative.cz/) \
 [angrytools](https://angrytools.com/) \
 [animista](https://animista.net/) \

@@ -19,3 +19,32 @@
 ```
 
 [适合做页面背景动效的js](http://paperjs.org/)
+
+阿里云、腾讯云、华为云、CloudFlare、滴滴云、百度云
+[chinaz](http://aq.chinaz.com/SSL)
+[青云SSL](https://www.qingcloud.com/pricing#/SSLCertificate)
+[FreeSSL](https://freessl.org/)
+[SSL For Free](https://www.sslforfree.com/)
+[90天]()
+[Comodo](https://www.sslchaoshi.com/ssl/brand/5)
+[ohttps](https://ohttps.com/)
+[mianfeissl](https://www.mianfeissl.com/)
+[sslforfree](https://www.sslforfree.com/)
+[secure](https://secure.ssl.com/certificates/free/buy)
+[gogetssl](https://www.gogetssl.com/sslcerts/free-ssl/)
+[letsencrypt](https://letsencrypt.osfipin.com/)
+[zerossl](https://zerossl.com/)
+[又拍云](https://www.upyun.com/products/ssl)
+[七牛云 ](https://www.qiniu.com/products/ssl)
+[FreeSSL](https://freessl.cn/)
+[奇安信](https://wangzhan.qianxin.com/)
+[30天]()
+[pianyissl](https://www.pianyissl.com/)
+[trustico](https://www.trustico.com.hk/dv/comodo/trial/free-comodo-trial-certificate.php)
+[tmdhosting](https://www.tmdhosting.com/ssl-certificates.html)
+[自己操作]()
+[acme.sh](https://github.com/acmesh-official/acme.sh)
+[gethttpsforfree](https://gethttpsforfree.com/)
+
+
+
