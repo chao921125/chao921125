@@ -1,15 +1,18 @@
-# 基础核心依赖
+# 基础核心依赖 https://vue3js.cn/
 ## 推荐一个插件比较全的网站
 https://hu-snail.github.io/vue3-resource/
 ### 无特殊说明均对应最新版
-### 名称为npm库地址
-## 核心库 https://vue3js.cn/
-[vue-cli](https://www.npmjs.com/package/@vue/cli) \
+## 脚手架
 [vite](https://www.npmjs.com/package/vite) || [官网](https://cn.vitejs.dev/) \
+[vue-cli](https://www.npmjs.com/package/@vue/cli) \
+## vue
 [vue3](https://www.npmjs.com/package/vue) || [官网](https://v3.cn.vuejs.org/) \
+## 路由管理
 [vue-router](https://www.npmjs.com/package/vue-router) || [官网](https://vue3js.cn/) \
-[vuex](https://www.npmjs.com/package/vuex) || [官网](https://next.vuex.vuejs.org/) \
+## 状态管理
 [Pinia](https://www.npmjs.com/package/pinia) || [官网](https://pinia.web3doc.top/) \
+[vuex](https://www.npmjs.com/package/vuex) || [官网](https://next.vuex.vuejs.org/) \
+## js核心
 [core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
