@@ -2,8 +2,8 @@
 ## 推荐一个插件比较全的网站
 https://hu-snail.github.io/vue3-resource/
 ### 无特殊说明均对应最新版
-### 名称为npm库地址
-## 核心库 https://vue3js.cn/
+### 名称为npm库地址 https://vue3js.cn/
+## 核心库
 [vue-cli](https://www.npmjs.com/package/@vue/cli) \
 [vite](https://www.npmjs.com/package/vite) || [官网](https://cn.vitejs.dev/) \
 [vue3](https://www.npmjs.com/package/vue) || [官网](https://v3.cn.vuejs.org/) \
