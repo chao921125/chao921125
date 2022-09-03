@@ -27,7 +27,9 @@
 [FreeSSL 推荐](https://freessl.org/)
 [FreeSSL 推荐](https://freessl.cn/)
 [SSL For Free 推荐](https://www.sslforfree.com/) \
-[sslforfree](https://www.sslforfree.com/)
+https://letsencrypt.org/ \
+https://www.ssl.com/certificates/free/ \
+https://www.cloudflare.com/zh-cn/ssl/ \
 [secure](https://secure.ssl.com/certificates/free/buy)
 [gogetssl](https://www.gogetssl.com/sslcerts/free-ssl/)
 [zerossl](https://zerossl.com/) \
