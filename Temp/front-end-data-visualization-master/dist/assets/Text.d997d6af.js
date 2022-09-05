@@ -1,0 +1,10 @@
+import{A as S,C as T,o as v,e as z,f as _}from"./vendor.b99b632f.js";import{f as e}from"./fabric.49791ffe.js";const C=_("canvas",{width:"600",height:"600",id:"canvas",style:{border:"1px solid #ccc"}},null,-1),k=[C],F={setup(A){const i=S();function a(){let t=new e.fabric.Canvas("canvas"),o=new e.fabric.Text("Hello World!",{left:40,top:10,fontFamily:"Comic Sans",fontSize:60,fontWeight:600,charSpacing:100,fill:"red",cornerColor:"pink",angle:30,backgroundColor:"#ffd460",borderColor:"yellowGreen",borderScaleFactor:4,borderDashArray:[10,4,20],stroke:"#3f72af",strokeWidth:2,textAlign:"lfet",opacity:.8,selectable:!0,shadow:"rgba(0, 0, 0, 0.5) 5px 5px 5px"});t.add(o);let r=new e.fabric.Text("\u4E0B\u5212\u7EBF",{left:0,top:400,fontSize:20,underline:!0});t.add(r);let l=new e.fabric.Text("\u4E2D\u5212\u7EBF",{left:80,top:400,fontSize:20,linethrough:!0});t.add(l);let f=new e.fabric.Text("\u4E0A\u5212\u7EBF",{left:160,top:400,fontSize:20,overline:!0});t.add(f);let d=new e.fabric.Text("\u4E0A\u4E2D\u4E0B\u5212\u7EBF",{left:240,top:400,fontSize:20,overline:!0,linethrough:!0,underline:!0});t.add(d);let c=new e.fabric.Text("\u6295\u5F71 shadow",{left:0,top:440,fontSize:20,shadow:"rgba(0, 0, 0, 0.8) 5px 5px 2px"});t.add(c);let s=new e.fabric.Text("\u6295\u5F71 shadow",{left:140,top:440,fontSize:20,shadow:"#f6416c -3px -3px 2px"});t.add(s);let x=`\u5DE6
+\u5DE6\u5DE6
+\u5DE6\u5BF9\u9F50`,p=new e.fabric.Text(x,{top:10,left:500,fontSize:16,textAlign:"left"});t.add(p);let b=`\u4E2D
+\u4E2D\u4E2D
+\u5C45\u4E2D\u5BF9\u9F50`,u=new e.fabric.Text(b,{top:100,left:500,fontSize:16,textAlign:"center"});t.add(u);let h=`\u53F3
+\u53F3\u53F3
+\u53F3\u5BF9\u9F50`,g=new e.fabric.Text(h,{top:200,left:500,fontSize:16,textAlign:"right"});t.add(g);var n=`Lorem ipsum dolor sit amet,
+consectetur adipisicing elit,
+sed do eiusmod tempor incididunt
+ut labo`;let w=new e.fabric.Text(n,{top:350,left:380,fontSize:16,lineHeight:1}),m=new e.fabric.Text(n,{top:450,left:380,fontSize:16,lineHeight:2});t.add(m,w)}return T(()=>{i.commit("setComponentPath","src/views/FabricJS/Basic/pages/Text/Text.vue"),a()}),(t,o)=>(v(),z("div",null,k))}};export{F as default};
