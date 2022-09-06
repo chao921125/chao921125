@@ -17,12 +17,13 @@
 └─TS TypeScript简单介绍
 ```
 
-# 临时邮箱
-https://www.linshi-email.com/
-
-https://temp-mail.org/
-
-https://www.guerrillamail.com/
+##### [临时邮箱](https://www.linshi-email.com/) \
+##### [临时邮箱](https://temp-mail.org/) \
+##### [临时邮箱](https://www.guerrillamail.com/) \
+##### [临时手短信](https://www.storytrain.info/) \
+##### [临时手短信](https://yunduanxin.net/) \
+##### [TYB字幕下载](https://addyoutube.com/) \
+##### [电影、电视配乐](https://www.tunefind.com/) \
 
 # SSL证书 免费及收费，只推荐好用的
 ### 一般来说国内的SSL需要实名认证，大家根据需要自行选择我这里全部剔除掉后面
