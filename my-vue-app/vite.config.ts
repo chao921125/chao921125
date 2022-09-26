@@ -5,8 +5,6 @@ import vue from "@vitejs/plugin-vue";
 import dayjs from "dayjs";
 import path from "path";
 import { createHtmlPlugin } from "vite-plugin-html";
-// 热重载
-import VitePluginRestart from "vite-plugin-restart";
 // build 构建
 import { visualizer } from "rollup-plugin-visualizer";
 // 向上兼容浏览器
@@ -114,8 +112,8 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
 		plugins: [
 			// 插件
 			vue(),
-			// * vite 可以使用 jsx/tsx 语法
 			WindiCSS(),
+			// * vite 可以使用 jsx/tsx 语法
 			// * name 可以写在 script 标签上
 			VueSetupExtend(),
 			PurgeIcons({}),
@@ -156,10 +154,6 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
 					// 	css: "https://unpkg.com/element-plus/dist/index.css"
 					// }
 				],
-			}),
-			// 热重载，包含配置文件的修改
-			VitePluginRestart({
-				restart: ["vite.config.[jt]s"],
 			}),
 			createHtmlPlugin({
 				minify: true,
