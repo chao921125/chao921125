@@ -249,7 +249,7 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
 			// polyfillDynamicImport: "", // boolean
 			outDir: "dist", // path.join(__dirname, "dist/render"),
 			assetsDir: "assets",
-			assetsInlineLimit: 5120, // 5MB
+			assetsInlineLimit: 3096, // 3MB
 			// 如果设置为false，整个项目中的所有 CSS 将被提取到一个 CSS 文件中
 			cssCodeSplit: true,
 			// cssTarget: true,
