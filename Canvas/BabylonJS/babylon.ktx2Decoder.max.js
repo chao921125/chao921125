@@ -34,10 +34,10 @@ class DataReader {
      */
     constructor(buffer, byteOffset, byteLength) {
         if (buffer.buffer) {
-            this._dataView = new DataView(buffer.buffer, buffer.byteOffset + (byteOffset !== null && byteOffset !== void 0 ? byteOffset : 0), byteLength !== null && byteLength !== void 0 ? byteLength : buffer.byteLength);
+            this._dataView = new DataView(buffer.buffer, buffer.byteOffset + (byteOffset ?? 0), byteLength ?? buffer.byteLength);
         }
         else {
-            this._dataView = new DataView(buffer, byteOffset !== null && byteOffset !== void 0 ? byteOffset : 0, byteLength !== null && byteLength !== void 0 ? byteLength : buffer.byteLength);
+            this._dataView = new DataView(buffer, byteOffset ?? 0, byteLength ?? buffer.byteLength);
         }
         this._dataByteOffset = 0;
     }
@@ -203,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 class LiteTranscoder extends _transcoder__WEBPACK_IMPORTED_MODULE_0__.Transcoder {
     _loadModule() {
@@ -243,16 +243,16 @@ class LiteTranscoder extends _transcoder__WEBPACK_IMPORTED_MODULE_0__.Transcoder
             return transcoder.transcode(nBlocks) === 0 ? (this._transcodeInPlace ? textureView.slice() : uncompressedTextureView.slice()) : null;
         });
     }
-    _prepareTranscoding(width, height, uncompressedByteLength, encodedData, forceRGBA = false) {
+    _prepareTranscoding(width, height, uncompressedByteLength, encodedData, uncompressedNumComponents) {
         const nBlocks = ((width + 3) >> 2) * ((height + 3) >> 2);
-        if (forceRGBA) {
-            uncompressedByteLength = width * ((height + 3) >> 2) * 4 * 4;
+        if (uncompressedNumComponents !== undefined) {
+            uncompressedByteLength = width * ((height + 3) >> 2) * 4 * uncompressedNumComponents;
         }
         const texMemoryPages = ((nBlocks * 16 + 65535 + (this._transcodeInPlace ? 0 : uncompressedByteLength)) >> 16) + 1;
         const textureView = this.memoryManager.getMemoryView(texMemoryPages, 65536, nBlocks * 16);
         const uncompressedTextureView = this._transcodeInPlace
             ? null
-            : new Uint8Array(this._memoryManager.wasmMemory.buffer, 65536 + nBlocks * 16, forceRGBA ? width * height * 4 : uncompressedByteLength);
+            : new Uint8Array(this._memoryManager.wasmMemory.buffer, 65536 + nBlocks * 16, uncompressedNumComponents !== undefined ? width * height * uncompressedNumComponents : uncompressedByteLength);
         textureView.set(encodedData);
         return [textureView, uncompressedTextureView, nBlocks];
     }
@@ -276,7 +276,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 class LiteTranscoder_UASTC_ASTC extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__.LiteTranscoder {
@@ -295,7 +295,7 @@ class LiteTranscoder_UASTC_ASTC extends _liteTranscoder__WEBPACK_IMPORTED_MODULE
 /**
  * URL to use when loading the wasm module for the transcoder
  */
-LiteTranscoder_UASTC_ASTC.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/uastc_astc.wasm";
+LiteTranscoder_UASTC_ASTC.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/uastc_astc.wasm";
 LiteTranscoder_UASTC_ASTC.Name = "UniversalTranscoder_UASTC_ASTC";
 
 
@@ -316,7 +316,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 class LiteTranscoder_UASTC_BC7 extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__.LiteTranscoder {
@@ -335,8 +335,102 @@ class LiteTranscoder_UASTC_BC7 extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_
 /**
  * URL to use when loading the wasm module for the transcoder
  */
-LiteTranscoder_UASTC_BC7.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/uastc_bc7.wasm";
+LiteTranscoder_UASTC_BC7.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/uastc_bc7.wasm";
 LiteTranscoder_UASTC_BC7.Name = "UniversalTranscoder_UASTC_BC7";
+
+
+/***/ }),
+
+/***/ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_R8_UNORM.js":
+/*!************************************************************************************!*\
+  !*** ../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_R8_UNORM.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LiteTranscoder_UASTC_R8_UNORM": () => (/* binding */ LiteTranscoder_UASTC_R8_UNORM)
+/* harmony export */ });
+/* harmony import */ var _transcoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../transcoder */ "../../../tools/ktx2Decoder/dist/transcoder.js");
+/* harmony import */ var _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./liteTranscoder */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder.js");
+
+
+/**
+ * @internal
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
+class LiteTranscoder_UASTC_R8_UNORM extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__.LiteTranscoder {
+    static CanTranscode(src, dst, isInGammaSpace) {
+        return src === _transcoder__WEBPACK_IMPORTED_MODULE_0__.sourceTextureFormat.UASTC4x4 && dst === _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.R8;
+    }
+    getName() {
+        return LiteTranscoder_UASTC_R8_UNORM.Name;
+    }
+    initialize() {
+        super.initialize();
+        this._transcodeInPlace = false;
+        this.setModulePath(LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL);
+    }
+    transcode(src, dst, level, width, height, uncompressedByteLength, ktx2Reader, imageDesc, encodedData) {
+        return this._loadModule().then((moduleWrapper) => {
+            const transcoder = moduleWrapper.module;
+            const [, uncompressedTextureView] = this._prepareTranscoding(width, height, uncompressedByteLength, encodedData, 1);
+            return transcoder.decode(width, height) === 0 ? uncompressedTextureView.slice() : null;
+        });
+    }
+}
+/**
+ * URL to use when loading the wasm module for the transcoder (srgb)
+ */
+LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = "https://preview.babylonjs.com/1/uastc_r8_unorm.wasm";
+LiteTranscoder_UASTC_R8_UNORM.Name = "UniversalTranscoder_UASTC_R8_UNORM";
+
+
+/***/ }),
+
+/***/ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_RG8_UNORM.js":
+/*!*************************************************************************************!*\
+  !*** ../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_RG8_UNORM.js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LiteTranscoder_UASTC_RG8_UNORM": () => (/* binding */ LiteTranscoder_UASTC_RG8_UNORM)
+/* harmony export */ });
+/* harmony import */ var _transcoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../transcoder */ "../../../tools/ktx2Decoder/dist/transcoder.js");
+/* harmony import */ var _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./liteTranscoder */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder.js");
+
+
+/**
+ * @internal
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
+class LiteTranscoder_UASTC_RG8_UNORM extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__.LiteTranscoder {
+    static CanTranscode(src, dst, isInGammaSpace) {
+        return src === _transcoder__WEBPACK_IMPORTED_MODULE_0__.sourceTextureFormat.UASTC4x4 && dst === _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.RG8;
+    }
+    getName() {
+        return LiteTranscoder_UASTC_RG8_UNORM.Name;
+    }
+    initialize() {
+        super.initialize();
+        this._transcodeInPlace = false;
+        this.setModulePath(LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL);
+    }
+    transcode(src, dst, level, width, height, uncompressedByteLength, ktx2Reader, imageDesc, encodedData) {
+        return this._loadModule().then((moduleWrapper) => {
+            const transcoder = moduleWrapper.module;
+            const [, uncompressedTextureView] = this._prepareTranscoding(width, height, uncompressedByteLength, encodedData, 2);
+            return transcoder.decode(width, height) === 0 ? uncompressedTextureView.slice() : null;
+        });
+    }
+}
+/**
+ * URL to use when loading the wasm module for the transcoder (srgb)
+ */
+LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/uastc_rg8_unorm.wasm";
+LiteTranscoder_UASTC_RG8_UNORM.Name = "UniversalTranscoder_UASTC_RG8_UNORM";
 
 
 /***/ }),
@@ -356,7 +450,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 class LiteTranscoder_UASTC_RGBA_SRGB extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__.LiteTranscoder {
@@ -374,15 +468,15 @@ class LiteTranscoder_UASTC_RGBA_SRGB extends _liteTranscoder__WEBPACK_IMPORTED_M
     transcode(src, dst, level, width, height, uncompressedByteLength, ktx2Reader, imageDesc, encodedData) {
         return this._loadModule().then((moduleWrapper) => {
             const transcoder = moduleWrapper.module;
-            const [, uncompressedTextureView] = this._prepareTranscoding(width, height, uncompressedByteLength, encodedData, true);
-            return transcoder.decodeRGBA32(width, height) === 0 ? uncompressedTextureView.slice() : null;
+            const [, uncompressedTextureView] = this._prepareTranscoding(width, height, uncompressedByteLength, encodedData, 4);
+            return transcoder.decode(width, height) === 0 ? uncompressedTextureView.slice() : null;
         });
     }
 }
 /**
  * URL to use when loading the wasm module for the transcoder (srgb)
  */
-LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/uastc_rgba32_srgb.wasm";
+LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/uastc_rgba8_srgb_v2.wasm";
 LiteTranscoder_UASTC_RGBA_SRGB.Name = "UniversalTranscoder_UASTC_RGBA_SRGB";
 
 
@@ -403,7 +497,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 class LiteTranscoder_UASTC_RGBA_UNORM extends _liteTranscoder__WEBPACK_IMPORTED_MODULE_1__.LiteTranscoder {
@@ -421,15 +515,15 @@ class LiteTranscoder_UASTC_RGBA_UNORM extends _liteTranscoder__WEBPACK_IMPORTED_
     transcode(src, dst, level, width, height, uncompressedByteLength, ktx2Reader, imageDesc, encodedData) {
         return this._loadModule().then((moduleWrapper) => {
             const transcoder = moduleWrapper.module;
-            const [, uncompressedTextureView] = this._prepareTranscoding(width, height, uncompressedByteLength, encodedData, true);
-            return transcoder.decodeRGBA32(width, height) === 0 ? uncompressedTextureView.slice() : null;
+            const [, uncompressedTextureView] = this._prepareTranscoding(width, height, uncompressedByteLength, encodedData, 4);
+            return transcoder.decode(width, height) === 0 ? uncompressedTextureView.slice() : null;
         });
     }
 }
 /**
  * URL to use when loading the wasm module for the transcoder (unorm)
  */
-LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/uastc_rgba32_unorm.wasm";
+LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/uastc_rgba8_unorm_v2.wasm";
 LiteTranscoder_UASTC_RGBA_UNORM.Name = "UniversalTranscoder_UASTC_RGBA_UNORM";
 
 
@@ -450,7 +544,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 class MSCTranscoder extends _transcoder__WEBPACK_IMPORTED_MODULE_0__.Transcoder {
     getName() {
@@ -553,11 +647,11 @@ class MSCTranscoder extends _transcoder__WEBPACK_IMPORTED_MODULE_0__.Transcoder 
 /**
  * URL to use when loading the MSC transcoder
  */
-MSCTranscoder.JSModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/msc_basis_transcoder.js";
+MSCTranscoder.JSModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/msc_basis_transcoder.js";
 /**
  * URL to use when loading the wasm module for the transcoder
  */
-MSCTranscoder.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/msc_basis_transcoder.wasm";
+MSCTranscoder.WasmModuleURL = "https://preview.babylonjs.com/ktx2Transcoders/1/msc_basis_transcoder.wasm";
 MSCTranscoder.UseFromWorkerThread = true;
 MSCTranscoder.Name = "MSCTranscoder";
 
@@ -626,10 +720,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Transcoders_liteTranscoder_UASTC_BC7__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Transcoders/liteTranscoder_UASTC_BC7 */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_BC7.js");
 /* harmony import */ var _Transcoders_liteTranscoder_UASTC_RGBA_UNORM__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Transcoders/liteTranscoder_UASTC_RGBA_UNORM */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_RGBA_UNORM.js");
 /* harmony import */ var _Transcoders_liteTranscoder_UASTC_RGBA_SRGB__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Transcoders/liteTranscoder_UASTC_RGBA_SRGB */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_RGBA_SRGB.js");
-/* harmony import */ var _Transcoders_mscTranscoder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Transcoders/mscTranscoder */ "../../../tools/ktx2Decoder/dist/Transcoders/mscTranscoder.js");
-/* harmony import */ var _transcoder__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./transcoder */ "../../../tools/ktx2Decoder/dist/transcoder.js");
-/* harmony import */ var _zstddec__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./zstddec */ "../../../tools/ktx2Decoder/dist/zstddec.js");
-/* harmony import */ var _transcodeDecisionTree__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./transcodeDecisionTree */ "../../../tools/ktx2Decoder/dist/transcodeDecisionTree.js");
+/* harmony import */ var _Transcoders_liteTranscoder_UASTC_R8_UNORM__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Transcoders/liteTranscoder_UASTC_R8_UNORM */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_R8_UNORM.js");
+/* harmony import */ var _Transcoders_liteTranscoder_UASTC_RG8_UNORM__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Transcoders/liteTranscoder_UASTC_RG8_UNORM */ "../../../tools/ktx2Decoder/dist/Transcoders/liteTranscoder_UASTC_RG8_UNORM.js");
+/* harmony import */ var _Transcoders_mscTranscoder__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Transcoders/mscTranscoder */ "../../../tools/ktx2Decoder/dist/Transcoders/mscTranscoder.js");
+/* harmony import */ var _transcoder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./transcoder */ "../../../tools/ktx2Decoder/dist/transcoder.js");
+/* harmony import */ var _zstddec__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./zstddec */ "../../../tools/ktx2Decoder/dist/zstddec.js");
+/* harmony import */ var _transcodeDecisionTree__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./transcodeDecisionTree */ "../../../tools/ktx2Decoder/dist/transcodeDecisionTree.js");
 /**
  * Resources used for the implementation:
  *  - 3js KTX2 loader: https://github.com/mrdoob/three.js/blob/dfb5c23ce126ec845e4aa240599915fef5375797/examples/jsm/loaders/KTX2Loader.js
@@ -639,6 +735,8 @@ __webpack_require__.r(__webpack_exports__);
  *  - KTX specification: https://www.khronos.org/registry/DataFormat/specs/1.3/dataformat.1.3.html
  *  - KTX-Software: https://github.com/KhronosGroup/KTX-Software
  */
+
+
 
 
 
@@ -669,7 +767,7 @@ class KTX2Decoder {
             kfr.parse();
             if (kfr.needZSTDDecoder) {
                 if (!this._zstdDecoder) {
-                    this._zstdDecoder = new _zstddec__WEBPACK_IMPORTED_MODULE_8__.ZSTDDecoder();
+                    this._zstdDecoder = new _zstddec__WEBPACK_IMPORTED_MODULE_10__.ZSTDDecoder();
                 }
                 return this._zstdDecoder.init().then(() => {
                     return this._decodeData(kfr, caps, options);
@@ -682,13 +780,13 @@ class KTX2Decoder {
         const width = kfr.header.pixelWidth;
         const height = kfr.header.pixelHeight;
         const srcTexFormat = kfr.textureFormat;
-        const decisionTree = new _transcodeDecisionTree__WEBPACK_IMPORTED_MODULE_9__.TranscodeDecisionTree(srcTexFormat, kfr.hasAlpha, isPowerOfTwo(width) && isPowerOfTwo(height), caps, options);
+        const decisionTree = new _transcodeDecisionTree__WEBPACK_IMPORTED_MODULE_11__.TranscodeDecisionTree(srcTexFormat, kfr.hasAlpha, isPowerOfTwo(width) && isPowerOfTwo(height), caps, options);
         const transcodeFormat = decisionTree.transcodeFormat;
         const engineFormat = decisionTree.engineFormat;
         const roundToMultiple4 = decisionTree.roundToMultiple4;
-        const transcoder = this._transcoderMgr.findTranscoder(srcTexFormat, transcodeFormat, kfr.isInGammaSpace, options === null || options === void 0 ? void 0 : options.bypassTranscoders);
+        const transcoder = this._transcoderMgr.findTranscoder(srcTexFormat, transcodeFormat, kfr.isInGammaSpace, options?.bypassTranscoders);
         if (transcoder === null) {
-            throw new Error(`no transcoder found to transcode source texture format "${_transcoder__WEBPACK_IMPORTED_MODULE_7__.sourceTextureFormat[srcTexFormat]}" to format "${_transcoder__WEBPACK_IMPORTED_MODULE_7__.transcodeTarget[transcodeFormat]}"`);
+            throw new Error(`no transcoder found to transcode source texture format "${_transcoder__WEBPACK_IMPORTED_MODULE_9__.sourceTextureFormat[srcTexFormat]}" to format "${_transcoder__WEBPACK_IMPORTED_MODULE_9__.transcodeTarget[transcodeFormat]}"`);
         }
         const mipmaps = [];
         const dataPromises = [];
@@ -745,8 +843,7 @@ class KTX2Decoder {
                     return data;
                 })
                     .catch((reason) => {
-                    var _a;
-                    decodedData.errors = (_a = decodedData.errors) !== null && _a !== void 0 ? _a : "";
+                    decodedData.errors = decodedData.errors ?? "";
                     decodedData.errors += reason + "\n" + reason.stack + "\n";
                     return null;
                 });
@@ -764,7 +861,9 @@ _transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTransc
 _transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_liteTranscoder_UASTC_BC7__WEBPACK_IMPORTED_MODULE_3__.LiteTranscoder_UASTC_BC7);
 _transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_liteTranscoder_UASTC_RGBA_UNORM__WEBPACK_IMPORTED_MODULE_4__.LiteTranscoder_UASTC_RGBA_UNORM);
 _transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_liteTranscoder_UASTC_RGBA_SRGB__WEBPACK_IMPORTED_MODULE_5__.LiteTranscoder_UASTC_RGBA_SRGB);
-_transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_mscTranscoder__WEBPACK_IMPORTED_MODULE_6__.MSCTranscoder); // catch all transcoder - will throw an error if the format can't be transcoded
+_transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_liteTranscoder_UASTC_R8_UNORM__WEBPACK_IMPORTED_MODULE_6__.LiteTranscoder_UASTC_R8_UNORM);
+_transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_liteTranscoder_UASTC_RG8_UNORM__WEBPACK_IMPORTED_MODULE_7__.LiteTranscoder_UASTC_RG8_UNORM);
+_transcoderManager__WEBPACK_IMPORTED_MODULE_1__.TranscoderManager.RegisterTranscoder(_Transcoders_mscTranscoder__WEBPACK_IMPORTED_MODULE_8__.MSCTranscoder); // catch all transcoder - will throw an error if the format can't be transcoded
 
 
 /***/ }),
@@ -785,7 +884,7 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint-disable @typescript-eslint/naming-convention */
 
 
-/** @hidden */
+/** @internal */
 var SupercompressionScheme;
 (function (SupercompressionScheme) {
     SupercompressionScheme[SupercompressionScheme["None"] = 0] = "None";
@@ -1064,6 +1163,8 @@ const COMPRESSED_RGBA8_ETC2_EAC = 0x9278;
 const COMPRESSED_RGB8_ETC2 = 0x9274;
 const COMPRESSED_RGB_ETC1_WEBGL = 0x8d64;
 const RGBA8Format = 0x8058;
+const R8Format = 0x8229;
+const RG8Format = 0x822b;
 const DecisionTree = {
     ETC1S: {
         option: "forceRGBA",
@@ -1144,74 +1245,90 @@ const DecisionTree = {
             roundToMultiple4: false,
         },
         no: {
-            cap: "astc",
+            option: "forceR8",
             yes: {
-                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ASTC_4x4_RGBA,
-                engineFormat: COMPRESSED_RGBA_ASTC_4x4_KHR,
+                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.R8,
+                engineFormat: R8Format,
+                roundToMultiple4: false,
             },
             no: {
-                cap: "bptc",
+                option: "forceRG8",
                 yes: {
-                    transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.BC7_RGBA,
-                    engineFormat: COMPRESSED_RGBA_BPTC_UNORM_EXT,
+                    transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.RG8,
+                    engineFormat: RG8Format,
+                    roundToMultiple4: false,
                 },
                 no: {
-                    option: "useRGBAIfASTCBC7NotAvailableWhenUASTC",
+                    cap: "astc",
                     yes: {
-                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.RGBA32,
-                        engineFormat: RGBA8Format,
-                        roundToMultiple4: false,
+                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ASTC_4x4_RGBA,
+                        engineFormat: COMPRESSED_RGBA_ASTC_4x4_KHR,
                     },
                     no: {
-                        cap: "etc2",
+                        cap: "bptc",
                         yes: {
-                            alpha: true,
-                            yes: {
-                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ETC2_RGBA,
-                                engineFormat: COMPRESSED_RGBA8_ETC2_EAC,
-                            },
-                            no: {
-                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ETC1_RGB,
-                                engineFormat: COMPRESSED_RGB8_ETC2,
-                            },
+                            transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.BC7_RGBA,
+                            engineFormat: COMPRESSED_RGBA_BPTC_UNORM_EXT,
                         },
                         no: {
-                            cap: "etc1",
+                            option: "useRGBAIfASTCBC7NotAvailableWhenUASTC",
                             yes: {
-                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ETC1_RGB,
-                                engineFormat: COMPRESSED_RGB_ETC1_WEBGL,
+                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.RGBA32,
+                                engineFormat: RGBA8Format,
+                                roundToMultiple4: false,
                             },
                             no: {
-                                cap: "s3tc",
+                                cap: "etc2",
                                 yes: {
                                     alpha: true,
                                     yes: {
-                                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.BC3_RGBA,
-                                        engineFormat: COMPRESSED_RGBA_S3TC_DXT5_EXT,
+                                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ETC2_RGBA,
+                                        engineFormat: COMPRESSED_RGBA8_ETC2_EAC,
                                     },
                                     no: {
-                                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.BC1_RGB,
-                                        engineFormat: COMPRESSED_RGB_S3TC_DXT1_EXT,
+                                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ETC1_RGB,
+                                        engineFormat: COMPRESSED_RGB8_ETC2,
                                     },
                                 },
                                 no: {
-                                    cap: "pvrtc",
-                                    needsPowerOfTwo: true,
+                                    cap: "etc1",
                                     yes: {
-                                        alpha: true,
-                                        yes: {
-                                            transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.PVRTC1_4_RGBA,
-                                            engineFormat: COMPRESSED_RGBA_PVRTC_4BPPV1_IMG,
-                                        },
-                                        no: {
-                                            transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.PVRTC1_4_RGB,
-                                            engineFormat: COMPRESSED_RGB_PVRTC_4BPPV1_IMG,
-                                        },
+                                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.ETC1_RGB,
+                                        engineFormat: COMPRESSED_RGB_ETC1_WEBGL,
                                     },
                                     no: {
-                                        transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.RGBA32,
-                                        engineFormat: RGBA8Format,
-                                        roundToMultiple4: false,
+                                        cap: "s3tc",
+                                        yes: {
+                                            alpha: true,
+                                            yes: {
+                                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.BC3_RGBA,
+                                                engineFormat: COMPRESSED_RGBA_S3TC_DXT5_EXT,
+                                            },
+                                            no: {
+                                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.BC1_RGB,
+                                                engineFormat: COMPRESSED_RGB_S3TC_DXT1_EXT,
+                                            },
+                                        },
+                                        no: {
+                                            cap: "pvrtc",
+                                            needsPowerOfTwo: true,
+                                            yes: {
+                                                alpha: true,
+                                                yes: {
+                                                    transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.PVRTC1_4_RGBA,
+                                                    engineFormat: COMPRESSED_RGBA_PVRTC_4BPPV1_IMG,
+                                                },
+                                                no: {
+                                                    transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.PVRTC1_4_RGB,
+                                                    engineFormat: COMPRESSED_RGB_PVRTC_4BPPV1_IMG,
+                                                },
+                                            },
+                                            no: {
+                                                transcodeFormat: _transcoder__WEBPACK_IMPORTED_MODULE_0__.transcodeTarget.RGBA32,
+                                                engineFormat: RGBA8Format,
+                                                roundToMultiple4: false,
+                                            },
+                                        },
                                     },
                                 },
                             },
@@ -1227,7 +1344,7 @@ class TranscodeDecisionTree {
         this._hasAlpha = hasAlpha;
         this._isPowerOfTwo = isPowerOfTwo;
         this._caps = caps;
-        this._options = options !== null && options !== void 0 ? options : {};
+        this._options = options ?? {};
         this._parseNode(textureFormat === _transcoder__WEBPACK_IMPORTED_MODULE_0__.sourceTextureFormat.UASTC4x4 ? DecisionTree.UASTC : DecisionTree.ETC1S);
     }
     static _IsLeafNode(node) {
@@ -1243,11 +1360,10 @@ class TranscodeDecisionTree {
         return this._roundToMultiple4;
     }
     _parseNode(node) {
-        var _a;
         if (TranscodeDecisionTree._IsLeafNode(node)) {
             this._transcodeFormat = node.transcodeFormat;
             this._engineFormat = node.engineFormat;
-            this._roundToMultiple4 = (_a = node.roundToMultiple4) !== null && _a !== void 0 ? _a : true;
+            this._roundToMultiple4 = node.roundToMultiple4 ?? true;
         }
         else {
             let condition = true;
@@ -1284,7 +1400,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "transcodeTarget": () => (/* binding */ transcodeTarget)
 /* harmony export */ });
 /**
- * @hidden
+ * @internal
  */
 var sourceTextureFormat;
 (function (sourceTextureFormat) {
@@ -1292,7 +1408,7 @@ var sourceTextureFormat;
     sourceTextureFormat[sourceTextureFormat["UASTC4x4"] = 1] = "UASTC4x4";
 })(sourceTextureFormat || (sourceTextureFormat = {}));
 /**
- * @hidden
+ * @internal
  */
 var transcodeTarget;
 (function (transcodeTarget) {
@@ -1305,9 +1421,11 @@ var transcodeTarget;
     transcodeTarget[transcodeTarget["ETC2_RGBA"] = 6] = "ETC2_RGBA";
     transcodeTarget[transcodeTarget["ETC1_RGB"] = 7] = "ETC1_RGB";
     transcodeTarget[transcodeTarget["RGBA32"] = 8] = "RGBA32";
+    transcodeTarget[transcodeTarget["R8"] = 9] = "R8";
+    transcodeTarget[transcodeTarget["RG8"] = 10] = "RG8";
 })(transcodeTarget || (transcodeTarget = {}));
 /**
- * @hidden
+ * @internal
  */
 class Transcoder {
     static CanTranscode(src, dst, isInGammaSpace) {
@@ -1345,7 +1463,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @hidden
+ * @internal
  */
 class TranscoderManager {
     static RegisterTranscoder(transcoder) {
@@ -1406,7 +1524,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "WASMMemoryManager": () => (/* binding */ WASMMemoryManager)
 /* harmony export */ });
 /**
- * @hidden
+ * @internal
  */
 class WASMMemoryManager {
     constructor(initialMemoryPages = WASMMemoryManager.InitialMemoryPages) {
@@ -1448,7 +1566,7 @@ class WASMMemoryManager {
         return this._memory;
     }
     getMemoryView(numPages, offset = 0, byteLength) {
-        byteLength = byteLength !== null && byteLength !== void 0 ? byteLength : numPages << 16;
+        byteLength = byteLength ?? numPages << 16;
         if (this._numPages < numPages) {
             this._memory.grow(numPages - this._numPages);
             this._numPages = numPages;
