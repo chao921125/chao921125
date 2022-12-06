@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "sourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "noErrorTruncation": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "useUnknownInCatchVariables": false
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": []
+}
