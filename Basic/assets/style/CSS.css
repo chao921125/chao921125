@@ -53,3 +53,19 @@ html, body {
     grid-column-gap: 20px;
 }
 /* grid end */
+
+.rk-stars .ranking-other {
+  scrollbar-color: #FFF #FFF;
+  scrollbar-3dlight-color: #FFDA4D; /*- 最外左 -*/
+  scrollbar-highlight-color: #FFDA4D; /*- 左二 -*/
+  scrollbar-face-color: #FFFFFF; /*- 面子 -*/
+  scrollbar-shadow-color: #FFDA4D; /*- 右二 -*/
+  scrollbar-darkshadow-color: #FFDA4D; /*- 右一 -*/
+  scrollbar-base-color: #D7DCE0; /*- 基色 -*/
+  -ms-scrollbar-3dlight-color: #FFDA4D; /*- 最外左 -*/
+  -ms-scrollbar-highlight-color: #FFDA4D; /*- 左二 -*/
+  -ms-scrollbar-face-color: #FFFFFF; /*- 面子 -*/
+  -ms-scrollbar-shadow-color: #FFDA4D; /*- 右二 -*/
+  -ms-scrollbar-darkshadow-color: #FFDA4D; /*- 右一 -*/
+  -ms-scrollbar-base-color: #D7DCE0; /*- 基色 -*/
+}
