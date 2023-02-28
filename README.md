@@ -4,6 +4,8 @@
 Mac 下mysql无法启动解决：
 sudo chown -R mysql /usr/local/mysql/data
 sudo /usr/local/mysql/support-files/mysql.server start
+设置自启动
+sudo launchctl load -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 ```
 [JDK](https://www.oracle.com/cn/java/technologies/downloads/)
 ```text
