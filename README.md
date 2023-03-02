@@ -1,11 +1,12 @@
 # 插件及推荐
-[开发环境](./Document/Environment.md) |
-[VUE 最新](./Document/JS.md) |
-[React 最新](./Document/JS.md) |
-[HTML5+CSS3](./Document/HTML.md) |
-[JS](./Document/JS.md) |
-[JQ](./Document/JS.md) |
-[Mobile](./Document/Mobile.md) |
+[开发环境](./Document/Environment.md) | 
+[VUE 最新](./Document/JS.md) | 
+[React 最新](./Document/JS.md) | 
+[HTML5+CSS3](./Document/HTML.md) | 
+[JS](./Document/JS.md) | 
+[JQ](./Document/JS.md) | 
+[Java 项目推荐](./Document/Java.md) | 
+[Mobile](./Document/Mobile.md) | 
 [Markdown 语法](./Document/MarkDown.md) |
 
 # 目录说明
