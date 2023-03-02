@@ -7,6 +7,7 @@
 [JQ](./Document/JS.md) |
 [Mobile](./Document/Mobile.md) |
 [Markdown 语法](./Document/MarkDown.md) |
+[Java 项目推荐](./Document/Java.md) |
 
 # 目录说明
 ```<!-- markdownlint-capture -->
