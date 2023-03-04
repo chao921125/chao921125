@@ -1,5 +1,6 @@
 # 插件及推荐
-[开发环境](./Document/Environment.md) | 
+[开发环境](./Document/Environment.md) |
+[开源项目 优秀推荐](./Document/Project.md) | 
 [VUE 最新](./Document/JS.md) | 
 [React 最新](./Document/JS.md) | 
 [HTML5+CSS3](./Document/HTML.md) | 
