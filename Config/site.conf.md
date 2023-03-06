@@ -1,3 +1,4 @@
+```text
 server {
     set $index index.html;
     set $root /test/;
@@ -30,3 +31,5 @@ server {
         add_header Expires 0;
     }
 }
+
+```
