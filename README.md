@@ -10,24 +10,7 @@
 [Mobile](./Document/Mobile.md) | 
 [Markdown 语法](./Document/MarkDown.md) |
 
-# 目录说明
-```<!-- markdownlint-capture -->
-┌─Algorithm 算法实现示例
-├─Basic 基础学习
-│   ├─Demo 示例
-│   ├─assets 静态资源
-│   ├─plugins 三方库
-│   ├─script 脚本
-│   └─html 页面
-│─Canvas 示例及学习 WebGL的插件及DEMO
-│─Document 所有文档介绍
-│─Email-Template 邮件发送自定义模板
-│─Encrypt&Decrypt 加密、解密实现示例
-│─Playwright 微软自动化测试爬虫DEMO及解释，不会的可以留言
-│─Puppeteer 谷歌自动化测试爬虫DEMO及解释，不会的可以留言
-│─Share 分享示例
-└─TS TypeScript简单介绍
-```
+# 推荐网站
 #### [综合](https://iyideng.vip/welfare/lookssl-com.html)
 ##### [临时邮箱](https://www.linshi-email.com/) \
 ##### [临时邮箱](https://temp-mail.org/) \
