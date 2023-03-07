@@ -31,20 +31,19 @@
     <label>submit</label><input type="image" src="../assets/images/img_submit.gif" /> <input type="submit" src="../assets/images/img_submit.gif" /> <br/>
     <label>button</label><input type="button" value="submit form"/> <br/>
 </form>
-
-<script>
-    ;((dom) => {
-        document.querySelector("#name").addEventListener("blur", () => {
-            const re = /^\d+$/;
-            console.log(re.test(document.querySelector("#name").value));
-            if (!re.test(document.querySelector("#name").value)) {
-                document.querySelector("#nameValid").innerHTML = "name error";
-                return false;
-            } else {
-                document.querySelector("#nameValid").innerHTML = "";
-            }
-        });
-    })(window);
-</script>
 </body>
+<script>
+  ;((dom) => {
+    document.querySelector("#name").addEventListener("blur", () => {
+      const re = /^\d+$/;
+      console.log(re.test(document.querySelector("#name").value));
+      if (!re.test(document.querySelector("#name").value)) {
+        document.querySelector("#nameValid").innerHTML = "name error";
+        return false;
+      } else {
+        document.querySelector("#nameValid").innerHTML = "";
+      }
+    });
+  })(window);
+</script>
 </html>
