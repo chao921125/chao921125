@@ -30,32 +30,32 @@
 ## 无需自己操作，直接申请即可
 阿里云、腾讯云、华为云、CloudFlare、滴滴云、百度云
 ## [1年]()
-https://www.lookssl.com/
-[chinaz](http://aq.chinaz.com/SSL)
+[lookssl](https://www.lookssl.com/) |
+[chinaz](http://aq.chinaz.com/SSL) |
 [青云SSL](https://www.qingcloud.com/pricing#/SSLCertificate)
 ## [90天]()
-[FreeSSL 推荐](https://freessl.org/)
-[FreeSSL 推荐](https://freessl.cn/)
-[SSL For Free 推荐](https://www.sslforfree.com/) \
-https://letsencrypt.org/ \
-https://www.ssl.com/certificates/free/ \
-https://www.cloudflare.com/zh-cn/ssl/ \
-[secure](https://secure.ssl.com/certificates/free/buy)
-[gogetssl](https://www.gogetssl.com/sslcerts/free-ssl/)
-[zerossl](https://zerossl.com/) \
-[Comodo](https://www.sslchaoshi.com/ssl/brand/5)
-[ohttps](https://ohttps.com/)
-[mianfeissl](https://www.mianfeissl.com/)
-[letsencrypt](https://letsencrypt.osfipin.com/)
-[又拍云](https://www.upyun.com/products/ssl)
-[七牛云 ](https://www.qiniu.com/products/ssl) \
-[奇安信 不推荐，相当繁琐](https://wangzhan.qianxin.com/)
+[FreeSSL 推荐](https://freessl.org/) |
+[FreeSSL 推荐](https://freessl.cn/) |
+[sslforfree](https://www.sslforfree.com/) |
+[letsencrypt](https://letsencrypt.org/) |
+[ssl](https://www.ssl.com/certificates/free/) |
+[cloudflare](https://www.cloudflare.com/zh-cn/ssl/) |
+[secure](https://secure.ssl.com/certificates/free/buy) |
+[gogetssl](https://www.gogetssl.com/sslcerts/free-ssl/) |
+[zerossl](https://zerossl.com/) |
+[Comodo](https://www.sslchaoshi.com/ssl/brand/5) |
+[ohttps](https://ohttps.com/) |
+[mianfeissl](https://www.mianfeissl.com/) |
+[letsencrypt](https://letsencrypt.osfipin.com/) |
+[又拍云](https://www.upyun.com/products/ssl) |
+[七牛云 ](https://www.qiniu.com/products/ssl) |
+[奇安信 不推荐，相当繁琐](https://wangzhan.qianxin.com/) |
 ## [30天]()
-[pianyissl](https://www.pianyissl.com/) \
-[trustico](https://www.trustico.com.hk/dv/comodo/trial/free-comodo-trial-certificate.php) \
+[pianyissl](https://www.pianyissl.com/) |
+[trustico](https://www.trustico.com.hk/dv/comodo/trial/free-comodo-trial-certificate.php) |
 [tmdhosting](https://www.tmdhosting.com/ssl-certificates.html)
 ## [自己操作]()
-[acme.sh](https://github.com/acmesh-official/acme.sh) \
+[acme.sh](https://github.com/acmesh-official/acme.sh) |
 [gethttpsforfree](https://gethttpsforfree.com/)
 
 # 杂项
