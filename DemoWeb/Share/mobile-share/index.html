@@ -8,10 +8,10 @@
 </head>
 <body>
   <button id="share">点击分享12</button>
-  
+
   <!-- <script type="text/javascript" src="./dist/index.js"></script> -->
   <script type="module">
-    import NativeShare from './dist/index.js'
+    import NativeShare from './dist'
 
     var nativeShare = new NativeShare()
     nativeShare.setShareData({
@@ -43,7 +43,7 @@
         location.href = 'weixin://'
       }
     }
-    
+
     document.getElementById('share').onclick = share
   </script>
 </body>

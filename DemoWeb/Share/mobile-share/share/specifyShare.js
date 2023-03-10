@@ -42,7 +42,7 @@ function shareToWeibo4Web() {
     title: shareData.title,
     pic: shareData.icon,
   }
-  location.href = `http://service.weibo.com/share/share.php?${generateQueryString(queryObj, true)}`
+  location.href = `../../share.php?${generateQueryString(queryObj, true)}`
 }
 
 export { shareToQQ, shareToQZone, shareToWeibo4Web, shareToQZone4Web }
