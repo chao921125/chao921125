@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+node_modules
 
 # Build and Release Folders
 bin-debug/
