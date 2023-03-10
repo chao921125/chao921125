@@ -6,13 +6,13 @@
   "author": "Qihoo Business Team",
   "license": "MIT",
   "bin": {
-    "qihoo": "./dist/index.js"
+    "qihoo": "dist/index.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf ./dist/",
+    "prebuild": "rimraf dist",
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
