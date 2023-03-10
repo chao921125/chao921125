@@ -10,7 +10,6 @@
 https://github.com/shfshanyue/Daily-Question \
 https://github.com/CyC2018/CS-Notes \
 https://github.com/shfshanyue/Daily-Question \
-https://hit-alibaba.github.io/interview/index.html
 ## Web
 https://github.com/0voice/interview_internal_reference \
 https://github.com/shengxinjing/fe-advanced-interview \
