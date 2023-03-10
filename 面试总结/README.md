@@ -1,15 +1,14 @@
 # 面试问题及答案总结
-[Web](./Web.md)
-[HTML](./HTML.md)
-[CSS](./CSS.md)
-[JS](./JS.md)
-[Vue](./VUE.md)
+[Web](./Web.md) |
+[HTML](./HTML.md) |
+[CSS](./CSS.md) |
+[JS](./JS.md) |
+[Vue](./VUE.md) |
 [React](./React.md)
 # 面试合集网站推荐
 https://github.com/shfshanyue/Daily-Question \
 https://github.com/CyC2018/CS-Notes \
 https://github.com/shfshanyue/Daily-Question \
-https://paonet.com/ \
 https://hit-alibaba.github.io/interview/index.html
 ## Web
 https://github.com/0voice/interview_internal_reference \
