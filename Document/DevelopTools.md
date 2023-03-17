@@ -1,5 +1,7 @@
 # 开发环境
 [MYSQL 下载](https://dev.mysql.com/downloads/mysql/)
+[Windows](https://dev.mysql.com/downloads/installer/)
+[MacOS](https://dev.mysql.com/downloads/mysql/)
 ```text
 Mac 下mysql无法启动解决：
 sudo chown -R mysql /usr/local/mysql/data
