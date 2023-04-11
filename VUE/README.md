@@ -79,5 +79,8 @@ https://github.com/antfu/vitesse
 
 https://github.com/vuejs/vitepress
 
+# 自动生成视频
+https://github.com/remotion-dev/remotion
+
 # 解决下拉框回显图片
 this.$refs.select.$el.children[0].children[0].setAttribute('style',"background:url("+ icon +") no-repeat 10px;background-size: 30px 30px;color:#333;padding-left: 50px;");
