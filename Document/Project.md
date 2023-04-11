@@ -1,3 +1,12 @@
+# OpenAI
+#### ChatPGT训练模型
+ChatGPT 3.5 https://huggingface.co/cerebras/Cerebras-GPT-13B
+
+ChatGPT 4 https://github.com/nomic-ai/gpt4all
+
+#### 图片视频清晰
+视频修复 https://github.com/sczhou/CodeFormer
+
 # 仿网易云 Web
 
 [Vue3 单独集成 0](https://github.com/huang-wg/NeteaseCloudMusic-Vue3.0-typescript) |
