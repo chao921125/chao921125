@@ -43,3 +43,30 @@ MacPorts
 Install MacPorts if you don't already have it, then:
 $ sudo port install git
 ```
+# 开发、编程、软件工具
+## 全能开发工具
+[Visual Studio Code 简称VSCode 微软免费 强大 推荐](https://code.visualstudio.com/Download)
+```text
+VSCode 下载时请选择 System Installer
+```
+## Java
+[IDEA 收费 但有免费的社区版](https://www.jetbrains.com/zh-cn/idea/) |
+[Eclipse 老牌开发工具 免费](https://www.eclipse.org/ide/) |
+[Netbeans 免费](https://netbeans.apache.org/)
+```text
+Jetbrains家族工具之一：IDEA
+IDEA 收费 Ultimate
+IDEA 社区版免费 Community Edition
+```
+## Web 前端
+[Web Storm 收费](https://www.jetbrains.com/webstorm/)
+```text
+Jetbrains家族工具之一：Web Storm
+```
+## Python
+[Pycharm 收费 但有免费的社区版](https://www.jetbrains.com/pycharm/)
+```text
+Jetbrains家族工具之一：Pycharm
+Pycharm 收费 Professional
+Pycharm 社区版免费 Community
+```
