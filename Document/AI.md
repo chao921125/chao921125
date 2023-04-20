@@ -1,8 +1,10 @@
 # OpenAI
 ## ChatPGT训练模型
-ChatGPT 3.5 https://huggingface.co/cerebras/Cerebras-GPT-13B
+[ChatGPT 3.5](https://huggingface.co/cerebras/Cerebras-GPT-13B) \
+[ChatGPT 4](https://github.com/nomic-ai/gpt4all) \
 
-ChatGPT 4 https://github.com/nomic-ai/gpt4all
+## 图片生成
+[openai dall 需要账号](https://openai.com/product/dall-e-2) \
 
 ## 图片视频清晰
 视频修复 https://github.com/sczhou/CodeFormer
