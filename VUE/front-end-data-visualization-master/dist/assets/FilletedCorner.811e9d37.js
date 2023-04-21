@@ -1,1 +1,0 @@
-import{A as e,o as t,e as r}from"./vendor.b99b632f.js";import{_ as o}from"./index.8bb5b140.js";const s={class:"filleted__corner"},_={setup(a){return e().commit("setComponentPath","src/views/Native/PureCSS/pages/FilletedCorner/FilletedCorner.vue"),(n,l)=>(t(),r("div",s))}};var p=o(_,[["__scopeId","data-v-0a6c409c"]]);export{p as default};
