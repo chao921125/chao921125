@@ -3,11 +3,13 @@ https://sms-activate.org/cn/info/ChatGPT
 综合整理：https://zl49so8lbq.feishu.cn/wiki/wikcnraStrzFIMx3EGbxjLP3WJb
 
 ## ChatPGT平替 开源代码，自行搭建
-[ChatGPT 3.5 需要OpenAI KEY](https://huggingface.co/cerebras/Cerebras-GPT-13B)
-[ChatGPT 4 需要OpenAI KEY](https://github.com/nomic-ai/gpt4all)
-[MiniGPT 4 需要OpenAI KEY](https://github.com/Vision-CAIR/MiniGPT-4)
-[Open-Assistant 需要OpenAI KEY](https://github.com/LAION-AI/Open-Assistant)
-[gpt4all 笔记本可运行 需要OpenAI KEY](https://github.com/nomic-ai/gpt4all)
+|                                                                              |
+|------------------------------------------------------------------------------|
+| [ChatGPT 3.5 需要OpenAI KEY](https://huggingface.co/cerebras/Cerebras-GPT-13B) |
+| [ChatGPT 4 需要OpenAI KEY](https://github.com/nomic-ai/gpt4all)                |
+| [MiniGPT 4 需要OpenAI KEY](https://github.com/Vision-CAIR/MiniGPT-4)           |
+| [Open-Assistant 需要OpenAI KEY](https://github.com/LAION-AI/Open-Assistant)    |
+| [gpt4all 笔记本可运行 需要OpenAI KEY](https://github.com/nomic-ai/gpt4all)           |
 ## ChatPGT平替 开源代码，自行搭建
 | 综合收录                                     |
 |------------------------------------------|
