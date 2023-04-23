@@ -4,6 +4,19 @@
 [ChatGPT 4](https://github.com/nomic-ai/gpt4all)
 [MiniGPT 4](https://github.com/Vision-CAIR/MiniGPT-4)
 [Open-Assistant](https://github.com/LAION-AI/Open-Assistant)
+[gpt4all 笔记本可运行](https://github.com/nomic-ai/gpt4all)
+
+### 有限次 访问限制 付费
+#### 导航网址
+[导航](https://chatgpts.ninvfeng.xyz/)
+
+#### 付费
+[AI帮个忙](https://ai-toolbox.codefuture.top/)
+
+#### GPT-3.5 []()
+[usesless](http://ai.usesless.com/)
+[intercat](https://gpt.intercat.cn/)
+[aichatos](https://chat6.aichatos.com/)
 
 ## 图片生成
 [openai dall 需要OpenAI账号](https://openai.com/product/dall-e-2)
@@ -34,6 +47,9 @@ pip3 install -r requirements.txt -q
 pip3 install -q gradio
 python basicsr/setup.py develop
 ```
+
+## 图片生成视频
+[metademolab 简约视频](https://sketch.metademolab.com/canvas)
 
 ## 自动生成视频
 [remotion](https://github.com/remotion-dev/remotion)
