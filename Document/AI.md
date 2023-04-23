@@ -2,7 +2,7 @@
 https://sms-activate.org/cn/info/ChatGPT
 综合整理：https://zl49so8lbq.feishu.cn/wiki/wikcnraStrzFIMx3EGbxjLP3WJb
 
-## ChatPGT平替 开源代码，自行搭建
+## ChatPGT
 |                                                                              |
 |------------------------------------------------------------------------------|
 | [ChatGPT 3.5 需要OpenAI KEY](https://huggingface.co/cerebras/Cerebras-GPT-13B) |
