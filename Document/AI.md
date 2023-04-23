@@ -1,6 +1,6 @@
 # OpenAI 注册教程
 https://sms-activate.org/cn/info/ChatGPT
-综合整理：https://zl49so8lbq.feishu.cn/wiki/wikcnraStrzFIMx3EGbxjLP3WJb
+综合整理：https://zl49so8lbq.feishu.cn/wiki/wikcnu3kSXr75E50w8PFefhJMYf
 
 ## ChatPGT
 |                                                                              |
