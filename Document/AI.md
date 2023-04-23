@@ -1,13 +1,15 @@
 # OpenAI
-## ChatPGT训练模型
-[ChatGPT 3.5](https://huggingface.co/cerebras/Cerebras-GPT-13B) \
-[ChatGPT 4](https://github.com/nomic-ai/gpt4all) \
+## ChatPGT平替
+[ChatGPT 3.5](https://huggingface.co/cerebras/Cerebras-GPT-13B)
+[ChatGPT 4](https://github.com/nomic-ai/gpt4all)
+[MiniGPT 4](https://github.com/Vision-CAIR/MiniGPT-4)
+[Open-Assistant](https://github.com/LAION-AI/Open-Assistant)
 
 ## 图片生成
-[openai dall 需要账号](https://openai.com/product/dall-e-2) \
+[openai dall 需要OpenAI账号](https://openai.com/product/dall-e-2)
 
-## 图片视频清晰
-视频修复 https://github.com/sczhou/CodeFormer
+## 图片视频修复
+[视频修复](https://github.com/sczhou/CodeFormer)
 ```text
 准备：
 下载以下软件：
@@ -34,6 +36,8 @@ python basicsr/setup.py develop
 ```
 
 ## 自动生成视频
-https://github.com/remotion-dev/remotion
+[remotion](https://github.com/remotion-dev/remotion)
+[ChatPaper](https://github.com/kaixindelele/ChatPaper)
 
-https://github.com/kaixindelele/ChatPaper
+## 模型
+[人体模型](https://github.com/iPERDance/iPERCore)
