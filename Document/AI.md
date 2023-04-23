@@ -1,13 +1,28 @@
 # OpenAI
-## ChatPGT训练模型
-[ChatGPT 3.5](https://huggingface.co/cerebras/Cerebras-GPT-13B) \
-[ChatGPT 4](https://github.com/nomic-ai/gpt4all) \
+## ChatPGT平替
+[ChatGPT 3.5](https://huggingface.co/cerebras/Cerebras-GPT-13B)
+[ChatGPT 4](https://github.com/nomic-ai/gpt4all)
+[MiniGPT 4](https://github.com/Vision-CAIR/MiniGPT-4)
+[Open-Assistant](https://github.com/LAION-AI/Open-Assistant)
+[gpt4all 笔记本可运行](https://github.com/nomic-ai/gpt4all)
+
+### 有限次 访问限制 付费
+#### 导航网址
+[导航](https://chatgpts.ninvfeng.xyz/)
+
+#### 付费
+[AI帮个忙](https://ai-toolbox.codefuture.top/)
+
+#### GPT-3.5 []()
+[usesless](http://ai.usesless.com/)
+[intercat](https://gpt.intercat.cn/)
+[aichatos](https://chat6.aichatos.com/)
 
 ## 图片生成
-[openai dall 需要账号](https://openai.com/product/dall-e-2) \
+[openai dall 需要OpenAI账号](https://openai.com/product/dall-e-2)
 
-## 图片视频清晰
-视频修复 https://github.com/sczhou/CodeFormer
+## 图片视频修复
+[视频修复](https://github.com/sczhou/CodeFormer)
 ```text
 准备：
 下载以下软件：
@@ -33,7 +48,12 @@ pip3 install -q gradio
 python basicsr/setup.py develop
 ```
 
-## 自动生成视频
-https://github.com/remotion-dev/remotion
+## 图片生成视频
+[metademolab 简约视频](https://sketch.metademolab.com/canvas)
 
-https://github.com/kaixindelele/ChatPaper
+## 自动生成视频
+[remotion](https://github.com/remotion-dev/remotion)
+[ChatPaper](https://github.com/kaixindelele/ChatPaper)
+
+## 模型
+[人体模型](https://github.com/iPERDance/iPERCore)
