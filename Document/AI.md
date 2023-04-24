@@ -32,13 +32,14 @@ https://sms-activate.org/cn/info/ChatGPT
 | [Chat For AI 需要OpenAI ](https://chatforai.com/)   |
 
 ## 图片
-| 绘图                                     |
-|------------------------------------------|
-| [aiask 发布页](https://ailink.icu/) |
+| 绘图                                          |
+|---------------------------------------------|
+| [aiask 发布页](https://ailink.icu/)            |
 | [aiask 绘图 限次](https://aiask.me/#/home/chat) |
 
 | 文字生成图片                                                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [fotor 免费 限次](https://www.fotor.com/f)                                                                                                                      |
 | [DALL-E 2 需要OpenAI KEY](https://openai.com/product/dall-e-2)                                                                                                |
 | [Stable Diffusion 限次](https://stablediffusionweb.com/)                                                                                                      |
 | [Stable Diffusion 限次](https://stablediffusionweb.com/)                                                                                                      |
