@@ -64,21 +64,26 @@ https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
 | [免费党](https://www.mfdang.com/)                                                       |
 | [v2ray免费节点 输入邮箱订阅](https://www.v2mj.com/) [v2ray免费节点](https://www.v2rayfree.eu.org/) |
 | [维尼兔 输入邮箱订阅](https://www.v2v0.com/)                                                  |
-| []()                                                                                 |
+| [ialtone](https://ialtone.xyz/)                                                      |
 | [github Leon406](https://github.com/Leon406/SubCrawler)                              |
 
-| 每日节点                                                                               |
-|------------------------------------------------------------------------------------|
-| [长风分享](https://www.cfmem.com/)                                                     |
-| [v2rayshare](https://v2rayshare.com/)                                              |
-| [nodefree](https://nodefree.org/)                                                  |
-| [即刻学习](https://www.jkxuexi.com/)                                                   |
-| [玉豆分享](https://www.yudou66.com/)                                                   |
-| [加速器123](https://ssr.bettershop.club/)                                             |
-| [freenode](https://freenode.me/)                                                   |
-| [nodefree](https://nodefree.org/)                                                  |
-| [clash](https://www.clash-gaming.com/)                                             |
-| [clashnode](https://clashnode.com/)                                                |
+| 每日节点                                                   |
+|--------------------------------------------------------|
+| [灯云](https://58dengyun.com/)                           |
+| [一灯不是和尚](https://iyideng.vip/)                         |
+| [选梯子](https://www.xuantizi.com/)                       |
+| [科学上网](https://www.oaoy.net/)                          |
+| [vps90](http://vps90.com/vps/kxsw/)                    |
+| [freefq](https://freefq.com/)                          |
+| [长风分享](https://www.cfmem.com/)                         |
+| [v2rayshare](https://v2rayshare.com/)                  |
+| [nodefree](https://nodefree.org/)                      |
+| [即刻学习](https://www.jkxuexi.com/)                       |
+| [玉豆分享](https://www.yudou66.com/)                       |
+| [加速器123](https://ssr.bettershop.club/)                 |
+| [freenode](https://freenode.me/)                       |
+| [clash](https://www.clash-gaming.com/)                 |
+| [clashnode](https://clashnode.com/)                    |
 
 
 
