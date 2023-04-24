@@ -56,45 +56,30 @@ v2ray: https://raw.fastgit.org/freefq/free/master/v2
 https://github.com/Pawdroid/Free-servers \
 https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
 
-# 临时
-https://www.cfmem.com/ \
-https://v2rayshare.com/ \
-https://nodefree.org/ \
-https://bulink.me/sub/m5aep/cl \
-https://github.com/Leon406/SubCrawler \
-https://github.com/FMYC2015/Clash \
-https://github.com/Strongmiao168/Clash \
-https://github.com/Pawdroid/Free-servers \
-https://github.com/Junely/clash \
-https://github.com/ZGQ-inc/overthefirewall \
-https://github.com/jnlaoshu/MySelf \
-https://github.com/sakopower/KH_CLASH \
-https://www.jkxuexi.com/
+# 每日更新
+| 综合订阅地址                                                                               |
+|--------------------------------------------------------------------------------------|
+| [SSR-V2ray机场推荐](https://jichangtuijian.com/)                                         |
+| [Clash Node](https://clashnode.xyz/)                                                 |
+| [免费党](https://www.mfdang.com/)                                                       |
+| [v2ray免费节点 输入邮箱订阅](https://www.v2mj.com/) [v2ray免费节点](https://www.v2rayfree.eu.org/) |
+| [维尼兔 输入邮箱订阅](https://www.v2v0.com/)                                                  |
+| []()                                                                                 |
+| [github Leon406](https://github.com/Leon406/SubCrawler)                              |
 
-https://www.cfmem.com/
+| 每日节点                                                                               |
+|------------------------------------------------------------------------------------|
+| [长风分享](https://www.cfmem.com/)                                                     |
+| [v2rayshare](https://v2rayshare.com/)                                              |
+| [nodefree](https://nodefree.org/)                                                  |
+| [即刻学习](https://www.jkxuexi.com/)                                                   |
+| [玉豆分享](https://www.yudou66.com/)                                                   |
+| [加速器123](https://ssr.bettershop.club/)                                             |
+| [freenode](https://freenode.me/)                                                   |
+| [nodefree](https://nodefree.org/)                                                  |
+| [clash](https://www.clash-gaming.com/)                                             |
+| [clashnode](https://clashnode.com/)                                                |
 
-https://www.mfdang.com/
 
-https://www.yudou66.com/
 
-https://www.v2v0.com/
 
-https://ssr.bettershop.club/
-
-https://freenode.me/
-
-https://clashnode.com/
-
-https://nodefree.org/
-
-https://v2rayshare.com/
-
-https://www.clash-gaming.com/
-
-https://www.v2mj.com/
-
-https://jichangtuijian.com/
-
-https://www.v2rayfree.eu.org/f/getclash.html
-
-https://clashnode.xyz/
