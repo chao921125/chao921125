@@ -1,19 +1,19 @@
 # google inurl:clash/proxies
 
 # 稳定更新
-### C
+### Windows & Mac Clash
 https://sub.pmsub.me/clash.yaml
 
 https://tt.vg/freeclash
 
-### V
+### Windows V2ray
 https://sub.sharecentre.online/sub
 
 https://sub.pmsub.me/base64
 
 https://raw.fastgit.org/freefq/free/master/v2
 
-# 综合
+# Windows & Mac Clash & V2ray
 https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash \
 【主力】https://tt.vg/freev2 【备用】https://freefq.neocities.org/free.txt \
 clash订阅链接： \
