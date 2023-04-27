@@ -36,6 +36,21 @@
 [TYB字幕下载](https://addyoutube.com/) \
 [电影、电视配乐](https://www.tunefind.com/)
 
+# 网站托管（免费）
+[wordpress](https://wordpress.com/zh-cn/)
+[wix](https://www.wix.com/)
+[weebly](https://www.weebly.com/)
+[awardspace](https://www.awardspace.com/)
+[infinityfree](https://www.infinityfree.net/)
+[freehostia](https://www.freehostia.com/)
+
+## 通过GitHub直接自动部署
+[vercel 限额](https://vercel.com/)
+[netlify 限额](https://app.netlify.com/)
+[cloudflare 限额](https://dash.cloudflare.com/)
+[SurgeHandbook 限额](https://github.com/FlintyLemming/SurgeHandbook)
+
+
 # 杂项
 [适合做页面背景动效的js](http://paperjs.org/)
 

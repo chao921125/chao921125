@@ -15,9 +15,11 @@ https://sms-activate.org/cn/info/ChatGPT
 |------------------------------------------|
 | [导航 免费](https://github.com/xx025/carrot) |
 | [工具箱 付费](https://ai.aigcfun.com/)        |
+| [aibang 付费](https://aibang.run/)         |
 
 | 平替                                                |
 |---------------------------------------------------|
+| [perplexity 👍推荐](https://www.perplexity.ai/)     |
 | [AI_TOOL00 实时聊天机器人 发布页](https://gptn.tool00.com/) |
 | [AI_TOOL00 实时聊天机器人 限次](https://gpt.tool00.com/)   |
 | [文心AI 免费](https://catgpt.run/)                    |
@@ -30,6 +32,7 @@ https://sms-activate.org/cn/info/ChatGPT
 | [GPTalkv 付费](https://chat.gptalk.net/)            |
 | [ChatGPT Bot 需要OpenAI ](https://chat.xeasy.me/)   |
 | [Chat For AI 需要OpenAI ](https://chatforai.com/)   |
+| [askopenai 限次 ](https://www.askopenai.co/)        |
 
 ## 图片
 | 绘图                                          |
@@ -175,7 +178,9 @@ https://sms-activate.org/cn/info/ChatGPT
 | 其他                                                                                   |
 |--------------------------------------------------------------------------------------|
 | [鸡汤佛 免费](https://hotoke.ai/)                                                         |
+| [作诗 免费](https://www.aichpoem.net/#/shisanbai/poem)                                   |
 | [GeekChat 免费](https://chat.geekr.dev/)                                               |
+| [ChatGPT提示词 免费](https://www.aishort.top/)                                            |
 | [单词故事 付费](https://love-english.streamlit.app/)                                       |
 | [PhotoRoom：擦除任何背景、对象](https://www.photoroom.com/)                                    |
 | [造梦师：只需一句话，让你的文字变成画作](https://printidea.art/)                                        |
@@ -188,6 +193,7 @@ https://sms-activate.org/cn/info/ChatGPT
 | [文心一格 飞桨：AI艺术和创意辅助平台](https://yige.baidu.com/)                                       |
 | [Phygital+：AI图像生成](https://phygital.plus/)                                           |
 | [Beautiful.ai：AI生成PPT](https://www.beautiful.ai/)                                    |
+| [画个画](https://scribblediffusion.com/)                                                |
 
 | AI-Brain生成文本模型                                                                               |
 |----------------------------------------------------------------------------------------------|
@@ -231,3 +237,9 @@ python basicsr/setup.py develop
 
 ## 模型
 [人体模型](https://github.com/iPERDance/iPERCore)
+
+# APP
+|                                       |
+|---------------------------------------|
+| [古诗](https://shipian.danieljia.work/) |
+
