@@ -49,15 +49,17 @@ https://github.com/anaer/Sub \
 【备用】https://raw.iqiq.io/anaer/Sub/main/clash.yaml
 
 # 每日更新
-| 综合订阅地址                                                                               |
-|--------------------------------------------------------------------------------------|
-| [SSR-V2ray机场推荐](https://jichangtuijian.com/)                                         |
-| [Clash Node](https://clashnode.xyz/)                                                 |
-| [免费党](https://www.mfdang.com/)                                                       |
-| [v2ray免费节点 输入邮箱订阅](https://www.v2mj.com/) [v2ray免费节点](https://www.v2rayfree.eu.org/) |
-| [维尼兔 输入邮箱订阅](https://www.v2v0.com/)                                                  |
-| [ialtone](https://ialtone.xyz/)                                                      |
-| [github Leon406](https://github.com/Leon406/SubCrawler)                              |
+| 综合订阅地址                                                                             |
+|------------------------------------------------------------------------------------|
+| [机场推荐](https://jichangtuijian.com/)                                                |
+| [Clash Node](https://clashnode.xyz/)                                               |
+| [免费党](https://www.mfdang.com/)                                                     |
+| [v2ray免费 输入邮箱订阅](https://www.v2mj.com/) [v2ray免费节点](https://www.v2rayfree.eu.org/) |
+| [维尼兔 输入邮箱订阅](https://www.v2v0.com/)                                                |
+| [ialtone](https://ialtone.xyz/)                                                    |
+| [github Leon406](https://github.com/Leon406/SubCrawler)                            |
+| [爱机场](https://aijichang.com/)                                                      |
+| [666vpn](http://666vpn.com/)                                                       |
 
 | 每日节点                                                   |
 |--------------------------------------------------------|
