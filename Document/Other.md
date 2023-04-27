@@ -1,50 +1,30 @@
 # google inurl:clash/proxies
 
 # Clash
-https://sub.pmsub.me/clash.yaml
+【Proxy】https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml
 
-https://tt.vg/freeclash
-
-https://sub.nicevpn.top/Clash.yaml
-
-https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/clash/Geekshare.yaml
-
-https://github.com/anaer/Sub \
-
-https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml \
-
-https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml \
-
-https://raw.fastgit.org/anaer/Sub/main/clash.yaml \
-
-https://anaer.github.io/Sub/clash.yaml \
-
-https://raw.kgithub.com/anaer/Sub/main/clash.yaml \
-
-https://raw.iqiq.io/anaer/Sub/main/clash.yaml
-
-https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml
+【Proxy】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 
 【主力】https://tt.vg/freeclash 【备用】https://freefq.neocities.org/free.xml
 
+【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/clash/Geekshare.yaml
+
+https://sub.pmsub.me/clash.yaml
+
 # V2ray
-https://sub.sharecentre.online/sub
+【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/v2ray/Geekshare.txt
 
-https://sub.nicevpn.top/long
+【Proxy】https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
 
-https://sub.pmsub.me/base64
+【主力】https://tt.vg/freev2 【备用】https://freefq.neocities.org/free.txt
 
 https://raw.fastgit.org/freefq/free/master/v2
 
+https://sub.sharecentre.online/sub
+
+https://sub.pmsub.me/base64
+
 https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
-
-https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/v2ray/Geekshare.txt
-
-https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml
-
-https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
-
-【主力】https://tt.vg/freev2 【备用】https://freefq.neocities.org/free.txt
 
 # 发布页
 https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
@@ -60,6 +40,13 @@ https://github.com/freefq/free
 https://github.com/Pawdroid/Free-servers
 
 https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt
+
+https://github.com/anaer/Sub \
+【备用】https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml \
+【备用】https://raw.fastgit.org/anaer/Sub/main/clash.yaml \
+【备用】https://anaer.github.io/Sub/clash.yaml \
+【备用】https://raw.kgithub.com/anaer/Sub/main/clash.yaml \
+【备用】https://raw.iqiq.io/anaer/Sub/main/clash.yaml
 
 # 每日更新
 | 综合订阅地址                                                                               |
@@ -91,6 +78,3 @@ https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt
 | [clashnode](https://clashnode.com/)                    |
 
 # 其他
-小火箭 https://sub.nicevpn.top/https
-
-Quanx https://sub.nicevpn.top/Quanx.conf
