@@ -1,8 +1,6 @@
 # google inurl:clash/proxies
 
 # Clash
-【Proxy】https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml
-
 【Proxy】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 
 【主力】https://tt.vg/freeclash 【备用】https://freefq.neocities.org/free.xml
@@ -10,6 +8,8 @@
 【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/clash/Geekshare.yaml
 
 https://sub.pmsub.me/clash.yaml
+
+【Proxy 手动选择】https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml
 
 # V2ray
 【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/v2ray/Geekshare.txt
