@@ -20,6 +20,10 @@ https://sms-activate.org/cn/info/ChatGPT
 | 平替                                                |
 |---------------------------------------------------|
 | [perplexity 👍推荐](https://www.perplexity.ai/)     |
+| [engati](https://www.engati.com/)                 |
+| [writesonic](https://writesonic.com/chat)         |
+| [chatbot](https://www.chatbot.com/)               |
+| [askopenai 免费](https://www.askopenai.co/)         |
 | [AI_TOOL00 实时聊天机器人 发布页](https://gptn.tool00.com/) |
 | [AI_TOOL00 实时聊天机器人 限次](https://gpt.tool00.com/)   |
 | [文心AI 免费](https://catgpt.run/)                    |
@@ -32,7 +36,6 @@ https://sms-activate.org/cn/info/ChatGPT
 | [GPTalkv 付费](https://chat.gptalk.net/)            |
 | [ChatGPT Bot 需要OpenAI ](https://chat.xeasy.me/)   |
 | [Chat For AI 需要OpenAI ](https://chatforai.com/)   |
-| [askopenai 限次 ](https://www.askopenai.co/)        |
 
 ## 图片
 | 绘图                                          |

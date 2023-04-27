@@ -59,6 +59,7 @@ https://github.com/anaer/Sub \
 | [ialtone](https://ialtone.xyz/)                                                    |
 | [github Leon406](https://github.com/Leon406/SubCrawler)                            |
 | [爱机场](https://aijichang.com/)                                                      |
+| [666vpn](http://666vpn.com/)                                                       |
 
 | 每日节点                                                   |
 |--------------------------------------------------------|
