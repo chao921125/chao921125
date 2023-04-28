@@ -2,95 +2,91 @@
 https://sms-activate.org/cn/info/ChatGPT
 综合整理：https://zl49so8lbq.feishu.cn/wiki/wikcnu3kSXr75E50w8PFefhJMYf
 
+--- 没有特殊说明均收费 ---
 ## ChatPGT
-|                                                                              |
+| https://www.githubs.cn/trending                                              |
 |------------------------------------------------------------------------------|
-| [ChatGPT 3.5 需要OpenAI KEY](https://huggingface.co/cerebras/Cerebras-GPT-13B) |
-| [ChatGPT 4 需要OpenAI KEY](https://github.com/nomic-ai/gpt4all)                |
-| [MiniGPT 4 需要OpenAI KEY](https://github.com/Vision-CAIR/MiniGPT-4)           |
-| [Open-Assistant 需要OpenAI KEY](https://github.com/LAION-AI/Open-Assistant)    |
-| [gpt4all 笔记本可运行 需要OpenAI KEY](https://github.com/nomic-ai/gpt4all)           |
+| [ChatGPT 3.5 【OpenAI KEY】](https://huggingface.co/cerebras/Cerebras-GPT-13B) |
+| [ChatGPT 4 【OpenAI KEY】](https://github.com/nomic-ai/gpt4all)                |
+| [MiniGPT 4 【OpenAI KEY】](https://github.com/Vision-CAIR/MiniGPT-4)           |
+| [Open-Assistant 【OpenAI KEY】](https://github.com/LAION-AI/Open-Assistant)    |
+| [gpt4all 笔记本可运行 【OpenAI KEY】](https://github.com/nomic-ai/gpt4all)           |
 ## ChatPGT平替 开源代码，自行搭建
 | 综合收录                                     |
 |------------------------------------------|
 | [导航 免费](https://github.com/xx025/carrot) |
-| [工具箱 付费](https://ai.aigcfun.com/)        |
-| [aibang 付费](https://aibang.run/)         |
+| [工具箱](https://ai.aigcfun.com/)           |
+| [aibang](https://aibang.run/)            |
 
-| 平替                                                |
-|---------------------------------------------------|
-| [perplexity 👍推荐](https://www.perplexity.ai/)     |
-| [engati](https://www.engati.com/)                 |
-| [writesonic](https://writesonic.com/chat)         |
-| [chatbot](https://www.chatbot.com/)               |
-| [askopenai 免费](https://www.askopenai.co/)         |
-| [AI_TOOL00 实时聊天机器人 发布页](https://gptn.tool00.com/) |
-| [AI_TOOL00 实时聊天机器人 限次](https://gpt.tool00.com/)   |
-| [文心AI 免费](https://catgpt.run/)                    |
-| [theb 限次](https://theb.ai/)                       |
-| [xeasy 限次](https://chat2.xeasy.me/)               |
-| [freegpt 限次](https://freegpt.one/)                |
-| [ChatGPT 限次](https://freegpt.cc/)                 |
-| [BAI Chat 免费](https://chatbot.theb.ai/)           |
-| [ChatGPT prompts 限次](https://openprompt.co/)      |
-| [GPTalkv 付费](https://chat.gptalk.net/)            |
-| [ChatGPT Bot 需要OpenAI ](https://chat.xeasy.me/)   |
-| [Chat For AI 需要OpenAI ](https://chatforai.com/)   |
+| 问答                                                               |
+|------------------------------------------------------------------|
+| [perplexity 👍推荐](https://www.perplexity.ai/)                    |
+| [engati 注册](https://www.engati.com/)                             |
+| [writesonic 注册](https://writesonic.com/chat)                     |
+| [chatbot 注册](https://www.chatbot.com/)                           |
+| [theb 注册](https://theb.ai/)                                      |
+| [ChatGPT prompts 注册](https://openprompt.co/)                     |
+| [askopenai 发布页](https://askopenai.cn/)                           |
+| [AI_TOOL00 发布页](https://gptn.tool00.com/)                        |
+| [文心AI](https://catgpt.run/)                                      |
+| [xeasy](https://chat2.xeasy.me/) [xeasy](https://chat.xeasy.me/) |
+| [freegpt](https://freegpt.one/) [freegpt](https://freegpt.cc/)   |
+| [BAI Chat](https://chatbot.theb.ai/)                             |
+| [GPTalkv](https://chat.gptalk.net/)                              |
+| [Chat For AI 【OpenAI KEY】](https://chatforai.com/)               |
 
 ## 图片
-| 绘图                                          |
-|---------------------------------------------|
-| [aiask 发布页](https://ailink.icu/)            |
-| [aiask 绘图 限次](https://aiask.me/#/home/chat) |
+| 绘图                                   |
+|--------------------------------------|
+| [aiask 发布页](https://ailink.icu/)     |
 
-| 文字生成图片                                                                                                                                                      |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [fotor 免费 限次](https://www.fotor.com/f)                                                                                                                      |
-| [DALL-E 2 需要OpenAI KEY](https://openai.com/product/dall-e-2)                                                                                                |
-| [Stable Diffusion 限次](https://stablediffusionweb.com/)                                                                                                      |
-| [Stable Diffusion 限次](https://stablediffusionweb.com/)                                                                                                      |
-| [Craiyon 限次](https://www.craiyon.com/)                                                                                                                      |
-| [Jasper 限次](https://www.jasper.ai/)                                                                                                                         |
-| [Imagen 限次](https://imagen.research.google/)                                                                                                                |
-| [Midjourney](https://midjourney.com/) [教程](https://www.uisdc.com/midjourney) [关键词](https://github.com/willwulfken/MidJourney-Styles-and-Keywords-Reference) |
-| [NightCafe 注册 收费](https://creator.nightcafe.studio/)                                                                                                        |
-| [pixray 限次](https://replicate.com/pixray/text2image)                                                                                                        |
-| [WOMBO APP](https://www.wombo.ai/)                                                                                                                          |
+| 文字生成图片                                                                                                                                                            |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [fotor](https://www.fotor.com/)                                                                                                                                   |
+| [DALL-E 2 【OpenAI KEY】](https://openai.com/product/dall-e-2)                                                                                                      |
+| [Stable Diffusion 免费](https://stablediffusionweb.com/)                                                                                                            |
+| [Craiyon](https://www.craiyon.com/)                                                                                                                               |
+| [Jasper 注册](https://www.jasper.ai/)                                                                                                                               |
+| [pixray](https://replicate.com/pixray/text2image)                                                                                                                 |
+| [Imagen素材 免费](https://imagen.research.google/)                                                                                                                    |
+| [Midjourney 注册 收费](https://midjourney.com/) [教程](https://www.uisdc.com/midjourney) [关键词](https://github.com/willwulfken/MidJourney-Styles-and-Keywords-Reference) |
+| [NightCafe 注册 收费](https://creator.nightcafe.studio/)                                                                                                              |
+| [WOMBO APP](https://www.wombo.ai/)                                                                                                                                |
 
 ## 视频
-| 文字生成视频                                    |
-|-------------------------------------------|
-| [Google AI 免费](https://ai.google/)        |
-| [Runway 限次](https://runwayml.com/)        |
-| [Fliki 限次](https://fliki.ai/)             |
-| [Synthesia 限次](https://www.synthesia.io/) |
-| [Meta AI 限次](https://ai.facebook.com/)    |
-| [Phenaki 限次](https://phenaki.video/)      |
+| 文字生成视频                                                    |
+|-----------------------------------------------------------|
+| [Google AI 免费](https://ai.google/)                        |
+| [Runway 注册](https://runwayml.com/)                        |
+| [Fliki 注册](https://fliki.ai/)                             |
+| [Synthesia 注册](https://www.synthesia.io/)                 |
+| [Meta AI 注册](https://ai.facebook.com/)                    |
+| [Phenaki 注册](https://phenaki.video/)                      |
+| [metademolab 简约视频](https://sketch.metademolab.com/canvas) |
+| [remotion](https://github.com/remotion-dev/remotion)      |
+| [ChatPaper](https://github.com/kaixindelele/ChatPaper)    |
 
-| AI视频                                                            |
-|-----------------------------------------------------------------|
-| [Runway： AI 魔法工具](https://runwayml.com/)                        |
-| [Cascadeur：人工智障辅助关键帧动画软件](https://cascadeur.com/)               |
-| [Synthesia：人工智障视频生成](https://www.synthesia.io/)                 |
-| [Pollinations：文本转视频、图片](https://pollinations.ai/)               |
-| [Zubtitle：为视频添加字幕和在线编辑视频](https://zubtitle.com/)                |
-| [Munch：人工智障提取视频中的最引人入胜、最流行和最有影响力的片段](https://www.getmunch.com/) |
-| [Fliki：将文本变成带有 AI 语音的视频](https://fliki.ai/)                     |
-| [Peech：个性化的自动视频编辑和管理平台](https://www.peech-ai.com/)              |
+| AI视频                                               |
+|----------------------------------------------------|
+| [Pollinations：文本转视频、图片](https://pollinations.ai/)  |
+| [Zubtitle：为视频添加字幕和在线编辑视频](https://zubtitle.com/)   |
+| [Munch：提取视频片段](https://www.getmunch.com/)          |
+| [Fliki：将文本变成带有 AI 语音的视频](https://fliki.ai/)        |
+| [Peech：个性化的自动视频编辑和管理平台](https://www.peech-ai.com/) |
 
 ## 音频
-| 文字生成音频                                     |
-|--------------------------------------------|
-| [Play.ht 限次](https://play.ht/)             |
-| [Murf 限次](https://murf.ai/)                |
-| [Resemble AI 限次](https://www.resemble.ai/) |
-| [WellSaid 限次](https://wellsaidlabs.com/)   |
-| [Descript 限次](https://www.descript.com/)   |
+| 文字生成音频                                  |
+|-----------------------------------------|
+| [Play.ht](https://play.ht/)             |
+| [Murf](https://murf.ai/)                |
+| [Resemble AI](https://www.resemble.ai/) |
+| [WellSaid](https://wellsaidlabs.com/)   |
+| [Descript](https://www.descript.com/)   |
 
-| 音频生成音频                                                                   |
-|--------------------------------------------------------------------------|
-| [AudioLM 限次](https://google-research.github.io/seanet/audiolm/examples/) |
-| [Voicemod 限次](https://www.voicemod.net/)                                 |
+| 音频生成音频                                                                |
+|-----------------------------------------------------------------------|
+| [AudioLM](https://google-research.github.io/seanet/audiolm/examples/) |
+| [Voicemod](https://www.voicemod.net/)                                 |
 
 | AI音频                                                                                                |
 |-----------------------------------------------------------------------------------------------------|
@@ -119,34 +115,33 @@ https://sms-activate.org/cn/info/ChatGPT
 | [Outplay](https://outplayhq.com/)                                                        |
 | [CoWriter：AI辅助写作](https://cowriter.org/login)                                            |
 
-| 文字生成文本                                                                 |
-|------------------------------------------------------------------------|
-| [Simplified 限次](https://simplified.com/)                               |
-| [ 限次]()                                                                |
-| [Jasper 限次](https://www.jasper.ai/)                                    |
-| [Frase 限次](https://www.frase.io/)                                      |
-| [EleutherAI 限次](https://www.eleuther.ai/)                              |
-| [AI21 Labs 限次](https://www.ai21.com/)                                  |
-| [Hub Spot 限次](https://www.hubspot.com/)                                |
-| [InferKit 限次](https://inferkit.com/)                                   |
-| [GooseAI 限次](https://goose.ai/)                                        |
-| [Research AI 限次](https://researchai.co/)                               |
-| [Writesonic 限次](https://writesonic.com/)                               |
-| [Cohere 限次](https://cohere.ai/)                                        |
-| [Chibi 限次](https://chibi.ai/)                                          |
-| [Ideas AI 限次](https://ideasai.com/)                                    |
-| [Copysmith 限次](https://app.copysmith.ai/)                              |
-| [Flowrite 限次](https://www.flowrite.com/)                               |
-| [Nichesss 限次](https://nichesss.com/)                                   |
-| [Sudowrite 限次](https://www.sudowrite.com/)                             |
-| [TextCortex 限次](https://textcortex.com/)                               |
-| [Blog Idea Generator 限次](https://www.usetopic.com/blog-idea-generator) |
+| 文字生成文本                                                              |
+|---------------------------------------------------------------------|
+| [Simplified](https://simplified.com/)                               |
+| [Jasper](https://www.jasper.ai/)                                    |
+| [Frase](https://www.frase.io/)                                      |
+| [EleutherAI](https://www.eleuther.ai/)                              |
+| [AI21 Labs](https://www.ai21.com/)                                  |
+| [Hub Spot](https://www.hubspot.com/)                                |
+| [InferKit](https://inferkit.com/)                                   |
+| [GooseAI](https://goose.ai/)                                        |
+| [Research AI](https://researchai.co/)                               |
+| [Writesonic](https://writesonic.com/)                               |
+| [Cohere](https://cohere.ai/)                                        |
+| [Chibi](https://chibi.ai/)                                          |
+| [Ideas AI](https://ideasai.com/)                                    |
+| [Copysmith](https://app.copysmith.ai/)                              |
+| [Flowrite](https://www.flowrite.com/)                               |
+| [Nichesss](https://nichesss.com/)                                   |
+| [Sudowrite](https://www.sudowrite.com/)                             |
+| [TextCortex](https://textcortex.com/)                               |
+| [Blog Idea Generator](https://www.usetopic.com/blog-idea-generator) |
 
-| 音频生成文本                                                  |
-|---------------------------------------------------------|
-| [Descript 限次](https://www.descript.com/)                |
-| [AssemblyAI 限次](https://www.assemblyai.com/)            |
-| [Whisper (OpenAI) 限次](https://openai.com/blog/whisper/) |
+| 音频生成文本                                               |
+|------------------------------------------------------|
+| [Descript](https://www.descript.com/)                |
+| [AssemblyAI](https://www.assemblyai.com/)            |
+| [Whisper (OpenAI)](https://openai.com/blog/whisper/) |
 
 | AI图像生成文本模型                                            |
 |-------------------------------------------------------|
@@ -154,28 +149,39 @@ https://sms-activate.org/cn/info/ChatGPT
 | [GPT-3 x Image Captions](https://www.auxiliary.tools) |
 
 ## Motion模型
-| 文字生成生成                                                                       |
-|------------------------------------------------------------------------------|
-| [Tree 限次](https://tree.industries/)                                          |
-| [MDM: Human Motion Diffusion Model 限次](https://guytevet.github.io/mdm-page/) |
+| 文字生成生成                                                                    |
+|---------------------------------------------------------------------------|
+| [Tree](https://tree.industries/)                                          |
+| [MDM: Human Motion Diffusion Model](https://guytevet.github.io/mdm-page/) |
 
 ## 代码模型
-| 文字生成代码                                                           |
-|------------------------------------------------------------------|
-| [replitGhostwriter code 限次](https://replit.com/site/ghostwriter) |
-| [Github copilot 限次](https://github.com/features/copilot)         |
+| 文字生成代码                                                        |
+|---------------------------------------------------------------|
+| [replitGhostwriter code](https://replit.com/site/ghostwriter) |
+| [Github copilot](https://github.com/features/copilot)         |
 
 ## NFT模型
-| 文字生成代码                              |
-|-------------------------------------|
-| [LensAI 限次](https://www.lens.xyz/)  |
+| 文字生成代码                          |
+|---------------------------------|
+| [LensAI](https://www.lens.xyz/) |
 
 ## 3D模型
-| 文本生成3D模型                                           |
-|----------------------------------------------------|
-| [DreamFusion 限次](https://dreamfusion3d.github.io/) |
-| [CLIP-Mesh 限次](https://www.nasir.lol/clipmesh)     |
-| [GET3D 限次](https://nv-tlabs.github.io/GET3D/)      |
+| 文本生成3D模型                                        |
+|-------------------------------------------------|
+| [DreamFusion](https://dreamfusion3d.github.io/) |
+| [CLIP-Mesh](https://www.nasir.lol/clipmesh)     |
+| [GET3D](https://nv-tlabs.github.io/GET3D/)      |
+
+## 模型数据
+|                                               |
+|-----------------------------------------------|
+| [人体模型](https://github.com/iPERDance/iPERCore) |
+
+# APP
+|                                       |
+|---------------------------------------|
+| [古诗](https://shipian.danieljia.work/) |
+
 
 # 其他
 | 其他                                                                                   |
@@ -184,7 +190,7 @@ https://sms-activate.org/cn/info/ChatGPT
 | [作诗 免费](https://www.aichpoem.net/#/shisanbai/poem)                                   |
 | [GeekChat 免费](https://chat.geekr.dev/)                                               |
 | [ChatGPT提示词 免费](https://www.aishort.top/)                                            |
-| [单词故事 付费](https://love-english.streamlit.app/)                                       |
+| [单词故事](https://love-english.streamlit.app/)                                          |
 | [PhotoRoom：擦除任何背景、对象](https://www.photoroom.com/)                                    |
 | [造梦师：只需一句话，让你的文字变成画作](https://printidea.art/)                                        |
 | [ARC Lab：一款提供照片修复、抠图、画质增强的在线工具](https://arc.tencent.com/zh/ai-demos/faceRestoration) |
@@ -203,10 +209,7 @@ https://sms-activate.org/cn/info/ChatGPT
 | [speech from brain(metaAI)](https://ai.facebook.com/blog/ai-speech-brain-activity/)          |
 | [Non-invasive brain recordings](https://www.biorxiv.org/content/10.1101/2022.09.29.509744v1) |
 
-## 生成图片
-[openai dall 需要OpenAI KEY](https://openai.com/product/dall-e-2)
-
-## 图片视频修复
+# 图片视频修复
 [视频修复 开源](https://github.com/sczhou/CodeFormer)
 ```text
 准备：
@@ -232,17 +235,3 @@ pip3 install -r requirements.txt -q
 pip3 install -q gradio
 python basicsr/setup.py develop
 ```
-
-## 生成视频
-[metademolab 简约视频](https://sketch.metademolab.com/canvas)
-[remotion](https://github.com/remotion-dev/remotion)
-[ChatPaper](https://github.com/kaixindelele/ChatPaper)
-
-## 模型
-[人体模型](https://github.com/iPERDance/iPERCore)
-
-# APP
-|                                       |
-|---------------------------------------|
-| [古诗](https://shipian.danieljia.work/) |
-
