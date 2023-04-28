@@ -4,7 +4,7 @@ https://sms-activate.org/cn/info/ChatGPT
 
 --- 没有特殊说明均收费 ---
 ## ChatPGT
-| https://www.githubs.cn/trending                                              |
+|                                                                              |
 |------------------------------------------------------------------------------|
 | [ChatGPT 3.5 【OpenAI KEY】](https://huggingface.co/cerebras/Cerebras-GPT-13B) |
 | [ChatGPT 4 【OpenAI KEY】](https://github.com/nomic-ai/gpt4all)                |
