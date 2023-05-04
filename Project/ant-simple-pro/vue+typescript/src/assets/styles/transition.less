@@ -1,0 +1,111 @@
+@fade-linear-transition: opacity 0.3s linear;
+@md-fade-transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+
+.com-fade-in-linear-enter-active,
+.com-fade-in-linear-leave-active {
+  transition: @fade-linear-transition;
+}
+
+.com-fade-in-linear-enter-from,
+.com-fade-in-linear-leave-to {
+  opacity: 0;
+}
+
+.com-fade-in-enter-active,
+.com-fade-in-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.com-fade-in-enter-from,
+.com-fade-in-leave-to {
+  opacity: 0;
+}
+
+.com-zoom-in-center-enter-active,
+.com-zoom-in-center-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.com-zoom-in-center-enter-from,
+.com-zoom-in-center-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.com-zoom-in-top-enter-active,
+.com-zoom-in-top-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: @md-fade-transition;
+  transform-origin: center top;
+}
+
+.com-zoom-in-top-enter-from,
+.com-zoom-in-top-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+// .com-zoom-in-top-enter-active,
+// .com-zoom-in-top-leave-active {
+//   opacity: 1;
+//   transform: scaleY(1);
+//   transition: @md-fade-transition;
+//   transform-origin: center top;
+// }
+// .com-zoom-in-top-enter,
+// .com-zoom-in-top-leave-active {
+//   opacity: 0;
+//   transform: scaleY(0);
+// }
+
+.com-zoom-in-bottom-enter-active,
+.com-zoom-in-bottom-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: @md-fade-transition;
+  transform-origin: center bottom;
+}
+
+.com-zoom-in-bottom-enter,
+.com-zoom-in-bottom-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.com-zoom-in-left-enter-active,
+.com-zoom-in-left-leave-active {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: @md-fade-transition;
+  transform-origin: top left;
+}
+
+.com-zoom-in-left-enter,
+.com-zoom-in-left-leave-active {
+  opacity: 0;
+  transform: scale(0.45, 0.45);
+}
+
+.collapse-transition {
+  transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
+}
+
+.horizontal-collapse-transition {
+  transition: 0.3s width ease-in-out, 0.3s padding-left ease-in-out, 0.3s padding-right ease-in-out;
+}
+
+.com-list-enter-active,
+.com-list-leave-active {
+  transition: all 1s;
+}
+
+.com-list-enter,
+.com-list-leave-active {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.com-opacity-transition {
+  transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
