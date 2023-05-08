@@ -9,12 +9,8 @@
 
 https://sub.pmsub.me/clash.yaml
 
-【Proxy 手动选择】https://raw.githubusercontent.com/openrunner/clash-freenode/main/clash.yaml
-
 # V2ray
 【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/v2ray/Geekshare.txt
-
-【Proxy】https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
 
 【主力】https://tt.vg/freev2 【备用】https://freefq.neocities.org/free.txt
 
@@ -31,10 +27,6 @@ https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
 
 https://github.com/tbbatbb/Proxy
 
-https://github.com/openRunner/clash-freenode \
-【备用】https://cdn.jsdelivr.net/gh/openrunner/clash-freenode@main/clash.yaml \
-【备用】https://cdn.statically.io/gh/openrunner/clash-freenode/main/clash.yaml
-
 https://github.com/freefq/free
 
 https://github.com/Pawdroid/Free-servers
@@ -48,8 +40,8 @@ https://github.com/anaer/Sub \
 【备用】https://raw.kgithub.com/anaer/Sub/main/clash.yaml \
 【备用】https://raw.iqiq.io/anaer/Sub/main/clash.yaml
 
-# 每日更新
-| 综合订阅地址                                                                             |
+# 论坛
+| 综合订阅                                                                               |
 |------------------------------------------------------------------------------------|
 | [机场推荐](https://jichangtuijian.com/)                                                |
 | [Clash Node](https://clashnode.xyz/)                                               |
@@ -61,22 +53,20 @@ https://github.com/anaer/Sub \
 | [爱机场](https://aijichang.com/)                                                      |
 | [666vpn](http://666vpn.com/)                                                       |
 
-| 每日节点                                                   |
-|--------------------------------------------------------|
-| [灯云](https://58dengyun.com/)                           |
-| [一灯不是和尚](https://iyideng.vip/)                         |
-| [选梯子](https://www.xuantizi.com/)                       |
-| [科学上网](https://www.oaoy.net/)                          |
-| [vps90](http://vps90.com/vps/kxsw/)                    |
-| [freefq](https://freefq.com/)                          |
-| [长风分享](https://www.cfmem.com/)                         |
-| [v2rayshare](https://v2rayshare.com/)                  |
-| [nodefree](https://nodefree.org/)                      |
-| [即刻学习](https://www.jkxuexi.com/)                       |
-| [玉豆分享](https://www.yudou66.com/)                       |
-| [加速器123](https://ssr.bettershop.club/)                 |
-| [freenode](https://freenode.me/)                       |
-| [clash](https://www.clash-gaming.com/)                 |
-| [clashnode](https://clashnode.com/)                    |
-
-# 其他
+| 每日一更                                   |
+|----------------------------------------|
+| [灯云](https://58dengyun.com/)           |
+| [一灯不是和尚](https://iyideng.vip/)         |
+| [选梯子](https://www.xuantizi.com/)       |
+| [科学上网](https://www.oaoy.net/)          |
+| [vps90](http://vps90.com/vps/kxsw/)    |
+| [freefq](https://freefq.com/)          |
+| [长风分享](https://www.cfmem.com/)         |
+| [v2rayshare](https://v2rayshare.com/)  |
+| [nodefree](https://nodefree.org/)      |
+| [即刻学习](https://www.jkxuexi.com/)       |
+| [玉豆分享](https://www.yudou66.com/)       |
+| [加速器123](https://ssr.bettershop.club/) |
+| [freenode](https://freenode.me/)       |
+| [clash](https://www.clash-gaming.com/) |
+| [clashnode](https://clashnode.com/)    |
