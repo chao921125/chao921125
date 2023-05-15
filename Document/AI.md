@@ -20,7 +20,8 @@ https://sms-activate.org/cn/info/ChatGPT
 
 | 问答                                                               |
 |------------------------------------------------------------------|
-| [perplexity 👍推荐](https://www.perplexity.ai/)                    |
+| [perplexity 👍推荐 搜索引擎](https://www.perplexity.ai/)               |
+| [phind 👍推荐 搜索引擎](https://www.phind.com/)                        |
 | [engati 注册](https://www.engati.com/)                             |
 | [writesonic 注册](https://writesonic.com/chat)                     |
 | [chatbot 注册](https://www.chatbot.com/)                           |
