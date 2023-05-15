@@ -12,6 +12,10 @@ https://sms-activate.org/cn/info/ChatGPT
 | [Open-Assistant 【OpenAI KEY】](https://github.com/LAION-AI/Open-Assistant)    |
 | [gpt4all 笔记本可运行 【OpenAI KEY】](https://github.com/nomic-ai/gpt4all)           |
 ## ChatPGT平替 开源代码，自行搭建
+| 开源代码                                                   |
+|--------------------------------------------------------|
+| [聊天 免费](https://github.com/Yidadaa/ChatGPT-Next-Web)   |
+
 | 综合收录                                     |
 |------------------------------------------|
 | [导航 免费](https://github.com/xx025/carrot) |
