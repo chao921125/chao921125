@@ -24,7 +24,9 @@ https://www.waodown.com/category/mac
 | [CSDN 去除广告及关闭关注博主代码](./Document/CSDN.md)       |
 | [Markdown 语法](./Document/MarkDown.md)          |
 
-# [github 项目趋势](https://github.com/trending) [github 项目趋势中文社区](https://www.githubs.cn/trending)
+# [github 项目趋势](https://github.com/trending)
+# [github 项目趋势中文社区](https://www.githubs.cn/trending)
+# [LLM 项目趋势](https://huggingface.co/spaces)
 
 # 推荐网站
 [临时邮箱](https://www.linshi-email.com/) |
