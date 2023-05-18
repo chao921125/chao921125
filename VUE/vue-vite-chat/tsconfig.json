@@ -1,25 +1,64 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
-}
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "compilerOptions": {
+      "target": "esnext",
+      "useDefineForClassFields": true,
+      "module": "esnext",
+      "moduleResolution": "Node",
+      "strict": true,
+      "jsx": "preserve",
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "esModuleInterop": true,
+      "lib": [
+        "esnext",
+        "DOM",
+        "dom.iterable",
+        "scripthost"
+      ],
+      "skipLibCheck": true,
+  
+      "forceConsistentCasingInFileNames": true,
+      "strictFunctionTypes": false,
+      "allowJs": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "experimentalDecorators": true,
+      "incremental": false,
+      "noLib": false,
+      //    "jsx": "preserve",
+      "importHelpers": true,
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+      "types": [
+        "vite/client"
+      ],
+      "paths": {
+        "@/*": [
+          "src/*"
+        ],
+        "/@/*": ["src/*"],
+        "/#/*": ["class/*"]
+      },
+      "noImplicitAny": false,
+      "removeComments": true
+    },
+    "plugins": [],
+    "include": [
+          "src/**/*",
+          "types/**/*",
+          "build/**/*",
+          "auto-imports.d.ts",
+          "components.d.ts"
+      ],
+    "exclude": [
+          "**/*.js",
+      "node_modules",
+          "dist",
+          "tests"
+    ],
+    "references": [{ "path": "./tsconfig.node.json" }]
+  
+  }
+  
