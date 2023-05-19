@@ -14,6 +14,7 @@ https://sms-activate.org/cn/info/ChatGPT
 ## ChatPGT平替 开源代码，自行搭建
 | 开源代码                                                   |
 |--------------------------------------------------------|
+| [聊天 免费](https://github.com/Chanzhaoyu/chatgpt-web)     |
 | [聊天 免费](https://github.com/Yidadaa/ChatGPT-Next-Web)   |
 
 | 综合收录                                     |
