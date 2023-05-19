@@ -1,17 +1,18 @@
 # OpenAI 注册教程
-https://sms-activate.org/cn/info/ChatGPT
-综合整理：https://zl49so8lbq.feishu.cn/wiki/wikcnu3kSXr75E50w8PFefhJMYf
+[ChatGPT 手机号接收验证码网站](https://sms-activate.org/cn/info/ChatGPT)
+[ChatGPT 注册教程](https://zl49so8lbq.feishu.cn/wiki/wikcnu3kSXr75E50w8PFefhJMYf)
 
 --- 没有特殊说明均收费 ---
 ## ChatPGT
-| 模型及网站                                                                      |
+| 模型及网站                                                                        |
 |------------------------------------------------------------------------------|
 | [ChatGPT 3.5 【OpenAI KEY】](https://huggingface.co/cerebras/Cerebras-GPT-13B) |
 | [ChatGPT 4 【OpenAI KEY】](https://github.com/nomic-ai/gpt4all)                |
 | [MiniGPT 4 【OpenAI KEY】](https://github.com/Vision-CAIR/MiniGPT-4)           |
 | [Open-Assistant 【OpenAI KEY】](https://github.com/LAION-AI/Open-Assistant)    |
 | [gpt4all 笔记本可运行 【OpenAI KEY】](https://github.com/nomic-ai/gpt4all)           |
-https://github.com/THUDM/ChatGLM-6B
+| [ChatGLM-6B 【OpenAI KEY】](https://github.com/THUDM/ChatGLM-6B)               |
+
 ## ChatPGT平替 开源代码，自行搭建
 | 开源代码                                                   |
 |--------------------------------------------------------|
