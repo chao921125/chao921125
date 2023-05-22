@@ -11,4 +11,16 @@ export default defineConfig({
       "#": path.resolve(__dirname, "./types"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      css: { charset: false },
+      less: {
+        javascriptEnabled: true,
+      },
+      scss: {
+        javascriptEnabled: true,
+        additionalData: `@import "@/assets/styles/global.scss";`,
+      },
+    },
+  },
 });
