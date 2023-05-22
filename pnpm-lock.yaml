@@ -8,19 +8,19 @@ dependencies:
     specifier: ^1.1.1
     version: 1.1.1
   playwright:
-    specifier: ^1.32.3
-    version: 1.32.3
+    specifier: ^1.34.0
+    version: 1.34.0
   puppeteer:
-    specifier: ^19.11.0
-    version: 19.11.0(typescript@5.0.4)
+    specifier: ^20.2.1
+    version: 20.2.1(typescript@5.0.4)
   puppeteer-core:
-    specifier: ^19.11.0
-    version: 19.11.0(typescript@5.0.4)
+    specifier: ^20.2.1
+    version: 20.2.1(typescript@5.0.4)
 
 devDependencies:
   '@playwright/test':
-    specifier: ^1.32.3
-    version: 1.32.3
+    specifier: ^1.34.0
+    version: 1.34.0
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -48,20 +48,20 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /@playwright/test@1.32.3:
-    resolution: {integrity: sha512-BvWNvK0RfBriindxhLVabi8BRe3X0J9EVjKlcmhxjg4giWBD/xleLcg2dz7Tx0agu28rczjNIPQWznwzDwVsZQ==}
+  /@playwright/test@1.34.0:
+    resolution: {integrity: sha512-GIALJVODOIrMflLV54H3Cow635OfrTwOu24ZTDyKC66uchtFX2NcCRq83cLdakMjZKYK78lODNLQSYBj2OgaTw==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       '@types/node': 18.16.0
-      playwright-core: 1.32.3
+      playwright-core: 1.34.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /@puppeteer/browsers@0.5.0(typescript@5.0.4):
-    resolution: {integrity: sha512-Uw6oB7VvmPRLE4iKsjuOh8zgDabhNX67dzo8U/BB0f9527qx+4eeUs+korU98OhG5C4ubg7ufBgVi63XYwS6TQ==}
-    engines: {node: '>=14.1.0'}
+  /@puppeteer/browsers@1.3.0(typescript@5.0.4):
+    resolution: {integrity: sha512-an3QdbNPkuU6qpxpbssxAbjRLJcF+eP4L8UqIY3+6n0sbaVxw5pz7PiCLy9g32XEZuoamUlV5ZQPnA6FxvkIHA==}
+    engines: {node: '>=16.0.0'}
     hasBin: true
     peerDependencies:
       typescript: '>= 4.7.4'
@@ -71,6 +71,7 @@ packages:
     dependencies:
       debug: 4.3.4
       extract-zip: 2.0.1
+      http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
       progress: 2.0.3
       proxy-from-env: 1.1.0
@@ -80,6 +81,11 @@ packages:
       yargs: 17.7.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@tootallnate/once@2.0.0:
+    resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
+    engines: {node: '>= 10'}
     dev: false
 
   /@types/node@18.16.0:
@@ -176,12 +182,12 @@ packages:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
     dev: false
 
-  /chromium-bidi@0.4.7(devtools-protocol@0.0.1107588):
-    resolution: {integrity: sha512-6+mJuFXwTMU6I3vYLs6IL8A1DyQTPjCfIL971X0aMPVGRbGnNfl6i6Cl0NMbxi2bRYLGESt9T2ZIMRM5PAEcIQ==}
+  /chromium-bidi@0.4.9(devtools-protocol@0.0.1120988):
+    resolution: {integrity: sha512-u3DC6XwgLCA9QJ5ak1voPslCmacQdulZNCPsI3qNXxSnEcZS7DFIbww+5RM2bznMEje7cc0oydavRLRvOIZtHw==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
-      devtools-protocol: 0.0.1107588
+      devtools-protocol: 0.0.1120988
       mitt: 3.0.0
     dev: false
 
@@ -249,8 +255,8 @@ packages:
       ms: 2.1.2
     dev: false
 
-  /devtools-protocol@0.0.1107588:
-    resolution: {integrity: sha512-yIR+pG9x65Xko7bErCUSQaDLrO/P1p3JUzEk7JCU4DowPcGHkTGUGQapcfcLc4qj0UaALwZ+cr0riFgiqpixcg==}
+  /devtools-protocol@0.0.1120988:
+    resolution: {integrity: sha512-39fCpE3Z78IaIPChJsP6Lhmkbf4dWXOmzLk/KFTdRkNk/0JymRIfUynDVRndV9HoDz8PyalK1UH21ST/ivwW5Q==}
     dev: false
 
   /emoji-regex@8.0.0:
@@ -326,6 +332,17 @@ packages:
   /has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
+    dev: false
+
+  /http-proxy-agent@5.0.0:
+    resolution: {integrity: sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@tootallnate/once': 2.0.0
+      agent-base: 6.0.2
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /https-proxy-agent@5.0.1:
@@ -458,18 +475,17 @@ packages:
     resolution: {integrity: sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==}
     dev: false
 
-  /playwright-core@1.32.3:
-    resolution: {integrity: sha512-SB+cdrnu74ZIn5Ogh/8278ngEh9NEEV0vR4sJFmK04h2iZpybfbqBY0bX6+BLYWVdV12JLLI+JEFtSnYgR+mWg==}
+  /playwright-core@1.34.0:
+    resolution: {integrity: sha512-fMUY1+iR6kYbJF/EsOOqzBA99ZHXbw9sYPNjwA4X/oV0hVF/1aGlWYBGPVUEqxBkGANDKMziYoOdKGU5DIP5Gg==}
     engines: {node: '>=14'}
-    hasBin: true
 
-  /playwright@1.32.3:
-    resolution: {integrity: sha512-h/ylpgoj6l/EjkfUDyx8cdOlfzC96itPpPe8BXacFkqpw/YsuxkpPyVbzEq4jw+bAJh5FLgh31Ljg2cR6HV3uw==}
+  /playwright@1.34.0:
+    resolution: {integrity: sha512-fh+Q7fw7fPg2jSjDUNgo46PbKNTKQCYbeYXXbMm1hTbhPc0V62WM6h/pqWLTW0tqjfu8TCLdx7tECd/2AbYaHg==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.32.3
+      playwright-core: 1.34.0
     dev: false
 
   /process-nextick-args@2.0.1:
@@ -492,26 +508,21 @@ packages:
       once: 1.4.0
     dev: false
 
-  /puppeteer-core@19.11.0(typescript@5.0.4):
-    resolution: {integrity: sha512-UBlwpyTEKcaOt7bIWWhlhIXDlFbR1wVBcxpMibBhImwagkwDB8ld8ehT5dOdfKIcCHjxXzVEaMtgDKzfwcf7Rg==}
-    engines: {node: '>=14.14.0'}
+  /puppeteer-core@20.2.1(typescript@5.0.4):
+    resolution: {integrity: sha512-HmNMcL+g9ght0nCzS5BmEvom2IVhp1/xhlQ9O+fmihQx0EYwYUqgCQhs8Hbv7IapiqKhahKCC8PKfCNTXXsKbQ==}
+    engines: {node: '>=16.0.0'}
     peerDependencies:
       typescript: '>= 4.7.4'
     peerDependenciesMeta:
       typescript:
         optional: true
     dependencies:
-      '@puppeteer/browsers': 0.5.0(typescript@5.0.4)
-      chromium-bidi: 0.4.7(devtools-protocol@0.0.1107588)
+      '@puppeteer/browsers': 1.3.0(typescript@5.0.4)
+      chromium-bidi: 0.4.9(devtools-protocol@0.0.1120988)
       cross-fetch: 3.1.5
       debug: 4.3.4
-      devtools-protocol: 0.0.1107588
-      extract-zip: 2.0.1
-      https-proxy-agent: 5.0.1
-      proxy-from-env: 1.1.0
-      tar-fs: 2.1.1
+      devtools-protocol: 0.0.1120988
       typescript: 5.0.4
-      unbzip2-stream: 1.4.3
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -520,16 +531,13 @@ packages:
       - utf-8-validate
     dev: false
 
-  /puppeteer@19.11.0(typescript@5.0.4):
-    resolution: {integrity: sha512-xE0BTOFIR/fEXEHQNfGGMWGr3IQBB2AY760K+pE11kjBKe5P0jivzWG1LHr0TA1/xiHxu9nAhQzv5zh2Dy0YEQ==}
+  /puppeteer@20.2.1(typescript@5.0.4):
+    resolution: {integrity: sha512-XWHlNCJf1u+i5AzakXj1PlNOTYcFcAwAunQj/urFKzKaZ7WTChlAo710W+TlEE2SJKshEZTwilMDDkVvwadLTQ==}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 0.5.0(typescript@5.0.4)
+      '@puppeteer/browsers': 1.3.0(typescript@5.0.4)
       cosmiconfig: 8.1.3
-      https-proxy-agent: 5.0.1
-      progress: 2.0.3
-      proxy-from-env: 1.1.0
-      puppeteer-core: 19.11.0(typescript@5.0.4)
+      puppeteer-core: 20.2.1(typescript@5.0.4)
     transitivePeerDependencies:
       - bufferutil
       - encoding
