@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: length
+Version: 1.0.1
+Summary: A package to count the number of digits
+Home-page: https://github.com/Ratheshprabakar/length
+Author: Rathesh Prabakar
+Author-email: ratheshprabakar@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.2
+Description-Content-Type: text/markdown
+
+
+A simple package to find the number of digits in the given number.
+
+## How to install
+
+```
+pip install length
+```
+
+## How to use
+
+Below example will help you
+
+```
+from length import length
+l = 13412
+length.nlength(l)	# returns the digit count in the given number
+
+```
+
+
+
+
+

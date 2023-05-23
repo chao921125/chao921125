@@ -1,7 +1,9 @@
 # 工具箱网站
-|                                    |
-|------------------------------------|
-| [集知盒子](https://www.jizhihezi.com/) |
+|                                          |
+|------------------------------------------|
+| [集知盒子](https://www.jizhihezi.com/)       |
+| [1](http://www.mobanwang.com/)           |
+| [2](https://www.templatemonster.com/cn/) |
 
 # OCR
 | 图片识别文字                                    |

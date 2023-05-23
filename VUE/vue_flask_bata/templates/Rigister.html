@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<h1>这是注册组件{{username}} </h1>
+<h1>{{ book | join(" ") }}</h1>
+<form action="/User/Rigister" method="POST">
+    <table>
+        <tr>
+            <td>
+                邮箱 :
+            </td>
+            <td>
+                <input type="text" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                用户名 :
+            </td>
+            <td>
+                <input type="text" name="user">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                密码 :
+            </td>
+            <td>
+                <input type="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                确认密码 :
+            </td>
+            <td>
+                <input type="password" name="pwdcomfirm">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>注册</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

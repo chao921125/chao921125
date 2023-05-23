@@ -1,0 +1,125 @@
+-- travel.`Path` definition
+
+CREATE TABLE `Path` (
+  `pathName` varchar(50) DEFAULT NULL,
+  `pathId` int(4) NOT NULL,
+  PRIMARY KEY (`pathId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Spot definition
+
+CREATE TABLE `Spot` (
+  `spotId` int(11) NOT NULL,
+  `spotName` varchar(50) DEFAULT NULL,
+  `spotImage` varchar(50) DEFAULT NULL,
+  `spotPrice` decimal(18,3) DEFAULT NULL,
+  `spotIntroduce` varchar(100) DEFAULT NULL,
+  `spotPurchasedNumber` int(4) DEFAULT NULL,
+  `spotTime1` varchar(50) DEFAULT NULL,
+  `spotTime2` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`spotId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Tag definition
+
+CREATE TABLE `Tag` (
+  `tagId` int(4) NOT NULL,
+  `tagName` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`tagId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.`User` definition
+
+CREATE TABLE `User` (
+  `userName` varchar(50) DEFAULT NULL,
+  `userNickName` varchar(50) DEFAULT NULL,
+  `uerPassword` varchar(100) DEFAULT NULL,
+  `userPhone` varchar(13) DEFAULT NULL,
+  `userId` int(4) NOT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.City definition
+
+CREATE TABLE `City` (
+  `cityId` int(4) NOT NULL AUTO_INCREMENT,
+  `cityName` varchar(50) DEFAULT NULL,
+  `spotId` int(4) DEFAULT NULL,
+  PRIMARY KEY (`cityId`),
+  KEY `City_FK` (`spotId`),
+  CONSTRAINT `City_FK` FOREIGN KEY (`spotId`) REFERENCES `Spot` (`spotId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Collection definition
+
+CREATE TABLE `Collection` (
+  `collectionId` int(4) NOT NULL AUTO_INCREMENT,
+  `userId` int(4) DEFAULT NULL,
+  `spotId` int(4) DEFAULT NULL,
+  PRIMARY KEY (`collectionId`),
+  KEY `Collection_FK` (`userId`),
+  KEY `Collection_FK_1` (`spotId`),
+  CONSTRAINT `Collection_FK` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`),
+  CONSTRAINT `Collection_FK_1` FOREIGN KEY (`spotId`) REFERENCES `Spot` (`spotId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Path_Spot definition
+
+CREATE TABLE `Path_Spot` (
+  `pathSpotId` int(4) NOT NULL AUTO_INCREMENT,
+  `pathId` int(4) DEFAULT NULL,
+  `spotId` int(4) DEFAULT NULL,
+  PRIMARY KEY (`pathSpotId`),
+  KEY `Path_Spot_FK` (`spotId`),
+  KEY `Path_Spot_FK_1` (`pathId`),
+  CONSTRAINT `Path_Spot_FK` FOREIGN KEY (`spotId`) REFERENCES `Spot` (`spotId`),
+  CONSTRAINT `Path_Spot_FK_1` FOREIGN KEY (`pathId`) REFERENCES `Path` (`pathId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Purchase definition
+
+CREATE TABLE `Purchase` (
+  `purchaseId` int(4) NOT NULL,
+  `userId` int(4) DEFAULT NULL,
+  `purchaseDate` date DEFAULT NULL,
+  `purchaseTime` varchar(50) DEFAULT NULL,
+  `purchaseNumber` int(4) DEFAULT NULL,
+  PRIMARY KEY (`purchaseId`),
+  KEY `Purchase_FK` (`userId`),
+  CONSTRAINT `Purchase_FK` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Purchase_Spot definition
+
+CREATE TABLE `Purchase_Spot` (
+  `purchaseSpotId` int(11) NOT NULL AUTO_INCREMENT,
+  `purchaseId` int(4) DEFAULT NULL,
+  `spotId` int(4) DEFAULT NULL,
+  PRIMARY KEY (`purchaseSpotId`),
+  KEY `purchase_spot_FK` (`spotId`),
+  KEY `purchase_spot_FK_1` (`purchaseId`),
+  CONSTRAINT `purchase_spot_FK` FOREIGN KEY (`spotId`) REFERENCES `Spot` (`spotId`),
+  CONSTRAINT `purchase_spot_FK_1` FOREIGN KEY (`purchaseId`) REFERENCES `Purchase` (`purchaseId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- travel.Tag_Spot definition
+
+CREATE TABLE `Tag_Spot` (
+  `tagSpotId` int(4) NOT NULL AUTO_INCREMENT,
+  `tagId` int(4) DEFAULT NULL,
+  `spotId` int(4) DEFAULT NULL,
+  PRIMARY KEY (`tagSpotId`),
+  KEY `Tag_Spot_FK` (`spotId`),
+  KEY `Tag_Spot_FK_1` (`tagId`),
+  CONSTRAINT `Tag_Spot_FK` FOREIGN KEY (`spotId`) REFERENCES `Spot` (`spotId`),
+  CONSTRAINT `Tag_Spot_FK_1` FOREIGN KEY (`tagId`) REFERENCES `Tag` (`tagId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

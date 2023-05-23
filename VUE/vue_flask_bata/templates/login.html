@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<form action="/User/Login" method="POST">
+    <table>
+        <tr>
+            <td>
+                邮箱 :
+            </td>
+            <td>
+                <input type="text" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                密码 :
+            </td>
+            <td>
+                <input type="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {% for message in get_flashed_messages() %}
+                <div style="background-color: red">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>登录</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
