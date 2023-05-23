@@ -1,0 +1,57 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "大连圣亚海洋世界(AAAA景区)",
+    "categoryList": [
+      {
+        "title": "门票+导览",
+        "tag": "title",
+        "children": [
+          {
+            "title": "门票+电子讲解",
+            "tag": "sub-title",
+            "children": [
+              {
+                "title": "成人票",
+                "price": "39.6",
+                "tag": "ticket"
+              }
+            ]
+          },
+          {
+            "title": "门票+人工讲解",
+            "tag": "sub-title",
+            "children": [
+              {
+                "title": "成人票",
+                "price": "64",
+                "tag": "ticket"
+              },
+              {
+                "title": "优待票",
+                "price": "69",
+                "tag": "ticket"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "门票+项目+导览",
+        "tag": "title",
+        "children": [
+          {
+            "成人票": "118",
+            "tag": "ticket"
+          }
+        ]
+      },
+      {
+        "title": "儿童票"
+      },
+      {
+        "title": "特惠票"
+      }
+    ]
+  }
+}

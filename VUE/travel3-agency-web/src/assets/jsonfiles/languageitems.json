@@ -1,0 +1,44 @@
+﻿[
+  {
+    "id": 1,
+    "value": "nothing",
+    "text": " ",
+    "url": "../assets/images/flags/United_Kingdom.jpg"
+  },
+  {
+    "id": 2,
+    "value": "United_Kingdom",
+    "text": "United_Kingdom",
+    "url": "../assets/images/flags/United_Kingdom.jpg"
+  },
+  {
+    "id": 3,
+    "value": "Germany",
+    "text": "Germany",
+    "url": "../assets/images/flags/Germany.jpg"
+  },
+  {
+    "id": 4,
+    "value": "United_States",
+    "text": "United_States",
+    "url": "../assets/images/flags/USA.gif"
+  },
+  {
+    "id": 5,
+    "value": "Jamaica",
+    "text": "Jamaica",
+    "url": "../assets/images/flags/Jamaica.jpg"
+  },
+  {
+    "id": 6,
+    "value": "France",
+    "text": "France",
+    "url": "../assets/images/flags/France.jpg"
+  },
+  {
+    "id": 7,
+    "value": "Spain",
+    "text": "Spain",
+    "url": "../assets/images/flags/Spain.jpg"
+  }
+]

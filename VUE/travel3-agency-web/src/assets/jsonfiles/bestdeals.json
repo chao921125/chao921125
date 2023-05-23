@@ -1,0 +1,82 @@
+﻿[
+  {
+    "id": "1",
+    "url": "../assets/images/travel-agency-website-grand-canyon-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$399 - $499",
+    "month": "october",
+    "season": "winter",
+    "location": "london",
+    "rating": "three"
+  },
+  {
+    "id": "2",
+    "url": "../assets/images/travel-agency-website-dubai-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$399 - $499",
+    "month": "june",
+    "season": "summer",
+    "location": "dubai",
+    "rating": "one"
+  },
+  {
+    "id": "3",
+    "url": "../assets/images/travel-agency-website-gold-coast-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$999 +",
+    "month": "september",
+    "season": "autumn",
+    "location": "paris",
+    "rating": "four"
+  },
+  {
+    "id": "4",
+    "url": "../assets/images/travel-agency-website-singapore-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$499 - $599",
+    "month": "november",
+    "season": "winter",
+    "location": "madrid",
+    "rating": "four"
+  },
+  {
+    "id": "5",
+    "url": "../assets/images/travel-agency-website-grand-canyon-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$499 - $599",
+    "month": "april",
+    "season": "spring",
+    "location": "london",
+    "rating": "three"
+  },
+  {
+    "id": "6",
+    "url": "../assets/images/travel-agency-website-toronto-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$599 - $699",
+    "month": "july",
+    "season": "summer",
+    "location": "rome",
+    "rating": "five"
+  },
+  {
+    "id": "7",
+    "url": "../assets/images/travel-agency-website-spanish-villa-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$499 - $599",
+    "month": "june",
+    "season": "summer",
+    "location": "madrid",
+    "rating": "five"
+  },
+  {
+    "id": "8",
+    "url": "../assets/images/travel-agency-website-taj-mahal-image.jpg",
+    "title": "Lorem ipsum dolor sit amet.",
+    "price": "$699 - $999",
+    "month": "april",
+    "season": "spring",
+    "location": "dubai",
+    "rating": "two"
+  }
+]

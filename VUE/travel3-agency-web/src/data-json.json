@@ -1,0 +1,267 @@
+﻿{
+  "locations": [
+    {
+      "id": 1,
+      "title": "london"
+    },
+    {
+      "id": 2,
+      "title": "paris"
+    },
+    {
+      "id": 3,
+      "title": "madrid"
+    },
+    {
+      "id": 4,
+      "title": "rome"
+    },
+    {
+      "id": 5,
+      "title": "dubai"
+    },
+    {
+      "id": 6,
+      "title": "tajmahal"
+    },
+    {
+      "id": 7,
+      "title": "singapore"
+    },
+    {
+      "id": 8,
+      "title": "toronto"
+    },
+    {
+      "id": 9,
+      "title": "goldcoast"
+    }
+  ],
+  "prices": [
+    {
+      "id": 1,
+      "title": "$399 - $499"
+    },
+    {
+      "id": 2,
+      "title": "$499 - $599"
+    },
+    {
+      "id": 3,
+      "title": "$599 - $699"
+    },
+    {
+      "id": 4,
+      "title": "$699 - $999"
+    },
+    {
+      "id": 5,
+      "title": "$999 +"
+    }
+  ],
+  "ratings": [
+    {
+      "id": 1,
+      "title": "one"
+    },
+    {
+      "id": 2,
+      "title": "two"
+    },
+    {
+      "id": 3,
+      "title": "three"
+    },
+    {
+      "id": 4,
+      "title": "four"
+    },
+    {
+      "id": 5,
+      "title": "five"
+    }
+  ],
+  "seasons": [
+    {
+      "id": 1,
+      "title": "winter"
+    },
+    {
+      "id": 2,
+      "title": "summer"
+    },
+    {
+      "id": 3,
+      "title": "spring"
+    },
+    {
+      "id": 4,
+      "title": "autumn"
+    }
+  ],
+  "languageselectitems": [
+    {
+      "id": 1,
+      "value": "default",
+      "text": " ",
+      "url": "United_Kingdom.jpg"
+    },
+    {
+      "id": 2,
+      "value": "United_Kingdom",
+      "text": "United_Kingdom",
+      "url": "United_Kingdom.jpg"
+    },
+    {
+      "id": 3,
+      "value": "Germany",
+      "text": "Germany",
+      "url": "Germany.jpg"
+    },
+    {
+      "id": 4,
+      "value": "United_States",
+      "text": "United_States",
+      "url": "USA.gif"
+    },
+    {
+      "id": 5,
+      "value": "Jamaica",
+      "text": "Jamaica",
+      "url": "Jamaica.jpg"
+    },
+    {
+      "id": 6,
+      "value": "France",
+      "text": "France",
+      "url": "France.jpg"
+    },
+    {
+      "id": 7,
+      "value": "Spain",
+      "text": "Spain",
+      "url": "Spain.jpg"
+    }
+  ],
+  "searchform":[
+    {
+      "locations":[
+        "Dubai",
+        "Jamaica",
+        "Paris",
+        "Spain",
+        "France",
+        "London",
+        "Rome",
+        "Madrid"
+      ]
+    },
+    {
+      "date":[
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ]
+    },
+    {
+      "month":[
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    },
+    {
+      "year":[
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    {
+     "duration":[
+        "Day Trip",
+        "Two Days",
+        "Three Days",
+        "Four Days",
+        "Five Days",
+        "Six Days",
+        "One Week",
+        "One Month",
+        "3 Months",
+        "Six Months"
+      ]
+    },
+    {
+     "board":[
+        "half",
+        "full"
+      ]
+    },
+    {
+      "star":[
+        "1 Star",
+        "2 Star",
+        "3 Star",
+        "4 Star",
+        "5 Star"
+      ]
+    },
+    {
+      "adults":[
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "children":[
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  ]
+}

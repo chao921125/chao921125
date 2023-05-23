@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset CSS */
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Montserrat', Sans-Serif;
+   font-size: 24px;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+   display: none;
+}
+
+body {
+	background: #EEEEEE;
+}
+
+.app {
+   @apply bg-white md:w-8/12 mx-auto lg:w-5/12 xl:w-4/12;
+}

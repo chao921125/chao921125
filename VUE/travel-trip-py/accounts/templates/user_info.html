@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户的基本信息</title>
+</head>
+<body>
+  <p>
+    当前登录的用户是：{{ user.username }}-{{ user.email }}
+  </p>
+  {% if user.is_authenticated %}
+  <a href="/accounts/user/logout/">退出登录</a>
+  {% endif %}
+</body>
+</html>
