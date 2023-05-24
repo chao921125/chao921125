@@ -1,7 +1,7 @@
 var models = require('../db')
 var express = require('express')
 var router = express.Router()
-var mysql = require('mysql')
+var mysql = require('mysql2')
 var $sql = require('../sql')
 const { purchase } = require('../sql')
 
