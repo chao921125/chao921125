@@ -1,4 +1,4 @@
-INSERT INTO travel1.City (cityName,cityImage) VALUES
+INSERT INTO travel.City (cityName,cityImage) VALUES
 	 ('武汉',NULL),
 	 ('杭州',NULL),
 	 ('大理',NULL),
@@ -7,15 +7,15 @@ INSERT INTO travel1.City (cityName,cityImage) VALUES
 	 ('乌鲁木齐',NULL),
 	 ('拉萨',NULL),
 	 ('青岛',NULL),
-	 ('北京',NULL);INSERT INTO travel1.Collection (userId,spotId) VALUES
+	 ('北京',NULL);INSERT INTO travel.Collection (userId,spotId) VALUES
 	 (1,2),
-	 (2,42);INSERT INTO travel1.`Path` (pathName) VALUES
+	 (2,42);INSERT INTO travel.`Path` (pathName) VALUES
 	 ('武汉三日游'),
 	 ('游历苏杭'),
 	 ('大理风情'),
 	 ('九天开出一成都,万户千门入画图'),
 	 ('行乌鲁木齐，看广袤世界'),
-	 ('北京欢迎您!');INSERT INTO travel1.Path_Spot (pathId,spotId) VALUES
+	 ('北京欢迎您!');INSERT INTO travel.Path_Spot (pathId,spotId) VALUES
 	 (1,1),
 	 (1,2),
 	 (1,3),
@@ -26,7 +26,7 @@ INSERT INTO travel1.City (cityName,cityImage) VALUES
 	 (2,11),
 	 (2,12),
 	 (2,14);
-INSERT INTO travel1.Path_Spot (pathId,spotId) VALUES
+INSERT INTO travel.Path_Spot (pathId,spotId) VALUES
 	 (2,30),
 	 (2,33),
 	 (3,15),
@@ -37,7 +37,7 @@ INSERT INTO travel1.Path_Spot (pathId,spotId) VALUES
 	 (4,23),
 	 (4,24),
 	 (4,25);
-INSERT INTO travel1.Path_Spot (pathId,spotId) VALUES
+INSERT INTO travel.Path_Spot (pathId,spotId) VALUES
 	 (4,26),
 	 (4,27),
 	 (4,29),
@@ -48,11 +48,11 @@ INSERT INTO travel1.Path_Spot (pathId,spotId) VALUES
 	 (6,50),
 	 (6,51),
 	 (6,52);
-INSERT INTO travel1.Path_Spot (pathId,spotId) VALUES
+INSERT INTO travel.Path_Spot (pathId,spotId) VALUES
 	 (6,53),
-	 (6,54);INSERT INTO travel1.Purchase (userId,purchaseDate,purchaseNumber,spotId) VALUES
+	 (6,54);INSERT INTO travel.Purchase (userId,purchaseDate,purchaseNumber,spotId) VALUES
 	 (1,'2022-03-02',1,1),
-	 (1,'2022-04-01',1,1);INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
+	 (1,'2022-04-01',1,1);INSERT INTO travel.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
 	 ('江汉路',NULL,50.00,'江汉路步行街是中国最长的步行街，有“天下第一步行街”的美誉，位于湖北省武汉市汉口中心地带，南起沿江大道，贯通中山大道、京汉大道，北至解放大道，全长1600米。宽度为10至25米，是武汉著名的百年商业老街，也是“武汉二十世纪建筑博物馆”。
 2016年12月28日，历时2年建设，改造后的江汉路及中山大道以全新面貌示人。
 中山大道4.7公里的改造范围中，最亮眼的工程是江汉路。始建于1906年的中山大道，距今110年历史，是老汉口最重要的商业交通干道。江汉路与地铁2号线、6号线贯通同步，百年中山大道化身集商业文化、风情等于一体的景观大道，逐步向国际著名商业大道看齐。',1,'6：00','24：00','湖北省武汉市','Jianghan Road',1),
@@ -91,7 +91,7 @@ Wuhan Happy Valley',1),
 西溪国家湿地公园位于市区西面，这里环境清幽、水道纵横，是城市中少有的天然湿地，有“杭州之肾”之称。
 西溪湿地分为东区和西区，东区包括一期和二期，西区为三期洪园景区。
 东区是西溪湿地自然风光的精华所在，坐船穿行于错综复杂的水道，是感受自然生态最佳的方式。',0,'7：30','18：00','浙江省杭州市','xixi national wetland park',2);
-INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
+INSERT INTO travel.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
 	 ('千岛湖风景区',NULL,130.00,'千岛湖位于浙江省杭州西郊的淳安县境内，东距杭州约129公里，西距黄山约130公里，是“杭州——千岛湖——黄山”这条名城、名湖、名山黄金旅游线上的一颗璀璨明珠。它与杭州西湖，安徽黄山、西递宏村，江西婺源、三清山，福建武夷山等国家级风景区构成了一个有机的旅游网络，千岛湖处于浙赣皖区域旅游合作体的中心部位，上海、江苏、安徽、江西、福建等多个地区大城市都可一路高速直达千岛湖。
 ',0,'8：00','15：30','浙江省杭州市','Qiandao Lake Scenic Spot',2),
 	 ('东湖风景区',NULL,50.00,'被誉为江南的“山水盆景”，和杭州西湖、嘉兴南湖并称浙江三大名湖。
@@ -130,7 +130,7 @@ INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchas
 由12座雪峰组成，雪山自然旅游资源丰富，可分为雪域、冰川、高山草甸、原始森林景观等。
 雪山气势磅礴，玲珑秀丽，随着时令的变化，在不同高度依次开放的杜鹃花组成了雪山最美的风景。
 景区有玉水寨、冰川公园、蓝月谷等景点，蓝月谷广场上还会有《印象·丽江》的大型实景演出',0,'8：00','18：30','云南省大理市','Yulong Snowmountain',3);
-INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
+INSERT INTO travel.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
 	 ('丽江古城',NULL,50.00,'茶马古道上最著名的城镇之一，已有八九百年历史。古城内木楼青瓦，古街石巷，小桥流水，站在古城东大街上，举头即可遥望玉龙雪山。
 中国以整座古城申报世界文化遗产获得成功的两座古城之一，是中国民居中具有鲜明特色和风格的类型之一。
 丽江古城在南宋时期初具规模，自明朝时丽江古城称“大研厢”，因其居丽江坝中心，四面青山环绕，一片碧野之间绿水萦回，形似一块碧玉大砚，故而得名。
@@ -169,7 +169,7 @@ INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchas
 	 ('太湖',NULL,0.00,'位于长江三角洲的南缘，地跨苏州、无锡、常州三市，包含众多风景区，是中国五大淡水湖之一。
 是平原水网区的大型浅水湖泊，湖区号称有48座岛、72座峰，湖光山色，相映生辉。
 主要的景色集中在苏州的西山景区和东山景区、无锡的蠡湖景区，尤以无锡的鼋头渚公园为代表。',0,'8：00','17：00','江苏省苏州市','Taihu',5);
-INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
+INSERT INTO travel.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
 	 ('平江路',NULL,0.00,'平江路是苏州的一条历史老街，一条沿河的小路，全长约1.6公里，苏州古城迄今为止保存最为完整的一个区域，堪称古城缩影。
 东西两侧有悬桥巷、大儒巷、中张家巷、大新桥巷等小巷，尤其东边还保留了多条水巷，水陆并行、河街相邻，很有江南水城的特色。
 街区留住了街巷的旧貌，哪怕是改造而成的酒吧、纪念品店、咖啡馆也不张扬，看起来好似民居。',0,'0：00','24：00','江苏省苏州市','Pingjiang road',5),
@@ -211,7 +211,7 @@ INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchas
 	 ('纳木错',NULL,60.00,'我国第三大咸水湖，世界上海拔最高的咸水湖，朝圣者心目中的圣地。
 从古至今香客不断，湖中五个岛屿被称作是五方佛的化身，被善男信女视为必去的神圣之地。
 每到藏历羊年，诸佛、菩萨、扩法神会在纳木错设坛大兴法会，信徒会前往纳木错转湖。',0,'0：00','24：00','西藏自治区拉萨市','Namtso',7);
-INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
+INSERT INTO travel.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
 	 ('大昭寺',NULL,85.00,'大昭寺藏语为“觉康”，是藏传佛教信徒朝圣的终点，大昭寺之神圣，并不逊于布达拉宫。
 当年松赞干布为纪念文成公主入藏而建；人们常说“先有大昭寺，后有拉萨城”。
 最大的看头是当年文成公主入蕃时带来的释迦摩尼十二岁等身像；拉萨之所以被称为“圣地”，就与这座佛像有关。
@@ -254,7 +254,7 @@ INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchas
 故宫内珍藏有大量珍贵文物，据统计有上百万件，占全国文物总数的六分之一。
 故宫需要从南到北参观，午门是唯一的入口，出口是东华门和神武门。
 逢春末夏初的时节，一簇簇素白的梨花，如云似雪，与故宫的红砖碧瓦，相映成趣。',0,'8：30','16：30','北京市','The Palace Museum',9);
-INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
+INSERT INTO travel.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchasedNumber,spotTime1,spotTime2,spotAddress,spotNameEng,cityId) VALUES
 	 ('天安门广场',NULL,0.00,'世界上最大的广场之一，位于长安街南侧，北京城的传统中轴线上。
 广场中心为人民英雄纪念碑，西侧是人民大会堂，东侧是国家博物馆，广场的对面，是天安门城楼。
 每天的清晨和傍晚，会举行升降旗仪式，对于初到北京的人来说，观看一场升降旗仪式是必做的事。
@@ -271,11 +271,11 @@ INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchas
 1860年英法联军将主要建筑烧为灰烬，如今游客前来只能在残骸中凭吊，寻找当年辉煌的帝国身影。
 绮春园中各处小景点众多，是一个小型水景园的大集合。如今，是圆明园每年一届的荷花节主场地。
 长春园以大型水景为主体，大家耳熟能详的“大水法”，即位于此。
-春季杏花盛开，就如同御制诗中所描绘——"春深花发，灿然如霞"。开花在3月-4月，全园均有分布，主要观赏地为花神庙、明春门及杏花春馆。',0,'7：00','17：30','北京市','Old Summer Palace',9);INSERT INTO travel1.Tag (tagName) VALUES
+春季杏花盛开，就如同御制诗中所描绘——"春深花发，灿然如霞"。开花在3月-4月，全园均有分布，主要观赏地为花神庙、明春门及杏花春馆。',0,'7：00','17：30','北京市','Old Summer Palace',9);INSERT INTO travel.Tag (tagName) VALUES
 	 ('人文景观'),
 	 ('自然景观'),
 	 ('休闲娱乐'),
-	 ('历史重现');INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+	 ('历史重现');INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (1,1),
 	 (1,2),
 	 (1,3),
@@ -286,7 +286,7 @@ INSERT INTO travel1.Spot (spotName,spotImage,spotPrice,spotIntroduce,spotPurchas
 	 (2,8),
 	 (1,9),
 	 (2,10);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (2,11),
 	 (2,12),
 	 (1,13),
@@ -297,7 +297,7 @@ INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
 	 (1,16),
 	 (3,16),
 	 (2,17);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (2,18),
 	 (2,19),
 	 (2,20),
@@ -308,7 +308,7 @@ INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
 	 (3,23),
 	 (1,24),
 	 (3,24);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (2,25),
 	 (1,26),
 	 (2,26),
@@ -319,7 +319,7 @@ INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
 	 (1,31),
 	 (3,31),
 	 (4,32);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (1,32),
 	 (2,33),
 	 (1,33),
@@ -330,7 +330,7 @@ INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
 	 (3,37),
 	 (2,38),
 	 (1,39);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (2,40),
 	 (1,41),
 	 (2,42),
@@ -341,7 +341,7 @@ INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
 	 (2,46),
 	 (1,47),
 	 (3,47);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (2,48),
 	 (1,49),
 	 (4,49),
@@ -352,11 +352,11 @@ INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
 	 (1,52),
 	 (2,52),
 	 (3,52);
-INSERT INTO travel1.Tag_Spot (tagId,spotId) VALUES
+INSERT INTO travel.Tag_Spot (tagId,spotId) VALUES
 	 (1,53),
 	 (4,53),
 	 (1,54),
-	 (4,54);INSERT INTO travel1.`User` (userNickName,userPassword,userPhone) VALUES
+	 (4,54);INSERT INTO travel.`User` (userNickName,userPassword,userPhone) VALUES
 	 ('张三','123','15772345780'),
 	 ('李四','123','15772345780'),
 	 ('王五','233','123456');
