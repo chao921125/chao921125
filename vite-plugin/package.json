@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin",
+  "description": "vite-plugin",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "serve": "npm run dev"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "resolutions": {},
+  "author": {
+    "name": "chao921125",
+    "email": "chao921125@gmail.com"
+  },
+  "homepage": "https://github.com/chao921125",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chao921125"
+  },
+  "bugs": {
+    "url": "https://github.com/chao921125"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.18.0",
+    "pnpm": ">=6.20.0",
+    "npm": ">=6.14.18",
+    "yarn": ">=3.0.0"
+  }
+}
