@@ -4,7 +4,6 @@
 [开源项目](./Project.md) |
 [CSS](./CSS.md) |
 [HTML](./HTML.md) |
-[Java](./Java.md) |
 [JS](./JS.md) |
 [MarkDown](./MarkDown.md) |
 [Mobile](./Mobile.md) |
