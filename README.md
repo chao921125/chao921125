@@ -1,5 +1,3 @@
-https://www.waodown.com/category/mac
-https://github.com/ynwynw/tourismvue-public.git
 # 面试知识总结
 |                               |
 |-------------------------------|
@@ -7,19 +5,16 @@ https://github.com/ynwynw/tourismvue-public.git
 | [知识总结](./Knowledge/README.md) |
 
 # 各种网站汇总
-|                                                |
+| [🔥](./Document/README.md)                     |
 |------------------------------------------------|
 | [🔥 全网最全 Open AI 汇总 ChatGPT](./Document/AI.md) |
 | [✈️ 开源项目 优秀推荐](./Document/Project.md)          |
 | [HTML5](./Document/HTML.md)                    |
 | [CSS3](./Document/CSS.md)                      |
 | [JS](./Document/JS.md)                         |
-| [VUE 最新](./Document/JS.md)                     |
-| [React 最新](./Document/JS.md)                   |
-| [Java 项目推荐](./Document/Java.md)                |
 | [Mobile](./Document/Mobile.md)                 |
 | [开发环境](./Document/DevelopTools.md)             |
-| [SSL 证书](./Document/SSL.md)                    |
+| [网站部署 SSL 托管](./Document/WebSite.md)           |
 | [网站推荐](./Document/System.md)                   |
 | [CSDN 去除广告及关闭关注博主代码](./Document/CSDN.md)       |
 | [Markdown 语法](./Document/MarkDown.md)          |
@@ -41,24 +36,6 @@ https://github.com/ynwynw/tourismvue-public.git
 [临时手短信](https://www.sms-receive-online.com/) \
 [TYB字幕下载](https://addyoutube.com/) \
 [电影、电视配乐](https://www.tunefind.com/)
-
-# 网站托管（免费）
-[wordpress](https://wordpress.com/zh-cn/)
-[wix](https://www.wix.com/)
-[weebly](https://www.weebly.com/)
-[awardspace](https://www.awardspace.com/)
-[infinityfree](https://www.infinityfree.net/)
-[freehostia](https://www.freehostia.com/)
-
-## 通过GitHub直接自动部署
-[vercel 限额](https://vercel.com/)
-[netlify 限额](https://app.netlify.com/)
-[cloudflare 限额](https://dash.cloudflare.com/)
-[SurgeHandbook 限额](https://github.com/FlintyLemming/SurgeHandbook)
-
-
-# 杂项
-[适合做页面背景动效的js](http://paperjs.org/)
 
 # 目录说明
 

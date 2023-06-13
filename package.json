@@ -28,7 +28,7 @@
     "npm"
   ],
   "author": "cc",
-  "license": "ISC",
+  "license": "BSD3",
   "engines": {
     "node": ">= 8.16.0",
     "npm": ">= 6.9.0"
