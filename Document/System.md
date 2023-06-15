@@ -1,18 +1,23 @@
+# 软件
+|                                                     |
+|-----------------------------------------------------|
+| [Win+Mac 哇哦菌](https://www.waodown.com/category/mac) |
+
 # 工具箱网站
-|                                          |
-|------------------------------------------|
-| [集知盒子](https://www.jizhihezi.com/)       |
-| [1](http://www.mobanwang.com/)           |
-| [1](https://www.templatemonster.com/cn/) |
-| [1](https://www.aigei.com/)              |
-| [1](https://www.lanrenmb.com/)           |
-| [1](http://www.bootstrapmb.com/)         |
-| [1](https://www.php.cn/)                 |
-| [1](http://www.baisheng999.com/)         |
-| [1](http://www.cssmoban.com/cssthemes/)  |
-| [2](https://templatemo.com/)             |
-| [2](https://html5up.net/)                |
-| [ym](https://www.bucuoba.com/)           |
+|                                            |
+|--------------------------------------------|
+| [集知盒子](https://www.jizhihezi.com/)         |
+| [模板王](http://www.mobanwang.com/)           |
+| [模板](https://www.templatemonster.com/cn/)  |
+| [爱给](https://www.aigei.com/)               |
+| [懒人模板](https://www.lanrenmb.com/)          |
+| [模板](http://www.bootstrapmb.com/)          |
+| [php中文网](https://www.php.cn/)              |
+| [网站模板库](http://www.baisheng999.com/)       |
+| [模板之家](http://www.cssmoban.com/cssthemes/) |
+| [模板](https://templatemo.com/)              |
+| [html5up](https://html5up.net/)            |
+| [不错吧](https://www.bucuoba.com/)            |
 
 # OCR
 | 图片识别文字                                    |

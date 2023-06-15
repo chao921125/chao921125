@@ -44,3 +44,17 @@
 
 [acme.sh](https://github.com/acmesh-official/acme.sh) |
 [gethttpsforfree](https://gethttpsforfree.com/)
+
+# 网站托管（免费）
+[wordpress](https://wordpress.com/zh-cn/)
+[wix](https://www.wix.com/)
+[weebly](https://www.weebly.com/)
+[awardspace](https://www.awardspace.com/)
+[infinityfree](https://www.infinityfree.net/)
+[freehostia](https://www.freehostia.com/)
+
+## 通过GitHub直接自动部署
+[vercel 限额](https://vercel.com/)
+[netlify 限额](https://app.netlify.com/)
+[cloudflare 限额](https://dash.cloudflare.com/)
+[SurgeHandbook 限额](https://github.com/FlintyLemming/SurgeHandbook)

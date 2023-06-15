@@ -7,3 +7,6 @@
 [LayUI 镜像](https://www.layuiweb.com/) \
 [EasyUI 官网](https://www.jeasyui.cn/) \
 []()
+
+# 杂项
+[适合做页面背景动效的js](http://paperjs.org/)
