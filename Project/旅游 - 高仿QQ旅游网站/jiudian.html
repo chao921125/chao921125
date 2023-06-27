@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>YY旅游</title>
+
+<link href="css/jiudian.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="nav">
+    <div class="navbox">
+  		<ul class="nav4">
+        	<li><a href="#">网购</a></li>
+            <li><a href="#">拍拍</a></li>
+            <li><a href="#">易讯</a></li>
+  		</ul>
+        <ul class="nav3">
+    	    <li><a href="#">登录</a></li>
+            <li><a href="#">个人中心<img src="images/01.png"></a></li>
+            <li><a href="#">微博</a></li>
+            <li><a href="#">手机版</a></li>
+        </ul>
+  </div>
+</div>
+<div class="logo">
+	<div class="logo1">
+		<img class="img1" src="images/011.png">
+    	<img class="img2" src="images/022.png">
+    </div>
+</div>
+<div class="mainbav">
+	<ul>
+    	<li><a  href="index.html">首页</a></li>
+        <li><a href="menpiao.html">景点门票</a></li>
+        <li><a class="currentA"  href="jiudian.html">酒店</a></li>
+        <li><a href="jipiao.html">机票</a></li>
+        <li><a href="zhoubianyou.html">周边游</a></li>
+        <li><a href="chujingyou.html">出境游</a></li>
+        <li><a href="shoujizhuanqu.html">手机专区</a></li>
+  </ul>
+</div>
+<div class="jiudian">
+	<div class="chaxun">
+    	<h1><img src="images/300.png" style="margin-left:24px;"/>&nbsp;&nbsp;&nbsp;&nbsp;国内酒店查询</h1>
+        <form>
+        	<ul>
+        		<li style="margin-top:12px;">入住城市：<input type="text" value="南昌" /></li>
+            	<li style="margin-top:12px;">入住日期：<input type="text" value="2014-12-30" /></li>
+            	<li style="margin-top:12px;">离店日期：<input type="text" value="2014-12-31" /></li>
+            	<li style="margin-top:12px;">酒店关键字：<input type="text" value="请输入酒店名称、品牌等" /></li>
+            	<li style="margin-top:12px;">价格范围：
+                	<select style="width:152px; height:22px;">
+                        <option>不限</option>
+                        <option value="11"></option>
+                        <option value="11"></option>
+                	</select>
+                </li>
+                <li><input type="submit" value="查询" style=" background:url(images/302.png); border:none; width:85px; height:32px;border-radius:5px; margin-top:30px; margin-right:70px;"/></li>
+            </ul>
+        </form>
+        <img src="images/303.png"  style=" margin-top:20px; margin-left:1px;"/>
+    </div>
+    <div class="lunbo">
+    	<div id="Adv">
+        	<div class="ImgList" style="background:url('images/305.jpg') center"></div>
+            <div class="ImgList" style="background:url('images/306.jpg') center"></div>
+            <div class="ImgList" style="background:url('images/307.jpg') center"></div>
+            <div class="ImgList" style="background:url('images/308.jpg') center"></div>
+            <ul class="button">
+                <li class="hover"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+           	</ul>
+        </div>
+        <div class="lunbo-1">
+        	<div class="hundongH1">
+                <h3>预定0支付，到店付款</h3>
+                <h3>返现高达50%，省钱就是这么简单！</h3>
+            </div>
+            <div class="gundong">
+				<!--<marquee direction="up"  scrolldelay="100" >
+                用户138**78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;获得&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返现<span style="color:#ff6600;">75元</span>
+               	用户158**48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;获得&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返现<span style="color:#ff6600;">81元</span>
+              	用户136**21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;获得&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返现<span style="color:#ff6600;">99元</span>
+                用户135**32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;获得&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返现<span style="color:#ff6600;">53元</span>
+               	用户139**58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;获得&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返现<span style="color:#ff6600;">33元</span>
+                </marquee>-->
+                <DIV id="demo" style="OVERFLOW: hidden;WIDTH: 180px; HEIGHT:65px;">
+						<div id="demo1">
+							<div id="Table1">
+                            	<p>用户138**78</p><p>获得</p><p>返现<span>75元</span></p>
+               					<p>用户158**48</p><p>获得</p><p>返现<span>81元</span></p>
+              					<p>用户136**21</p><p>获得</p><p>返现<span>99元</span></p>
+                				<p>用户135**32</p><p>获得</p><p>返现<span>53元</span></p>
+               					<p>用户139**58</p><p>获得</p> 返现<span style="color:#ff6600;">33元</span>
+                            </div>
+						</div>
+						<div id="demo2">
+						</div>
+					</DIV>
+					<SCRIPT>
+						var speed = 30;
+						demo2.innerHTML=demo1.innerHTML;
+						function Marquee(){
+							if(demo.scrollTop>=demo1.offsetHeight)// 向上滚动一圈结束了吗？
+								demo.scrollTop -= demo1.offsetHeight;// 减去demo1对象的实际长度，使demo的滚动高度向下移
+							else
+								demo.scrollTop++; // 向上滚动
+						}
+						  
+						var Mar=setInterval(Marquee,speed)
+						demo.onmouseover=function() {clearInterval(Mar)}
+						demo.onmouseout=function() {Mar=setInterval(Marquee,speed)}  
+					</SCRIPT>
+            </div>
+        </div>
+    </div>
+    <div class="saoyisao">
+    	<a href="#"><img src="images/309.png" /></a>
+    </div>
+</div>
+<style>
+.main{ width:980px; margin:0 auto; overflow:hidden;height:130px;}
+/*tehui*/
+.main .tehui{ width:308px; height:128px; border:#e2e2e4 solid 1px; float:left; margin-right:15px;}
+.tehui h3{ font-size:16px; color:#444444; line-height:40px; background-color:#f5f5f5;}
+.tehui p{ color:#325e7f; font-size:12px; margin-left:10px; margin-top:20px;}
+/*dibiao*/
+.main .dibiao{ width:653px;border:#e2e2e4 solid 1px; float:left; height:128px;}
+.dibiao h3{font-size:16px; color:#444444; line-height:40px; background-color:#f5f5f5;}
+.dibiao h3 form{ float:right; margin-top:10px;margin-right:10px;}
+.dibiao-1{ padding:10px 18px;}
+.dibiao-1 .tubiao{ text-align:center; color:#325e7f; font-size:12px; float:left; margin-right:21px;}
+.dibiao-1 .tubiao p{ line-height:25px;}
+/*content*/
+.content{ width:980px; margin:15px auto; overflow:hidden;}
+/*huodong*/
+.content .huodong{ width:308px;border:#e2e2e4 solid 1px;height:449px; float:left;}
+.huodong h3{ background-color:#f5f5f5; line-height:40px;font-size:16px; color:#444444;}
+.huodong div{ padding:20px 12px;}
+/*jingxuan*/
+.content .jingxuan{ float:right;}
+.jingxuan .liansuo{ margin-bottom:15px;border:#e2e2e4 solid 1px; height:238px;width:653px;}
+.jingxuan .shangwu{border:#e2e2e4 solid 1px; height:194px;width:653px;}
+/*liansuo*/
+.liansuo h3{background-color:#f5f5f5; line-height:40px;font-size:16px; color:#444444;}
+.liansuo h3 span{ color:#325e7f; margin-left:480px;}
+.liansuo div{ text-align:center; font-size:12px;color:#325e7f; line-height:24px; margin-right:20px;float:left; margin-bottom:15px; margin-top:15px;}
+/*shangwu*/
+.shangwu h3{background-color:#f5f5f5; line-height:40px;font-size:16px; color:#444444; overflow:hidden;}
+.shangwu h3 span{color:#000000; margin-left:240px; font-size:12px;}
+.shangwu h3 span b{ font-weight:normal; background-color:#ffb349; color:#FFFFFF;}
+.shangwu ul{ float:left; font-size:12px; color:#9d9d9d; line-height:22px;}
+.shangwu ul b{ margin-right:10px;}
+/*footer*/
+.footer{ width:980px; margin:0 auto; overflow:hidden;}
+.footer .footer-1{ width:308px; height:149px; background-color:#f5f5f5; border:#e2e2e4 solid 1px; float:left; margin-right:15px;}
+.footer .footer-2{ width:453px; height:149px; border:#e2e2e4 solid 1px; float:left; margin-right:15px;}
+.footer .footer-3{ width:183px; height:149px; border:#e2e2e4 solid 1px; float:left;}
+/*footer-1*/
+.footer-1{ text-align:center; line-height:25px;}
+/*footer-2*/
+.footer-2 h3{background-color:#f5f5f5; line-height:40px;font-size:16px; color:#444444;}
+.footer-2 h3 span{color:#325e7f; margin-left:185px; font-size:12px;}
+.footer-2 h2{ font-size:12px; color:#888888; margin-left:15px;}
+.footer-2 h2 span{ font-size:16px; color:#444444; margin-left:10px;}
+/*footer-3*/
+.footer-3 h3{background-color:#f5f5f5; line-height:40px;font-size:16px; color:#444444;}
+.footer-3 img{ margin-left:20px; margin-top:28px;}
+.footer-3 p{color:#595959;line-height:25px;font-size:12px; text-align:center;}
+</style>
+<div class="main">
+	<div class="tehui">
+    	<h3>&nbsp;&nbsp;&nbsp;&nbsp;特惠活动</h3>
+        <p>【特惠】2014机票节第二季，盛大开幕！</p>
+    </div>
+    <div class="dibiao">
+    	<h3>
+        	&nbsp;&nbsp;&nbsp;&nbsp;城市附近地标酒店
+            <form>
+            	<select>
+                <option>深圳</option>
+                <option>北京</option>
+                <option>上海</option>
+                </select>
+            </form>
+        </h3>
+        <div class="dibiao-1">
+        	<div class="tubiao">
+            	<img src="images/310.png" />
+                <p>机场/车站</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/311.png" />
+                <p>大学附近</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/312.png" />
+                <p>商业区</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/313.png" />
+                <p>中学附近</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/314.png" />
+                <p>行政区</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/315.png" />
+                <p>旅游景点</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/316.png" />
+                <p>展馆会场</p>
+            </div>
+            <div class="tubiao">
+            	<img src="images/317.png" />
+                <p>地铁站周边</p>
+            </div>
+            <div class="tubiao" style="margin-right:0px;">
+            	<img src="images/318.png" />
+                <p>医院附近</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+	<div class="huodong">
+    	<h3>&nbsp;&nbsp;&nbsp;&nbsp;精彩活动</h3>
+        <div>
+            <img src="images/319.png"  style="margin-bottom:15px;"/>
+            <img src="images/320.png"  style="margin-bottom:15px;"/>
+            <img src="images/321.png" />
+        </div>
+    </div>
+    <div class="jingxuan">
+    	<div class="liansuo">
+        	<h3>&nbsp;&nbsp;&nbsp;&nbsp;经济连锁酒店<span>更多>></span></h3>
+            <div style="margin-left:13px;">
+            	<img src="images/322.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>如家</p>
+            </div>
+            <div>
+            	<img src="images/323.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>7天</p>
+            </div>
+            <div>
+            	<img src="images/324.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>汉庭</p>
+            </div>
+            <div>
+            	<img src="images/325.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>莫泰168</p>
+            </div>
+            <div>
+            	<img src="images/326.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>速8</p>
+            </div>
+            <div>
+            	<img src="images/327.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>布丁</p>
+            </div>
+            <div>
+            	<img src="images/328.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>城市客栈</p>
+            </div>
+            <div>
+            	<img src="images/329.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>城市便捷</p>
+            </div>
+            <div style="margin-left:13px;">
+            	<img src="images/330.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>禧龙</p>
+            </div>
+            <div>
+            	<img src="images/331.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>宜必思</p>
+            </div>
+            <div>
+            	<img src="images/332.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>尚客优</p>
+            </div>
+            <div>
+            	<img src="images/334.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>维也纳</p>
+            </div>
+            <div>
+            	<img src="images/335.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>凯宾斯基</p>
+            </div>
+            <div>
+            	<img src="images/336.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>皇冠假日</p>
+            </div>
+            <div>
+            	<img src="images/337.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>喜来登</p>
+            </div>
+            <div>
+            	<img src="images/338.png"  style="border:#e2e2e4 solid 1px;"/>
+                <p>希尔顿</p>
+            </div>
+        </div>
+        <div class="shangwu">
+        	<h3>&nbsp;&nbsp;&nbsp;&nbsp;"商务出行"精选酒店<span><b>&nbsp;深圳&nbsp;</b>丨北京丨上海丨广州丨成都丨杭州丨武汉</span></h3>
+            <div style=" width:310px; margin-top:15px; float:left; margin-left:15px;">
+            	<img src="images/339.png"  style="float:left;"/>
+                <ul style="margin-left:15px;">
+                	<li style="color:#325e7f;">富临大酒店</li>
+                    <li>罗湖区</li>
+                    <li style="color:#325e7f;">金辉酒店</li>
+                    <li>南山区</li>
+                    <li style="color:#325e7f;">大梅沙酒店</li>
+                    <li>盐田区</li>
+                </ul>
+                <ul style="color:#ff663d; margin-left:30px;">
+                	<li>&nbsp;</li>
+                    <li><b>￥422</b>返16</li>
+                    <li>&nbsp;</li>
+                    <li><b>￥429</b>返19</li>
+                    <li>&nbsp;</li>
+                    <li><b>￥467</b>返13</li>
+                </ul>
+            </div>
+            <div style=" width:310px; margin-top:15px; float:left; margin-left:15px;">
+            	<img src="images/339.png"  style="float:left;"/>
+                <ul style="margin-left:15px;">
+                	<li style="color:#325e7f;">富临大酒店</li>
+                    <li>罗湖区</li>
+                    <li style="color:#325e7f;">金辉酒店</li>
+                    <li>南山区</li>
+                    <li style="color:#325e7f;">大梅沙酒店</li>
+                    <li>盐田区</li>
+                </ul>
+                <ul style="color:#ff663d; margin-left:30px;">
+                	<li>&nbsp;</li>
+                    <li><b>￥422</b>返16</li>
+                    <li>&nbsp;</li>
+                    <li><b>￥429</b>返19</li>
+                    <li>&nbsp;</li>
+                    <li><b>￥467</b>返13</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="footer-1">
+    	<h2 style="font-size:16px; font-weight:bold; color:#a4a4a3; margin-top:15px;">YY网购、旅游服务专线</h2>
+        <h2 style="color:#3d9ce6;"><img src="images/341.png"/>&nbsp;&nbsp;4006-022-066</h2>
+        <p style=" color:#595959; border-bottom:#999999  dotted 1px; width:250px;">可预定酒店、处理酒店机票服务</p>
+        <h2 style="color:#3d9ce6; line-height:40px;"><img src="images/342.png" />&nbsp;&nbsp;帮助中心</h2>
+    </div>
+    <div class="footer-2">
+    	<h3>&nbsp;&nbsp;&nbsp;&nbsp;为什么选择YY网购、旅游<span>了解更多>></span></h3>
+        <h2 style=" margin-top:15px;"><img src="images/343.png"/><span>超低价格</span>三倍差额赔付 每日团购，更多惊喜</h2>
+        <h2><img src="images/344.png" /><span>高额返现</span>全场国内酒店 最高返现50%</h2>
+        <h2><img src="images/345.png" /><span>更优服务</span>到店无房即赔付首晚房费7*24小时预定服务</h2>
+    </div>
+    <div class="footer-3">
+    	<h3>&nbsp;&nbsp;&nbsp;&nbsp;合作伙伴</h3>
+        <img src="images/346.png" />
+        <p>酒店产品由易龙旅行网提供</p>
+    </div>
+</div>
+
+<div class="bottom">
+	<div class="bottom-1">
+    	<div class="bottomtxt">
+        	<img src="images/032.png" />
+        	<div class="bottomtxt-1">
+                <h3><span>新手指南</span></h3>
+                <ul>
+                    <li><a href="#">酒店预定</a></li>
+                    <li><a href="#">机票预订</a></li>
+                    <li><a href="#">团购酒店预定</a></li>
+                    <li><a href="#">酒店高反现</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style=" margin-left:250px;" class="bottomtxt">
+        	<img src="images/033.png" />
+        	<div class="bottomtxt-1">
+                <h3><span>支付方式</span></h3>
+                <ul>
+                    <li><a href="#">酒店前台现付</a></li>
+                    <li><a href="#">酒店担保订单</a></li>
+                    <li><a href="#">机票支付方式</a></li>
+                    <li><a href="#">团购酒店支付方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-left:490px;" class="bottomtxt">
+        	<img src="images/034.png" />
+        	<div class="bottomtxt-1">
+                <h3><span>品质服务</span></h3>
+                <ul>
+                    <li><a href="#">酒店售后服务</a></li>
+                    <li><a href="#">机票改期服务</a></li>
+                    <li><a href="#">机票行程单</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style=" margin-left:730px;" class="bottomtxt">
+        	<img src="images/035.png" />
+        	<div class="bottomtxt-1">
+                <h3><span>帮助信息</span></h3>
+                <ul>
+                    <li><a href="#">24小时服务电话 400-002-066</a></li>
+                    <li><a href="#">商家入住/内容合作：</a></li>
+                    <li><a href="#">010-58699013-8007</a></li>
+                    <li><a href="#">广告/媒体/推广合作18611176727</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-2">
+    	<h3>腾讯电商简介丨客服中心丨开放平台丨腾讯电商招聘丨财付通支付丨YY返利丨网站地图丨网站联盟丨用户协议丨版权说明</h3>
+        <p>Copyright @ 1998-2013 Tencent.All Rights Reserved 腾讯公司 版权所有</p>
+        <p>广东省通管局 增值电信业务经营许可证B2-20130209</p>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
