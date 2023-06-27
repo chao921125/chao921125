@@ -1,4 +1,4 @@
-# 变量声明
+# TS 变量声明
 
 ```typescript
 // const 直接数据类型不可更改，但Object可以
