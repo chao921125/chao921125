@@ -2,10 +2,10 @@
 ### [github 项目趋势中文社区](https://www.githubs.cn/trending)
 ### [LLM OpenAI模型项目趋势](https://huggingface.co/spaces)
 # 推荐
-| 本项目收集资料目录                     |
-|-------------------------------|
-| [面试学习](./Interview/README.md) |
-| [知识汇总](./Knowledge/README.md) |
+| 本项目收集资料目录                                 |
+|-------------------------------------------|
+| [面试学习](./Interview/README.md)             |
+| [知识汇总](./Knowledge/README.md)             |
 | [🔥 Open AI 汇总 ChatGPT](./Document/AI.md) |
 | [✈️ 开源项目 优秀推荐](./Document/Project.md)     |
 | [Web HTML5&CSS3&JS](./Document/Web.md)    |
