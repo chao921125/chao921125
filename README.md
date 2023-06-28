@@ -36,14 +36,9 @@ Web-Knowledge
 ├── Algorithm                   算法学习
 ├── Animation                   CSS/JS动画
 ├── Basic                       Web基础学习
-├── Canvas                      Html5
-├── Config                      配置文件总结
-├── DemoWeb                     Web示例
 ├── Document                    针对前后端框架总结
 ├── Interview                   面试总结
 ├── Knowledge                   知识总结
-├── Linux                       Linux总结
-├── NodeJS                      NodeJS总结
 ├── Playwright                  微软自动化测试
 ├── Puppeteer                   谷歌自动化测试
 ├── TS                          ts知识总结
