@@ -9,10 +9,9 @@
 | [🔥 Open AI 汇总 ChatGPT](./Document/AI.md) |
 | [✈️ 开源项目 优秀推荐](./Document/Project.md)     |
 | [Web HTML5&CSS3&JS](./Document/Web.md)    |
-| [Mobile](./Document/Mobile.md)            |
 | [开发环境](./Document/DevelopTools.md)        |
 | [网站部署 SSL 托管](./Document/WebSite.md)      |
-| [网站推荐](./Document/System.md)              |
+| [软件下载](./Document/System.md)              |
 | [CSDN 去除广告及关闭关注博主代码](./Document/CSDN.md)  |
 | [Markdown 语法](./Document/MarkDown.md)     |
 
