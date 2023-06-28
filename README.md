@@ -1,27 +1,21 @@
-# 面试知识总结
-|                               |
+# 推荐
+| 本项目收集资料目录                     |
 |-------------------------------|
-| [面试大全](./Interview/README.md) |
-| [知识总结](./Knowledge/README.md) |
+| [面试学习](./Interview/README.md) |
+| [知识汇总](./Knowledge/README.md) |
+| [🔥 Open AI 汇总 ChatGPT](./Document/AI.md) |
+| [✈️ 开源项目 优秀推荐](./Document/Project.md)     |
+| [Web HTML5&CSS3&JS](./Document/Web.md)    |
+| [Mobile](./Document/Mobile.md)            |
+| [开发环境](./Document/DevelopTools.md)        |
+| [网站部署 SSL 托管](./Document/WebSite.md)      |
+| [网站推荐](./Document/System.md)              |
+| [CSDN 去除广告及关闭关注博主代码](./Document/CSDN.md)  |
+| [Markdown 语法](./Document/MarkDown.md)     |
 
-# 各种网站汇总
-| [🔥](./Document/README.md)                     |
-|------------------------------------------------|
-| [🔥 全网最全 Open AI 汇总 ChatGPT](./Document/AI.md) |
-| [✈️ 开源项目 优秀推荐](./Document/Project.md)          |
-| [HTML5](./Document/HTML.md)                    |
-| [CSS3](./Document/CSS.md)                      |
-| [JS](./Document/JS.md)                         |
-| [Mobile](./Document/Mobile.md)                 |
-| [开发环境](./Document/DevelopTools.md)             |
-| [网站部署 SSL 托管](./Document/WebSite.md)           |
-| [网站推荐](./Document/System.md)                   |
-| [CSDN 去除广告及关闭关注博主代码](./Document/CSDN.md)       |
-| [Markdown 语法](./Document/MarkDown.md)          |
-
-# [github 项目趋势](https://github.com/trending)
-# [github 项目趋势中文社区](https://www.githubs.cn/trending)
-# [LLM 项目趋势](https://huggingface.co/spaces)
+### [github 项目趋势英文官网](https://github.com/trending)
+### [github 项目趋势中文社区](https://www.githubs.cn/trending)
+### [LLM OpenAI模型项目趋势](https://huggingface.co/spaces)
 
 # 推荐网站
 [临时邮箱](https://www.linshi-email.com/) |
@@ -49,16 +43,12 @@ Web-Knowledge
 ├── DemoWeb                     Web示例
 ├── Document                    针对前后端框架总结
 ├── Interview                   面试总结
-├── Java                        Java知识
 ├── Knowledge                   知识总结
 ├── Linux                       Linux总结
 ├── NodeJS                      NodeJS总结
 ├── Playwright                  微软自动化测试
 ├── Puppeteer                   谷歌自动化测试
-├── React                       React项目示例
-├── Share                       JS
 ├── TS                          ts知识总结
-├── VUE                         VUE项目示例
 ├── WebGL                       3D
 └── 前端知识图谱.xmind
 ```
