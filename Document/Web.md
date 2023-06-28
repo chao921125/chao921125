@@ -8,19 +8,29 @@
 [EasyUI 官网](https://www.jeasyui.cn/) \
 []()
 
-# CSS 动画
-[csscoco](https://csscoco.com/inspiration/#/)
+# 动画
+| CSS 动画                                                 | JS 动画                                                           |
+|--------------------------------------------------------|-----------------------------------------------------------------|
+| [Animate.css](https://animate.style/)                  | [tweenjs](https://tweenjs.github.io/tween.js/)                  |
+| [csscoco](https://csscoco.com/inspiration/#/)          | [snapsvg](http://snapsvg.io/)                                   |
+| [css-loaders](https://github.com/lukehaas/css-loaders) | [dynamicsjs](http://dynamicsjs.com/)                            |
+| [minimamente](https://www.minimamente.com/)            | [parallax](http://matthew.wagerfield.com/parallax/)             |
+| [Hover](http://ianlunn.github.io/Hover/)               | [matterjs](https://chinabigpan.github.io/matterjs_docs_zh_cn/)  |
+| []()                                                   | [move.js](https://visionmedia.github.io/move.js/)               |
+| []()                                                   | [animejs](https://animejs.com/)                                 |
+| []()                                                   | [mojs](https://mojs.github.io/)                                 |
+| []()                                                   | [anijs](http://anijs.github.io/)                                |
+| []()                                                   | [snabbt.js](http://daniel-lundin.github.io/snabbt.js/)          |
+| []()                                                   | [hubspot](https://github.hubspot.com/odometer/docs/welcome/)    |
+| []()                                                   | []()                                                            |
 
 # 字体下载
 [onlinewebfonts](https://www.onlinewebfonts.com/fonts)
 
 # JS 截图
-
-[html2canvas](https://github.com/SuperAL/canvas2image "html2canvas")
-
-[dom-to-image](https://github.com/tsayen/dom-to-image "dom-to-image")
-
-[canvas2image](https://github.com/hongru/canvas2image "canvas2image")
+[html2canvas](https://github.com/SuperAL/canvas2image) \
+[dom-to-image](https://github.com/tsayen/dom-to-image) \
+[canvas2image](https://github.com/hongru/canvas2image)
 
 # 数据可视化
 ## 数据图表
