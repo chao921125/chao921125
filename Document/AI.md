@@ -1,3 +1,15 @@
+# 真-免费AI
+| 名称                 | 地址                                                                      |
+|--------------------|-------------------------------------------------------------------------|
+| 文本 llamav2         | [访问地址](https://huggingface.co/spaces/ysharma/Explore_llamav2_with_TGI)  |
+| 文本 Gradio          | [访问地址](https://huggingface.co/spaces/ysharma/ChatGPT-Plugins-in-Gradio) |
+| 文本可选开源模型           | [访问地址](https://huggingface.co/spaces/lmsys/chatbot-arena)               |
+|                    | [访问地址]()                                                                |
+| 图 stable-diffusion | [访问地址](https://huggingface.co/spaces/stabilityai/stable-diffusion)      |
+| 图 文本 图片            | [访问地址](https://huggingface.co/spaces/BAAI/AltDiffusion)                 |
+|                    | [访问地址]()                                                                |
+| 视频 3秒              | [访问地址](https://huggingface.co/spaces/hysts/zeroscope-v2)                |
+
 # OpenAI 注册教程
 [ChatGPT 手机号接收验证码网站](https://sms-activate.org/cn/info/ChatGPT)
 [ChatGPT 注册教程](https://zl49so8lbq.feishu.cn/wiki/wikcnu3kSXr75E50w8PFefhJMYf)
@@ -44,9 +56,10 @@
 | [Chat For AI 【OpenAI KEY】](https://chatforai.com/)               |
 
 ## 图片
-| 绘图                                   |
-|--------------------------------------|
-| [aiask 发布页](https://ailink.icu/)     |
+| 绘图                                                  |
+|-----------------------------------------------------|
+| [aiask 发布页](https://ailink.icu/)                    |
+| [dreamstudio](https://beta.dreamstudio.ai/generate) |
 
 | 文字生成图片                                                                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -243,3 +256,5 @@ pip3 install -r requirements.txt -q
 pip3 install -q gradio
 python basicsr/setup.py develop
 ```
+
+[//]: # (https://huggingface.co/spaces)
