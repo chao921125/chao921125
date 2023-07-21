@@ -7,6 +7,7 @@
 |                    | [访问地址]()                                                                |
 | 图 stable-diffusion | [访问地址](https://huggingface.co/spaces/stabilityai/stable-diffusion)      |
 | 图 文本 图片            | [访问地址](https://huggingface.co/spaces/BAAI/AltDiffusion)                 |
+| 图 修复 高清            | [访问地址](https://huggingface.co/spaces/sczhou/CodeFormer)                 |
 |                    | [访问地址]()                                                                |
 | 视频 3秒              | [访问地址](https://huggingface.co/spaces/hysts/zeroscope-v2)                |
 
