@@ -25,6 +25,7 @@
 | []()                                                   | []()                                                            |
 
 # 字体下载
+[google fonts](https://fonts.google.com/?preview.size=20&icon.platform=web)
 [onlinewebfonts](https://www.onlinewebfonts.com/fonts)
 
 # JS 截图
