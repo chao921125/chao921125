@@ -1,21 +1,29 @@
+# 推荐
 ### [github 项目趋势英文官网](https://github.com/trending)
 ### [github 项目趋势中文社区](https://www.githubs.cn/trending)
 ### [LLM OpenAI模型项目趋势](https://huggingface.co/spaces)
-# 推荐
 | 本项目收集资料目录                                 |
 |-------------------------------------------|
-| [面试学习](./Interview/README.md)             |
-| [知识汇总](./Knowledge/README.md)             |
 | [🔥 Open AI 汇总 ChatGPT](./Document/AI.md) |
 | [✈️ 开源项目 优秀推荐](./Document/Project.md)     |
+| [WebGL 3D模型及游戏](./WebGL/README.md)        |
 | [Web HTML5&CSS3&JS](./Document/Web.md)    |
+| [VUE](./VUE/README.md)                    |
+| [React](./React/README.md)                |
+| [TS](./TS/README.md)                      |
+| [Python](./Python/README.md)              |
+| [NodeJS](./NodeJS/README.md)              |
+| [Java](./Java/README.md)                  |
+| [面试学习](./Interview/README.md)             |
+| [知识汇总](./Knowledge/README.md)             |
 | [开发环境](./Document/DevelopTools.md)        |
 | [网站部署 SSL 托管](./Document/WebSite.md)      |
 | [软件下载](./Document/System.md)              |
 | [CSDN 去除广告及关闭关注博主代码](./Document/CSDN.md)  |
 | [Markdown 语法](./Document/MarkDown.md)     |
+| [Linux 下载及命令使用](./Linux/System.md)        |
 
-# 推荐网站
+# 各种网站推荐
 [临时邮箱](https://www.linshi-email.com/) |
 [临时邮箱](https://temp-mail.org/) |
 [临时邮箱](https://www.guerrillamail.com/) \
