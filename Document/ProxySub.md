@@ -1,5 +1,31 @@
 # google inurl:clash/proxies
 
+| Client                                                                                             |
+|----------------------------------------------------------------------------------------------------|
+| MacOS                                                                                              |
+| [clashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
+| [clashX](https://github.com/yichengchen/clashX)                                                    |
+| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |
+| [V2rayU](https://github.com/yanue/V2rayU)                                                          |
+| Windows                                                                                            |
+| [v2rayN](https://github.com/2dust/v2rayN)                                                          |
+| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |
+| Android                                                                                            |
+| [v2rayNG](https://github.com/2dust/v2rayNG)                                                        |
+| [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)                                        |
+| IOS $                                                                                              |
+| [Shadowrocket GitHub](https://github.com/Shadowrocket)                                             |
+| [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                           |
+| [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118)                           |
+| [Quantumult GitHub](https://github.com/crossutility/Quantumult)                                    |
+| [Quantumult 美](https://apps.apple.com/us/app/quantumult/id1252015438)                              |
+| [Quantumult 港](https://apps.apple.com/hk/app/quantumult/id1252015438)                              |
+| [QuantumultX GitHub](https://github.com/crossutility/Quantumult-X)                                 |
+| [QuantumultX 美](https://apps.apple.com/us/app/quantumult-x/id1443988620)                           |
+| [QuantumultX 港](https://apps.apple.com/hk/app/quantumult-x/id1443988620)                           |
+| Route                                                                                              |
+| [OpenClash](https://github.com/vernesong/OpenClash)                                                |
+
 # Clash
 【Proxy】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 
@@ -22,7 +48,11 @@ https://sub.pmsub.me/base64
 
 https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
 
+https://tz.fovi.tk/
+
 # 发布页
+https://github.com/free18/v2ray
+
 https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
 
 https://github.com/tbbatbb/Proxy
@@ -43,33 +73,53 @@ https://github.com/anaer/Sub \
 # 论坛
 | 综合订阅                                                                               |
 |------------------------------------------------------------------------------------|
-| [机场推荐](https://jichangtuijian.com/)                                                |
+| [clashsub](https://clashsub.com/)                                                  |
 | [Clash Node](https://clashnode.xyz/)                                               |
 | [免费党](https://www.mfdang.com/)                                                     |
 | [v2ray免费 输入邮箱订阅](https://www.v2mj.com/) [v2ray免费节点](https://www.v2rayfree.eu.org/) |
 | [维尼兔 输入邮箱订阅](https://www.v2v0.com/)                                                |
 | [ialtone](https://ialtone.xyz/)                                                    |
 | [github Leon406](https://github.com/Leon406/SubCrawler)                            |
-| [爱机场](https://aijichang.com/)                                                      |
 | [666vpn](http://666vpn.com/)                                                       |
+| [fanqiangdang](https://fanqiangdang.com/)                                          |
+| 按照良心推荐                                                                             |
+| https://clashx.pro/                                                                |
+| https://limbopro.com/                                                              |
+| https://aijichang.com/                                                             |
+| https://runtufenxiang.com/                                                         |
+| https://vpnoe.com/                                                                 |
+| 以下参考                                                                               |
+| https://duangks.com/                                                               |
+| https://www.xuanjichang.com/                                                       |
+| https://clashios.com/                                                              |
+| https://kerrynotes.com/                                                            |
+| https://ssrv2ray.xyz/                                                              |
+| https://sites.google.com/view/honven/%E9%A6%96%E9%A1%B5                            |
+| https://jichangtuijian.com/                                                        |
+| 随便整                                                                                |
+| https://www.extrabux.com/chs                                                       |
+| https://okokcloud.net/#/login                                                      |
+| 自己动手搭建                                                                             |
+| https://shluqu.github.io/                                                          |
 
-| 每日一更                                   |
-|----------------------------------------|
-| [灯云](https://58dengyun.com/)           |
-| [一灯不是和尚](https://iyideng.vip/)         |
-| [选梯子](https://www.xuantizi.com/)       |
-| [科学上网](https://www.oaoy.net/)          |
-| [vps90](http://vps90.com/vps/kxsw/)    |
-| [freefq](https://freefq.com/)          |
-| [长风分享](https://www.cfmem.com/)         |
-| [v2rayshare](https://v2rayshare.com/)  |
-| [nodefree](https://nodefree.org/)      |
-| [即刻学习](https://www.jkxuexi.com/)       |
-| [玉豆分享](https://www.yudou66.com/)       |
-| [加速器123](https://ssr.bettershop.club/) |
-| [freenode](https://freenode.me/)       |
-| [clash](https://www.clash-gaming.com/) |
-| [clashnode](https://clashnode.com/)    |
+
+| 每日一更                                                     |
+|----------------------------------------------------------|
+| [灯云1](https://58dengyun.com/) [灯云2](https://92deng.com/) |
+| [一灯不是和尚](https://iyideng.vip/)                           |
+| [选梯子](https://www.xuantizi.com/)                         |
+| [科学上网](https://www.oaoy.net/)                            |
+| [vps90](http://vps90.com/vps/kxsw/)                      |
+| [freefq](https://freefq.com/)                            |
+| [长风分享](https://www.cfmem.com/)                           |
+| [v2rayshare](https://v2rayshare.com/)                    |
+| [nodefree](https://nodefree.org/)                        |
+| [即刻学习](https://www.jkxuexi.com/)                         |
+| [玉豆分享](https://www.yudou66.com/)                         |
+| [加速器123](https://ssr.bettershop.club/)                   |
+| [freenode](https://freenode.me/)                         |
+| [clash](https://www.clash-gaming.com/)                   |
+
 # 工具 V 转 C
 [综合 netlify](https://acl4ssr.netlify.app/)
 [v-c 长风分享](https://v1.v2rayse.com/v2ray-clash/)
@@ -95,3 +145,5 @@ https://github.com/anaer/Sub \
 [v-c vercel](https://sub-zh.vercel.app/)
 [v-c acrosslinehosting](https://clash.acrosslinehosting.club/)
 []()
+
+[//]: # (https://cn.tgstat.com/)
