@@ -1,5 +1,18 @@
 # google inurl:clash/proxies
 
+# Client
+| MacOS                                                                                              | Windows                                                                   | Android                                                     | IOS                                                                      | Route                                               |
+|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------|
+| [clashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) | [v2rayN](https://github.com/2dust/v2rayN)                                 | [v2rayNG](https://github.com/2dust/v2rayNG)                 | [Shadowrocket GitHub](https://github.com/Shadowrocket)                   | [OpenClash](https://github.com/vernesong/OpenClash) |
+| [clashX](https://github.com/yichengchen/clashX)                                                    | [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg) | [ClashForAndroid](https://github.com/Kr328/ClashForAndroid) | [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118) |                                                     |
+| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |                                                                           |                                                             | [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118) |                                                     |
+| [V2rayU](https://github.com/yanue/V2rayU)                                                          |                                                                           |                                                             | [Quantumult GitHub](https://github.com/crossutility/Quantumult)          |                                                     |
+|                                                                                                    |                                                                           |                                                             | [Quantumult 美](https://apps.apple.com/us/app/quantumult/id1252015438)    |                                                     |
+|                                                                                                    |                                                                           |                                                             | [Quantumult 港](https://apps.apple.com/hk/app/quantumult/id1252015438)    |                                                     |
+|                                                                                                    |                                                                           |                                                             | [QuantumultX GitHub](https://github.com/crossutility/Quantumult-X)       |                                                     |
+|                                                                                                    |                                                                           |                                                             | [QuantumultX 美](https://apps.apple.com/us/app/quantumult-x/id1443988620) |                                                     |
+|                                                                                                    |                                                                           |                                                             | [QuantumultX 港](https://apps.apple.com/hk/app/quantumult-x/id1443988620) |                                                     |
+
 # Clash
 【Proxy】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 
@@ -22,7 +35,11 @@ https://sub.pmsub.me/base64
 
 https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
 
+https://tz.fovi.tk/
+
 # 发布页
+https://github.com/free18/v2ray
+
 https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
 
 https://github.com/tbbatbb/Proxy
@@ -115,3 +132,5 @@ https://github.com/anaer/Sub \
 [v-c vercel](https://sub-zh.vercel.app/)
 [v-c acrosslinehosting](https://clash.acrosslinehosting.club/)
 []()
+
+[//]: # (https://cn.tgstat.com/)
