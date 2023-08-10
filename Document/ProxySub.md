@@ -88,6 +88,7 @@ https://github.com/anaer/Sub \
 | https://aijichang.com/                                                             |
 | https://runtufenxiang.com/                                                         |
 | https://vpnoe.com/                                                                 |
+| https://shadowrocket.one/                                                            |
 | 以下参考                                                                               |
 | https://duangks.com/                                                               |
 | https://www.xuanjichang.com/                                                       |
@@ -96,12 +97,17 @@ https://github.com/anaer/Sub \
 | https://ssrv2ray.xyz/                                                              |
 | https://sites.google.com/view/honven/%E9%A6%96%E9%A1%B5                            |
 | https://jichangtuijian.com/                                                        |
+| https://52.mk/                                                                         |
 | 随便整                                                                                |
 | https://www.extrabux.com/chs                                                       |
 | https://okokcloud.net/#/login                                                      |
 | 自己动手搭建                                                                             |
 | https://shluqu.github.io/                                                          |
-
+| 需要魔法                                     |
+| https://duangks.com/                                      |
+| https://clashios.com/                                     |
+| https://sstrojan.com/                                     |
+| https://www.duyaoss.com/                                     |
 
 | 每日一更                                                     |
 |----------------------------------------------------------|
