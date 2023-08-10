@@ -82,6 +82,10 @@ https://github.com/anaer/Sub \
 | [github Leon406](https://github.com/Leon406/SubCrawler)                            |
 | [666vpn](http://666vpn.com/)                                                       |
 | [fanqiangdang](https://fanqiangdang.com/)                                          |
+| 随时不靠谱    |
+| https://github.com/H4Ha/jichangfenxiangzhan   |
+| 临时                                                                         |
+| https://www.mibei77.com/                                                                         |
 | 按照良心推荐                                                                             |
 | https://clashx.pro/                                                                |
 | https://limbopro.com/                                                              |
@@ -108,6 +112,7 @@ https://github.com/anaer/Sub \
 | https://clashios.com/                                     |
 | https://sstrojan.com/                                     |
 | https://www.duyaoss.com/                                     |
+| https://52nav.icu/            |
 
 | 每日一更                                                     |
 |----------------------------------------------------------|
