@@ -1,4 +1,13 @@
 # 开发、编程、软件运行环境
+[Homebrew 建议安装](https://brew.sh/)
+```text
+官方指令安装
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+卸载：/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/HomebrewCN/raw/master/HomebrewUninstall.sh)"
+如果安装失败，请执行
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+卸载：/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)"
+```
 [MYSQL 下载](https://dev.mysql.com/downloads/mysql/) |
 [MYSQL Windows 下载](https://dev.mysql.com/downloads/installer/) |
 [MYSQL MacOS 下载](https://dev.mysql.com/downloads/mysql/)
@@ -14,7 +23,7 @@ sudo launchctl load -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 多版本jdk请在系统配置文件中设置即可
 ```
 [NodeJS 下载](https://nodejs.org/en/download/) |
-[NodeJS 多版本管理](https://github.com/nvm-sh/nvm/) |
+[NodeJS nvm 多版本管理](https://github.com/nvm-sh/nvm/) |
 [pnpm 包管理](https://www.pnpm.cn/installation/)
 ```text
 多版本nodejs推荐使用nvm管理
