@@ -82,12 +82,17 @@ https://github.com/anaer/Sub \
 | [github Leon406](https://github.com/Leon406/SubCrawler)                            |
 | [666vpn](http://666vpn.com/)                                                       |
 | [fanqiangdang](https://fanqiangdang.com/)                                          |
+| 随时不靠谱    |
+| https://github.com/H4Ha/jichangfenxiangzhan   |
+| 临时                                                                         |
+| https://www.mibei77.com/                                                                         |
 | 按照良心推荐                                                                             |
 | https://clashx.pro/                                                                |
 | https://limbopro.com/                                                              |
 | https://aijichang.com/                                                             |
 | https://runtufenxiang.com/                                                         |
 | https://vpnoe.com/                                                                 |
+| https://shadowrocket.one/                                                            |
 | 以下参考                                                                               |
 | https://duangks.com/                                                               |
 | https://www.xuanjichang.com/                                                       |
@@ -96,12 +101,18 @@ https://github.com/anaer/Sub \
 | https://ssrv2ray.xyz/                                                              |
 | https://sites.google.com/view/honven/%E9%A6%96%E9%A1%B5                            |
 | https://jichangtuijian.com/                                                        |
+| https://52.mk/                                                                         |
 | 随便整                                                                                |
 | https://www.extrabux.com/chs                                                       |
 | https://okokcloud.net/#/login                                                      |
 | 自己动手搭建                                                                             |
 | https://shluqu.github.io/                                                          |
-
+| 需要魔法                                     |
+| https://duangks.com/                                      |
+| https://clashios.com/                                     |
+| https://sstrojan.com/                                     |
+| https://www.duyaoss.com/                                     |
+| https://52nav.icu/            |
 
 | 每日一更                                                     |
 |----------------------------------------------------------|

@@ -20,20 +20,30 @@ sudo launchctl load -w /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 ```
 [JDK 下载](https://www.oracle.com/cn/java/technologies/downloads/)
 ```text
+请下载 LTS 版本，目前对应 17
 多版本jdk请在系统配置文件中设置即可
+Windows 环境下 请务必配置JDK的环境变量
+JAVA_HOME path
+CALSSPATH 
+Path 
 ```
 [NodeJS 下载](https://nodejs.org/en/download/) |
-[NodeJS nvm 多版本管理](https://github.com/nvm-sh/nvm/) |
+[NodeJS多版本管理 nvm MacOS](https://github.com/nvm-sh/nvm/) [nvm Windows](https://github.com/nvm-sh/nvm#install--update-script) |
 [pnpm 包管理](https://www.pnpm.cn/installation/)
 ```text
 多版本nodejs推荐使用nvm管理
 nvm安装 https://github.com/nvm-sh/nvm
+Mac: wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+Win: https://github.com/nvm-sh/nvm#install--update-script
+Windows 请注意：安装的nvm路径可以随意，但后面的node路径请勿放系统盘
 安装指定的NodeJS版本：nvm install x.x.x
 卸载对应的NodeJS版本：nvm uninstall x.x.x
 查看当前安装的版本：nvm ls
 
 且推荐使用pnpm安装包，减少本地磁盘的不必要占用
 pnpm安装 https://www.pnpm.cn/installation
+Mac：curl -fsSL https://get.pnpm.io/install.sh | sh -
+Win：iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
 [Python 下载](https://www.python.org/downloads/)
 ```text
@@ -79,3 +89,18 @@ Jetbrains家族工具之一：Pycharm
 Pycharm 收费 Professional
 Pycharm 社区版免费 Community
 ```
+## Data Base数据库连接
+[Navicat Premium](https://www.navicat.com.cn/download/navicat-premium)
+```text
+破解方式请自行搜索，或则和关注公众号
+```
+## 小程序 开发
+[HbuilderX](https://www.dcloud.io/hbuilderx.html)
+[微信小程序](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+[]()
+[]()
+## APP 开发
+[HbuilderX](https://www.dcloud.io/hbuilderx.html)
+[华为 ArkTS](https://developer.harmonyos.com/cn/develop/deveco-studio/#download)
+[]()
+[]()
