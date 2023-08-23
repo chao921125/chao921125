@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF 2 Excel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/web/pdf_viewer.min.css" rel="stylesheet">
+    <style>
+        table {
+            padding: 0;
+            margin: 0;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table th {
+            padding: 5px 20px;
+            margin: 0;
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+        }
+
+        table td {
+            padding: 5px 20px;
+            margin: 0;
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<!-- https://cdnjs.com/ -->
+<!-- https://unpkg.com/ -->
+<!-- https://cdn.jsdelivr.net/ -->
+
+<!-- https://mozilla.github.io/pdf.js/ -->
+<!-- https://pdf-lib.js.org/ -->
+<!-- https://www.npmjs.com/package/jspdf -->
+
+<!-- https://sheetjs.com/ -->
+<!-- https://github.com/exceljs/exceljs -->
+<input id="pdfFile" type="file" multiple accept="application/pdf"/>
+<button id="downloadExcel">下载Excel</button>
+<h1>商标</h1>
+<div>
+    <table id="tbSb">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>商标</th>
+                <th>类别</th>
+                <th>官方收文编号/申请号/注册号</th>
+                <th>申请日</th>
+                <th>申请人</th>
+                <th>锺维案号</th>
+                <th>注册日期</th>
+                <th>有效期至</th>
+            </tr>
+        </thead>
+        <tbody id="tbDataSb"></tbody>
+    </table>
+</div>
+<h1>软著</h1>
+<div>
+    <table id="tbRz">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>软件全称</th>
+            <th>流水号</th>
+            <th>登记号</th>
+            <th>著作权人</th>
+            <th>登记日期</th>
+        </tr>
+        </thead>
+        <tbody id="tbDataRz"></tbody>
+    </table>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.sandbox.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.worker.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<script>
+  // excel 下载 start
+  const titleSb = ["序号", "商标", "类别", "官方收文编号/申请号/注册号", "申请日", "申请人", "锺维案号", "注册日期", "有效期至"];
+  let dataSb = [{
+    "序号": 1,
+    "商标": "软件全称",
+    "类别": "软件全称",
+    "官方收文编号/申请号/注册号": "软件全称",
+    "申请日": new Date().getDate().toLocaleString(),
+    "申请人": "软件全称",
+    "锺维案号": "软件全称",
+    "注册日期": new Date().getDate().toLocaleString(),
+    "有效期至": new Date().getDate().toLocaleString()
+  }, {
+    "序号": 2,
+    "商标": "软件全称",
+    "类别": "软件全称",
+    "官方收文编号/申请号/注册号": "软件全称",
+    "申请日": new Date().getDate().toLocaleString(),
+    "申请人": "软件全称",
+    "锺维案号": "软件全称",
+    "注册日期": new Date().getDate().toLocaleString(),
+    "有效期至": new Date().getDate().toLocaleString()
+  }];
+  const titleRz = ["序号", "软件全称", "流水号", "登记号", "著作权人", "登记日期"];
+  let dataRz = [{
+    "序号": 1,
+    "软件全称": "软件全称",
+    "流水号": "软件全称",
+    "登记号": "软件全称",
+    "著作权人": "软件全称",
+    "登记日期": new Date().getDate().toLocaleString()
+  }, {
+    "序号": 2,
+    "软件全称": "软件全称",
+    "流水号": "软件全称",
+    "登记号": "软件全称",
+    "著作权人": "软件全称",
+    "登记日期": new Date().getDate().toLocaleString()
+  }];
+  const dataTypeEnum = {shoutong: "软著受通", shenqingbiao: "申请表", shoulitongzhishu: "受理通知书"};
+  // excel 下载 end
+
+  ((dom) => {
+    // pdf 上传及解析 start
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.worker.min.js";
+
+    document.getElementById("pdfFile").addEventListener("change", async (e) => {
+      const files = e.target.files;
+      if (!files) return false;
+      for (let file of files) {
+        console.log("=====", readFilePdf(file));
+      }
+    });
+    // pdf 上传及解析 end
+
+    // excel 下载 start
+    document.getElementById("downloadExcel").addEventListener("click", () => {
+      let wb = XLSX.utils.book_new();
+      let wsSb = XLSX.utils.json_to_sheet(dataSb, { header: titleSb });
+      XLSX.utils.book_append_sheet(wb, wsSb, "商标");
+      let wsRz = XLSX.utils.json_to_sheet(dataRz, { header: titleRz });
+      XLSX.utils.book_append_sheet(wb, wsRz, "软著");
+      XLSX.writeFile(wb, "商标_软著_宋宋.xlsx");
+    })
+    // excel 下载 end
+    // text demo
+    dataToHtml();
+  })(window);
+
+    // 解析单个文件，返回一维数组
+    function readFilePdf(file) {
+      let result = [];
+      let fileReader = new FileReader();
+      fileReader.readAsArrayBuffer(file);
+      fileReader.onload = async (event) => {
+        const pdfData = new Uint8Array(event.target.result);
+        const task = pdfjsLib.getDocument({data: pdfData});
+        const pdf = await task.promise;
+
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const page = await pdf.getPage(i);
+          const textContent = await page.getTextContent();
+          result = textContent.items.map(item => item.str);
+        }
+      }
+      return result;
+    }
+
+    // 将数据渲染到页面上
+    function dataToHtml() {
+      let htmlSb = "";
+      for (let iSb in dataSb) {
+        htmlSb += `<tr>
+                    <td>${dataSb[iSb]["序号"]}</td>
+                    <td>${dataSb[iSb]["商标"]}</td>
+                    <td>${dataSb[iSb]["类别"]}</td>
+                    <td>${dataSb[iSb]["官方收文编号/申请号/注册号"]}</td>
+                    <td>${dataSb[iSb]["申请日"]}</td>
+                    <td>${dataSb[iSb]["申请人"]}</td>
+                    <td>${dataSb[iSb]["锺维案号"]}</td>
+                    <td>${dataSb[iSb]["注册日期"]}</td>
+                    <td>${dataSb[iSb]["有效期至"]}</td>
+                   </tr>`;
+      }
+      document.getElementById("tbDataSb").innerHTML = htmlSb;
+      let htmlRz = "";
+      for (let iRz in dataRz) {
+        htmlRz += `<tr>
+                    <td>${dataSb[iRz]["序号"]}</td>
+                    <td>${dataRz[iRz]["软件全称"]}</td>
+                    <td>${dataRz[iRz]["流水号"]}</td>
+                    <td>${dataRz[iRz]["登记号"]}</td>
+                    <td>${dataRz[iRz]["著作权人"]}</td>
+                    <td>${dataRz[iRz]["登记日期"]}</td>
+                   </tr>`;
+      }
+      document.getElementById("tbDataRz").innerHTML = htmlRz;
+    }
+    function getFileUrl(file) {
+      let url = null;
+      if (window.createObjectURL !== undefined) {
+        url = window.createObjectURL(file);
+      } else if (window.URL !== undefined) {
+        url = window.URL.createObjectURL(file);
+      } else if (window.webkitURL !== undefined) {
+        url = window.webkitURL.createObjectURL(file);
+      }
+      return url;
+    }
+</script>
+</html>

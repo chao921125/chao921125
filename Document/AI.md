@@ -27,10 +27,11 @@
 | [ChatGLM-6B 【OpenAI KEY】](https://github.com/THUDM/ChatGLM-6B)               |
 
 ## ChatPGT平替 开源代码，自行搭建
-| 开源代码                                                   |
-|--------------------------------------------------------|
-| [聊天 免费](https://github.com/Chanzhaoyu/chatgpt-web)     |
-| [聊天 免费](https://github.com/Yidadaa/ChatGPT-Next-Web)   |
+| 开源代码                                                       |
+|------------------------------------------------------------|
+| [聊天 免费](https://github.com/Chanzhaoyu/chatgpt-web)         |
+| [聊天 免费](https://github.com/Yidadaa/ChatGPT-Next-Web)       |
+| [聊天 免费](https://github.com/adams549659584/go-proxy-bingai) |
 
 | 综合收录                                     |
 |------------------------------------------|
