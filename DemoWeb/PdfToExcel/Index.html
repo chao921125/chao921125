@@ -115,6 +115,10 @@
     let isShowHtmlFlag = [false, false, false];
 
     ((dom) => {
+        window.onload = (e) => {
+          console.log(e);
+        }
+
         // pdf 上传及解析 start
         pdfjsLib.GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js";
         pdfjsLib.cMapUrl = "https://unpkg.com/pdfjs-dist@3.9.179/cmaps/";
