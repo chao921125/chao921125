@@ -28,6 +28,9 @@
             border-left: 1px solid #000000;
             border-top: 1px solid #000000;
         }
+        .loading-data {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -43,30 +46,7 @@
 <!-- https://github.com/exceljs/exceljs -->
 <input id="pdfFile" type="file" multiple accept="application/pdf, image/*" />
 <button id="downloadExcel">下载Excel</button>
-<h1>获取到的数据</h1>
-<div>
-    <table id="tbAll">
-        <thead>
-        <tr>
-            <th>序号</th>
-            <th>商标</th>
-            <th>类别</th>
-            <th>官方收文编号/申请号/注册号</th>
-            <th>申请日</th>
-            <th>申请人</th>
-            <th>锺维案号</th>
-            <th>注册日期</th>
-            <th>有效期至</th>
-            <th>软件全称</th>
-            <th>流水号</th>
-            <th>登记号</th>
-            <th>著作权人</th>
-            <th>登记日期</th>
-        </tr>
-        </thead>
-        <tbody id="tbDataAll"></tbody>
-    </table>
-</div>
+<h1 class="loading-data">读取PDF数据中......</h1>
 <h1>商标</h1>
 <div>
     <table id="tbSb">
@@ -255,58 +235,61 @@
 
     // 将数据渲染到页面上
     function dataToHtml() {
-        const isShowFlag = isShowHtmlFlag[0] && isShowHtmlFlag[1] && isShowHtmlFlag[2];
+      document.getElementsByClassName("loading-data")[0].style.display = "block";
+      const isShowFlag = isShowHtmlFlag[0] && isShowHtmlFlag[1] && isShowHtmlFlag[2];
         let timeObj = setTimeout(() => {
             if (isShowFlag) {
+                document.getElementsByClassName("loading-data")[0].style.display = "none";
                 timeObj = null;
                 clearTimeout(timeObj);
-                let htmlAll = "";
                 for (let i in dataAll["软件全称"]) {
-                    htmlAll += `<tr>
-                    <td>${i}</td>
-                    <td>${dataAll["商标"][0]}</td>
-                    <td>${dataAll["类别"][0]}</td>
-                    <td>${dataAll["官方收文编号/申请号/注册号"][0]}</td>
-                    <td>${dataAll["申请日"][0]}</td>
-                    <td>${dataAll["申请人"][0]}</td>
-                    <td>${dataAll["锺维案号"][0]}</td>
-                    <td>${dataAll["注册日期"][0]}</td>
-                    <td>${dataAll["有效期至"][0]}</td>
-                    <td>${dataAll["软件全称"][i]}</td>
-                    <td>${dataAll["流水号"][i]}</td>
-                    <td>${dataAll["登记号"][i]}</td>
-                    <td>${dataAll["著作权人"][i]}</td>
-                    <td>${dataAll["登记日期"][i]}</td>
-                   </tr>`;
+                  dataSb.push({
+                    "序号": Number(i)+1,
+                    "商标": dataAll["商标"][0],
+                    "类别": dataAll["类别"][0],
+                    "官方收文编号/申请号/注册号": dataAll["官方收文编号/申请号/注册号"][0],
+                    "申请日": dataAll["申请日"][0],
+                    "申请人": dataAll["申请人"][0],
+                    "锺维案号": dataAll["锺维案号"][0],
+                    "注册日期": dataAll["注册日期"][0] || "",
+                    "有效期至": dataAll["有效期至"][0] || ""
+                  });
+                  dataRz.push({
+                    "序号": Number(i)+1,
+                    "软件全称": dataAll["软件全称"][i],
+                    "流水号": dataAll["流水号"][i],
+                    "登记号": dataAll["登记号"][i],
+                    "著作权人": dataAll["著作权人"][i],
+                    "登记日期": dataAll["登记日期"][i]
+                  });
                 }
-                document.getElementById("tbDataAll").innerHTML = htmlAll;
-                // let htmlSb = "";
-                // for (let iSb in dataSb) {
-                //     htmlSb += `<tr>
-                //         <td>${dataSb[iSb]["序号"]}</td>
-                //         <td>${dataSb[iSb]["商标"]}</td>
-                //         <td>${dataSb[iSb]["类别"]}</td>
-                //         <td>${dataSb[iSb]["官方收文编号/申请号/注册号"]}</td>
-                //         <td>${dataSb[iSb]["申请日"]}</td>
-                //         <td>${dataSb[iSb]["申请人"]}</td>
-                //         <td>${dataSb[iSb]["锺维案号"]}</td>
-                //         <td>${dataSb[iSb]["注册日期"]}</td>
-                //         <td>${dataSb[iSb]["有效期至"]}</td>
-                //        </tr>`;
-                // }
-                // document.getElementById("tbDataSb").innerHTML = htmlSb;
-                // let htmlRz = "";
-                // for (let iRz in dataRz) {
-                //     htmlRz += `<tr>
-                //         <td>${dataSb[iRz]["序号"]}</td>
-                //         <td>${dataRz[iRz]["软件全称"]}</td>
-                //         <td>${dataRz[iRz]["流水号"]}</td>
-                //         <td>${dataRz[iRz]["登记号"]}</td>
-                //         <td>${dataRz[iRz]["著作权人"]}</td>
-                //         <td>${dataRz[iRz]["登记日期"]}</td>
-                //        </tr>`;
-                // }
-                // document.getElementById("tbDataRz").innerHTML = htmlRz;
+                let htmlSb = "";
+                for (let iSb in dataSb) {
+                    htmlSb += `<tr>
+                        <td>${dataSb[iSb]["序号"]}</td>
+                        <td>${dataSb[iSb]["商标"]}</td>
+                        <td>${dataSb[iSb]["类别"]}</td>
+                        <td>${dataSb[iSb]["官方收文编号/申请号/注册号"]}</td>
+                        <td>${dataSb[iSb]["申请日"]}</td>
+                        <td>${dataSb[iSb]["申请人"]}</td>
+                        <td>${dataSb[iSb]["锺维案号"]}</td>
+                        <td>${dataSb[iSb]["注册日期"]}</td>
+                        <td>${dataSb[iSb]["有效期至"]}</td>
+                       </tr>`;
+                }
+                document.getElementById("tbDataSb").innerHTML = htmlSb;
+                let htmlRz = "";
+                for (let iRz in dataRz) {
+                    htmlRz += `<tr>
+                        <td>${dataSb[iRz]["序号"]}</td>
+                        <td>${dataRz[iRz]["软件全称"]}</td>
+                        <td>${dataRz[iRz]["流水号"]}</td>
+                        <td>${dataRz[iRz]["登记号"]}</td>
+                        <td>${dataRz[iRz]["著作权人"]}</td>
+                        <td>${dataRz[iRz]["登记日期"]}</td>
+                       </tr>`;
+                }
+                document.getElementById("tbDataRz").innerHTML = htmlRz;
             } else {
                 dataToHtml();
             }
