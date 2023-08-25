@@ -157,6 +157,8 @@
                     let fileReader = new FileReader();
                     fileReader.readAsArrayBuffer(file);
                     fileReader.onload = async (event) => {
+                        // const pdfData = new Uint32Array(event.target.result);
+                        // const pdfData = new Uint16Array(event.target.result);
                         const pdfData = new Uint8Array(event.target.result);
                         const task = pdfjsLib.getDocument({ data: pdfData });
                         const pdf = await task.promise;
@@ -173,7 +175,7 @@
                             let isBreak = false;
                             switch (t) {
                                 case dataTypeEnum.gjzscqj: isBreak = true; await getDataGjzscqj(pdf); break;
-                                case dataTypeEnum.sbzcsqs: isBreak = true; await getDataSbzcsqs(pdf); break;
+                                case dataTypeEnum.sbzcsqs: isBreak = true; await getDataSbzcsqs(pdf); await getDataImgSbzcsqs(page); break;
                                 case dataTypeEnum.rjdjsls: isBreak = true; await getDataRjdjsls(pdf); break;
                                 default: isBreak = false; ;
                             }
@@ -214,9 +216,11 @@
         const page = await pdf.getPage(1);
         const textContent = await page.getTextContent();
         const pdfDataArray = textContent.items.map((item) => item.str);
+        console.log(pdfDataArray);
         dataAll["申请人"].push(pdfDataArray[0]);
         dataAll["官方收文编号/申请号/注册号"].push(pdfDataArray[18]);
         dataAll["申请日"].push(pdfDataArray[20]);
+        dataAll["类别"].push(pdfDataArray[6].replace(/[^\d]/g, ""));
         countRun++;
         isShowHtmlFlag[0] = true;
     }
@@ -228,7 +232,7 @@
         const textContent = await page.getTextContent();
         const pdfDataArray = textContent.items.map((item) => item.str);
 
-        // dataAll["申请人"].push(pdfDataArray[36].split("：")[1]);
+        dataAll["申请人"].push(pdfDataArray[36].split("：")[1]);
         dataAll["锺维案号"].push(pdfDataArray[27]);
 
         const page2 = await pdf.getPage(2);
@@ -238,6 +242,37 @@
         dataAll["类别"].push(pdfDataArray2[13].split("：")[1]);
         countRun++;
         isShowHtmlFlag[1] = true;
+    }
+    async function getDataImgSbzcsqs(page) {
+        const operators = await page.getOperatorList();
+        const rawImgOperator = operators.fnArray
+            .map((f, index) => (f === pdfjsLib.OPS.paintImageXObject ? index : null))
+            .filter((n) => n !== null);
+        const filename = operators.argsArray[rawImgOperator[0]][0];
+        page.objs.get(filename, async (arg) => {
+            const canvas = document.createElement("canvas");
+            canvas.width = arg.width;
+            canvas.height = arg.height;
+            const ctx = canvas.getContext('2d');
+            const data = new Uint8ClampedArray(arg.width * arg.height * 4);
+            let k = 0;
+            let i = 0;
+            while (i < arg.data.length) {
+                data[k] = arg.data[i]; // r
+                data[k + 1] = arg.data[i + 1]; // g
+                data[k + 2] = arg.data[i + 2]; // b
+                data[k + 3] = 255; // a
+
+                i += 3;
+                k += 4;
+            }
+            const imgData = ctx.createImageData(arg.width, arg.height);
+            imgData.data.set(data);
+            ctx.putImageData(imgData, 0, 0);
+
+            const buff = canvas.toBuffer();
+            console.log(buffer);
+        });
     }
     // 处理数据 - 软件登记受理通知书
     async function getDataRjdjsls(pdf) {
