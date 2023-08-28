@@ -70,6 +70,7 @@ https://github.com/anaer/Sub \
 【备用】https://raw.kgithub.com/anaer/Sub/main/clash.yaml \
 【备用】https://raw.iqiq.io/anaer/Sub/main/clash.yaml
 
+https://github.com/openRunner/clash-freenode
 # 论坛
 | 综合订阅                                                                               |
 |------------------------------------------------------------------------------------|
