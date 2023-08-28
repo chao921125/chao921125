@@ -2,14 +2,17 @@
 
 | Client                                                                                             |
 |----------------------------------------------------------------------------------------------------|
+| MacOS & Windows                                                                                    |
+| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |
+| [clash-verge](https://github.com/zzzgydi/clash-verge)                                              |
 | MacOS                                                                                              |
 | [clashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
 | [clashX](https://github.com/yichengchen/clashX)                                                    |
-| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |
 | [V2rayU](https://github.com/yanue/V2rayU)                                                          |
+| [ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)                                            |
 | Windows                                                                                            |
 | [v2rayN](https://github.com/2dust/v2rayN)                                                          |
-| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |
+| [clash_for_windows_pkg clash_meta](https://github.com/kayaladream/Clash-Core-Change)               |
 | Android                                                                                            |
 | [v2rayNG](https://github.com/2dust/v2rayNG)                                                        |
 | [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)                                        |
