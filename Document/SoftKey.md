@@ -59,3 +59,8 @@ GDY6J-QPA0M-CG3AT-NZ2XV-8CAY5
 ```
 # Adobe
 [adobe-genp](https://www.cybermania.ws/apps/adobe-genp/)
+
+# JetBrains
+[jetbra](https://3.jetbra.in/)
+[jetbra code](http://jets.idejihuo.com/)
+
