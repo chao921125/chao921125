@@ -74,6 +74,10 @@ https://github.com/anaer/Sub \
 【备用】https://raw.iqiq.io/anaer/Sub/main/clash.yaml
 
 https://github.com/openRunner/clash-freenode
+
+**https://github.com/Alvin9999/pac2**
+**https://gitlab.com/free9999/ipupdate**
+
 # 论坛
 | 综合订阅                                                                               |
 |------------------------------------------------------------------------------------|
