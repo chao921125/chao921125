@@ -182,7 +182,7 @@
                                 case dataTypeEnum.gjzscqj: isBreak = true; await getDataGjzscqj(pdf); break;
                                 case dataTypeEnum.sbzcsqs: isBreak = true; await getDataSbzcsqs(pdf); await getDataImgSbzcsqs(page); break;
                                 case dataTypeEnum.rjdjsls: isBreak = true; await getDataRjdjsls(pdf); break;
-                                default: isBreak = false; ;
+                                default: await getDataImgSbzcsqs(page); isBreak = false; break;
                             }
                             if (isBreak) return false;
                         }
