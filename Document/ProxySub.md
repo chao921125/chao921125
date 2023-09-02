@@ -121,6 +121,7 @@ https://github.com/openRunner/clash-freenode
 | https://sstrojan.com/                                     |
 | https://www.duyaoss.com/                                     |
 | https://52nav.icu/            |
+https://fanqiang.network/
 
 | 每日一更                                                     |
 |----------------------------------------------------------|
