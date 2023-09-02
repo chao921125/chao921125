@@ -32,26 +32,26 @@
 # Clash
 【Proxy】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 
-【主力】https://tt.vg/freeclash 【备用】https://freefq.neocities.org/free.xml
+【Proxy】https://tt.vg/freeclash 【备用】https://freefq.neocities.org/free.xml
 
 【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/clash/Geekshare.yaml
 
-https://sub.pmsub.me/clash.yaml
+【Proxy】https://sub.pmsub.me/clash.yaml
 
 # V2ray
 【Proxy】https://raw.githubusercontent.com/igeekshare/GeekshareFreeNode/main/v2ray/Geekshare.txt
 
-【主力】https://tt.vg/freev2 【备用】https://freefq.neocities.org/free.txt
+【Proxy】https://tt.vg/freev2 【备用】https://freefq.neocities.org/free.txt
 
-https://raw.fastgit.org/freefq/free/master/v2
+【Proxy】https://raw.fastgit.org/freefq/free/master/v2
 
-https://sub.sharecentre.online/sub
+【Proxy】https://sub.sharecentre.online/sub
 
-https://sub.pmsub.me/base64
+【Proxy】https://sub.pmsub.me/base64
 
-https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
+【Proxy】https://raw.fastgit.org/Pawdroid/Free-servers/main/sub
 
-https://tz.fovi.tk/
+【Proxy】https://tz.fovi.tk/
 
 # 发布页
 https://github.com/free18/v2ray
@@ -90,17 +90,17 @@ https://github.com/openRunner/clash-freenode
 | [github Leon406](https://github.com/Leon406/SubCrawler)                            |
 | [666vpn](http://666vpn.com/)                                                       |
 | [fanqiangdang](https://fanqiangdang.com/)                                          |
-| 随时不靠谱    |
-| https://github.com/H4Ha/jichangfenxiangzhan   |
-| 临时                                                                         |
-| https://www.mibei77.com/                                                                         |
+| 随时不靠谱                                                                              |
+| https://github.com/H4Ha/jichangfenxiangzhan                                        |
+| 临时                                                                                 |
+| https://www.mibei77.com/                                                           |
 | 按照良心推荐                                                                             |
 | https://clashx.pro/                                                                |
 | https://limbopro.com/                                                              |
 | https://aijichang.com/                                                             |
 | https://runtufenxiang.com/                                                         |
 | https://vpnoe.com/                                                                 |
-| https://shadowrocket.one/                                                            |
+| https://shadowrocket.one/                                                          |
 | 以下参考                                                                               |
 | https://duangks.com/                                                               |
 | https://www.xuanjichang.com/                                                       |
@@ -109,18 +109,18 @@ https://github.com/openRunner/clash-freenode
 | https://ssrv2ray.xyz/                                                              |
 | https://sites.google.com/view/honven/%E9%A6%96%E9%A1%B5                            |
 | https://jichangtuijian.com/                                                        |
-| https://52.mk/                                                                         |
+| https://52.mk/                                                                     |
 | 随便整                                                                                |
 | https://www.extrabux.com/chs                                                       |
 | https://okokcloud.net/#/login                                                      |
 | 自己动手搭建                                                                             |
 | https://shluqu.github.io/                                                          |
-| 需要魔法                                     |
-| https://duangks.com/                                      |
-| https://clashios.com/                                     |
-| https://sstrojan.com/                                     |
-| https://www.duyaoss.com/                                     |
-| https://52nav.icu/            |
+| 需要魔法                                                                               |
+| https://duangks.com/                                                               |
+| https://clashios.com/                                                              |
+| https://sstrojan.com/                                                              |
+| https://www.duyaoss.com/                                                           |
+| https://52nav.icu/                                                                 |
 https://fanqiang.network/
 
 | 每日一更                                                     |
