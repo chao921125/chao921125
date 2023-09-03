@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>PDF 2 Excel</title>
 
-    <link href="https://unpkg.com/pdfjs-dist@3.9.179/web/pdf_viewer.css" rel="stylesheet" />
+    <link href="https://unpkg.com/pdfjs-dist@2.16.105/web/pdf_viewer.css" rel="stylesheet" />
     <style>
         table {
             padding: 0;
@@ -56,6 +56,7 @@
 <!-- https://sheetjs.com/ -->
 <!-- https://github.com/exceljs/exceljs -->
 <div id="showDom">
+<!--  pdfjs 3.x版本需要调整解析语法  -->
     <input id="pdfFile" type="file" multiple accept="application/pdf, image/*" />
     <button id="downloadExcel">下载Excel</button>
     <h1 class="loading-data">
@@ -87,11 +88,13 @@
             <tbody id="tbDataAll"></tbody>
         </table>
     </div>
+    <div id="images"></div>
 </div>
 </body>
-<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.min.js"></script>
-<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.sandbox.min.js"></script>
-<!--<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js"></script>-->
+<script src="https://unpkg.com/pdfjs-dist@2.16.105/build/pdf.js"></script>
+<script src="https://unpkg.com/pdfjs-dist@2.16.105/build/pdf.sandbox.js"></script>
+<script src="https://unpkg.com/pdfjs-dist@2.16.105/build/pdf.worker.js"></script>
+<script src="https://unpkg.com/pdfjs-dist@2.16.105/web/pdf_viewer.js"></script>
 <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
 <script>
@@ -131,8 +134,8 @@
         }
 
         // pdf 上传及解析 start
-        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js";
-        pdfjsLib.cMapUrl = "https://unpkg.com/pdfjs-dist@3.9.179/cmaps/";
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@2.16.105/build/pdf.worker.js";
+        pdfjsLib.cMapUrl = "https://unpkg.com/pdfjs-dist@2.16.105/cmaps/";
 
         document.getElementById("pdfFile").addEventListener("change", async (e) => {
             const files = e.target.files;
@@ -171,18 +174,25 @@
                         // 获取唯一标识
                         const page = await pdf.getPage(1);
                         const textContent = await page.getTextContent();
+
                         if (!textContent.items.length) {
-                            countRun++;
-                            return false;
+                            let opList = await page.getOperatorList();
+                            if (!opList.fnArray.length) {
+                                countRun++;
+                                return false;
+                            } else {
+                                await getDataImgSbzcsqs(pdf);
+                                countRun++;
+                            }
                         }
                         const pdfDataArray = textContent.items.map((item) => item.str);
                         for (let t of pdfDataArray) {
                             let isBreak = false;
                             switch (t) {
                                 case dataTypeEnum.gjzscqj: isBreak = true; await getDataGjzscqj(pdf); break;
-                                case dataTypeEnum.sbzcsqs: isBreak = true; await getDataSbzcsqs(pdf); await getDataImgSbzcsqs(page); break;
+                                case dataTypeEnum.sbzcsqs: isBreak = true; await getDataSbzcsqs(pdf); await getDataImgSbzcsqs(pdf); break;
                                 case dataTypeEnum.rjdjsls: isBreak = true; await getDataRjdjsls(pdf); break;
-                                default: await getDataImgSbzcsqs(page); isBreak = false; break;
+                                default: await getDataImgSbzcsqs(pdf); isBreak = false; break;
                             }
                             if (isBreak) return false;
                         }
@@ -250,58 +260,63 @@
         countRun++;
         isShowHtmlFlag[1] = true;
     }
-    async function getDataImgSbzcsqs(page) {
-        let imgIndex = 1;
-        let opList = await page.getOperatorList();
-        for (let k = 0; k < opList.fnArray.length; k++) {
-            if (opList.fnArray[k] === pdfjsLib.OPS.paintImageXObject) {
-                function getImage() {
-                    return new Promise(async function (res, rej) {
-                        let img = null
-                        try {
-                            //-------either get data from page.objs.get
-                            img = page.objs.get(opList.argsArray[k][0])
-                        } catch (err) {
-                            if (opList.argsArray[k][0].startsWith("g_")) {
-                                //---------or get data from page.commonObjs.get
-                                img = page.commonObjs.get(opList.argsArray[k][0])
-                            } else {
-                                res()
+    async function getDataImgSbzcsqs(pdf) {
+        for (let i = 1; i <= pdf.numPages; i++) {
+            const page = await pdf.getPage(i);
+            let imgIndex = 1;
+            let opList = await page.getOperatorList();
+            for (let k = 0; k < opList.fnArray.length; k++) {
+                if (opList.fnArray[k] === pdfjsLib.OPS.paintImageXObject) {
+                    function getImage() {
+                        return new Promise(async function (res, rej) {
+                            let img = null;
+                            try {
+                                //-------either get data from page.objs.get
+                                img = page.objs.get(opList.argsArray[k][0])
+                            } catch (err) {
+                                if (opList.argsArray[k][0].startsWith("g_")) {
+                                    //---------or get data from page.commonObjs.get
+                                    img = page.commonObjs.get(opList.argsArray[k][0])
+                                } else {
+                                    res()
+                                }
                             }
-                        }
-                        try {
+                            console.log(img);
+                            try {
 //------------------ directly creating image data from returned array does not print proper image also sometimes throw error.
-                            // var idata = new ImageData(img.data, img.width);
-                            var canvas = document.createElement('canvas');
-                            canvas.width = img.width;
-                            canvas.height = img.height;
-                            var ctx = canvas.getContext('2d');
+                                // var idata = new ImageData(img.data, img.width);
+                                var canvas = document.createElement('canvas');
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                var ctx = canvas.getContext('2d');
 //------------------- below function will process data and print proper image on provided canvas context. kind parameter in returned data is used in this function to prcess the data
-                            putBinaryImageData(ctx, img)
-                            // ctx.putImageData(idata, 0, 0);
-
-                            function getCanvasBlob(canvas) {
-                                return new Promise(function (resolve, reject) {
-                                    canvas.toBlob(function (blob) {
-                                        resolve(blob)
+                                putBinaryImageData(ctx, img)
+                                // ctx.putImageData(idata, 0, 0);
+console.log(ctx);
+                                document.getElementById('images').appendChild(canvas);
+                                function getCanvasBlob(canvas) {
+                                    return new Promise(function (resolve, reject) {
+                                        canvas.toBlob(function (blob) {
+                                            resolve(blob)
+                                        })
                                     })
+                                }
+                                getCanvasBlob(canvas).then((blob) => {
+                                    zip.folder('images').file(`page-${i}-image-${imgIndex}`, blob, { base64: false });
+                                    imgIndex++;
+                                    res()
+                                }).catch((err) => {
+                                    // console.log(err)
+                                    res()
                                 })
+                            } catch (err) {
+                                console.log(err)
+                                res()
                             }
-                            getCanvasBlob(canvas).then((blob) => {
-                                zip.folder('images').file(`page-${i}-image-${imgIndex}`, blob, { base64: false });
-                                imgIndex++;
-                                res()
-                            }).catch((err) => {
-                                // console.log(err)
-                                res()
-                            })
-                        } catch (err) {
-                            console.log(err)
-                            res()
-                        }
-                    })
+                        })
+                    }
+                    await getImage()
                 }
-                await getImage()
             }
         }
     }
