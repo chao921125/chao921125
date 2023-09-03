@@ -254,15 +254,13 @@
         let imgIndex = 1;
         let opList = await page.getOperatorList();
         for (let k = 0; k < opList.fnArray.length; k++) {
-            if (opList.fnArray[k] == pdfjsLib.OPS.paintJpegXObject || opList.fnArray[k] == pdfjsLib.OPS.paintImageXObject) {
-
+            if (opList.fnArray[k] === pdfjsLib.OPS.paintImageXObject) {
                 function getImage() {
                     return new Promise(async function (res, rej) {
                         let img = null
                         try {
                             //-------either get data from page.objs.get
                             img = page.objs.get(opList.argsArray[k][0])
-
                         } catch (err) {
                             if (opList.argsArray[k][0].startsWith("g_")) {
                                 //---------or get data from page.commonObjs.get
