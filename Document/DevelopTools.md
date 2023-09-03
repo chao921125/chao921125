@@ -95,13 +95,13 @@ Pycharm 社区版免费 Community
 ```text
 破解方式请自行搜索，或则和关注公众号
 ```
-## 小程序 开发
-[HbuilderX](https://www.dcloud.io/hbuilderx.html)
+## 小程序 开发 请参考[小程序框架推荐](https://github.com/chao921125/vue-vite)
 [微信小程序](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-[]()
-[]()
-## APP 开发
 [HbuilderX](https://www.dcloud.io/hbuilderx.html)
-[华为 ArkTS](https://developer.harmonyos.com/cn/develop/deveco-studio/#download)
 []()
+[]()
+## APP 开发 请参考[APP框架推荐](https://github.com/chao921125/vue-vite)
+[android studio](https://developer.android.google.cn/studio/)
+[华为 ArkTS](https://developer.harmonyos.com/cn/develop/deveco-studio/#download)
+[HbuilderX](https://www.dcloud.io/hbuilderx.html)
 []()
