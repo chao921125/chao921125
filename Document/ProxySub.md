@@ -1,33 +1,33 @@
 # google inurl:clash/proxies
 
-| Client                                                                                             |
-|----------------------------------------------------------------------------------------------------|
-| MacOS & Windows                                                                                    |
-| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                          |
-| [clash-verge](https://github.com/zzzgydi/clash-verge)                                              |
-| MacOS                                                                                              |
-| [clashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
-| [clashX](https://github.com/yichengchen/clashX)                                                    |
-| [V2rayU](https://github.com/yanue/V2rayU)                                                          |
-| [ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)                                            |
-| Windows                                                                                            |
-| [v2rayN](https://github.com/2dust/v2rayN)                                                          |
-| [clash_for_windows_pkg clash_meta](https://github.com/kayaladream/Clash-Core-Change)               |
-| Android                                                                                            |
-| [v2rayNG](https://github.com/2dust/v2rayNG)                                                        |
-| [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)                                        |
-| IOS $                                                                                              |
-| [Shadowrocket GitHub](https://github.com/Shadowrocket)                                             |
-| [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                           |
-| [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118)                           |
-| [Quantumult GitHub](https://github.com/crossutility/Quantumult)                                    |
-| [Quantumult 美](https://apps.apple.com/us/app/quantumult/id1252015438)                              |
-| [Quantumult 港](https://apps.apple.com/hk/app/quantumult/id1252015438)                              |
-| [QuantumultX GitHub](https://github.com/crossutility/Quantumult-X)                                 |
-| [QuantumultX 美](https://apps.apple.com/us/app/quantumult-x/id1443988620)                           |
-| [QuantumultX 港](https://apps.apple.com/hk/app/quantumult-x/id1443988620)                           |
-| Route                                                                                              |
-| [OpenClash](https://github.com/vernesong/OpenClash)                                                |
+| Client                                                                                                  |
+|---------------------------------------------------------------------------------------------------------|
+| MacOS & Windows                                                                                         |
+| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                               |
+| [clash-verge](https://github.com/zzzgydi/clash-verge)                                                   |
+| MacOS                                                                                                   |
+| [clashX Pro 👍推荐](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
+| [clashX](https://github.com/yichengchen/clashX)                                                         |
+| [V2rayU](https://github.com/yanue/V2rayU)                                                               |
+| [ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)                                                 |
+| Windows                                                                                                 |
+| [v2rayN 👍推荐](https://github.com/2dust/v2rayN)                                                          |
+| [clash_for_windows_pkg clash_meta](https://github.com/kayaladream/Clash-Core-Change)                    |
+| Android                                                                                                 |
+| [v2rayNG](https://github.com/2dust/v2rayNG)                                                             |
+| [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)                                             |
+| IOS $                                                                                                   |
+| [Shadowrocket GitHub](https://github.com/Shadowrocket)                                                  |
+| [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                                |
+| [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118)                                |
+| [Quantumult GitHub](https://github.com/crossutility/Quantumult)                                         |
+| [Quantumult 美](https://apps.apple.com/us/app/quantumult/id1252015438)                                   |
+| [Quantumult 港](https://apps.apple.com/hk/app/quantumult/id1252015438)                                   |
+| [QuantumultX GitHub](https://github.com/crossutility/Quantumult-X)                                      |
+| [QuantumultX 美](https://apps.apple.com/us/app/quantumult-x/id1443988620)                                |
+| [QuantumultX 港](https://apps.apple.com/hk/app/quantumult-x/id1443988620)                                |
+| Route                                                                                                   |
+| [OpenClash](https://github.com/vernesong/OpenClash)                                                     |
 
 # Clash
 【Proxy】https://tt.vg/freeclash
@@ -38,7 +38,7 @@
 【备用】https://anaer.github.io/Sub/clash.yaml
 【备用】https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
 
-【Proxy】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
+【Proxy clash_for_windows 不支持】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
 
 ###### 不稳定
 【Proxy】https://sub.pmsub.me/clash.yaml
