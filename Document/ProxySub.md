@@ -8,14 +8,16 @@
 | MacOS                                                                                                   |
 | [clashX Pro 👍推荐](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
 | [clashX](https://github.com/yichengchen/clashX)                                                         |
-| [V2rayU](https://github.com/yanue/V2rayU)                                                               |
+| [V2rayU 停更](https://github.com/yanue/V2rayU)                                                            |
 | [ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)                                                 |
 | Windows                                                                                                 |
 | [v2rayN 👍推荐](https://github.com/2dust/v2rayN)                                                          |
+| [nekoray](https://github.com/MatsuriDayo/nekoray/releases)                                              |
 | [clash_for_windows_pkg clash_meta](https://github.com/kayaladream/Clash-Core-Change)                    |
 | Android                                                                                                 |
 | [v2rayNG](https://github.com/2dust/v2rayNG)                                                             |
 | [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)                                             |
+| [NekoBoxForAndroid 停更](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)                       |
 | IOS $                                                                                                   |
 | [Shadowrocket GitHub](https://github.com/Shadowrocket)                                                  |
 | [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                                |
