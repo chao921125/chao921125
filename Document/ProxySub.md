@@ -40,7 +40,7 @@
 【备用】https://anaer.github.io/Sub/clash.yaml
 【备用】https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
 
-【Proxy clash_for_windows 不支持】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
+【Proxy 内部含有vless协议，clash所有客户端均不支持】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
 
 ###### 不稳定
 【Proxy】https://sub.pmsub.me/clash.yaml
