@@ -57,3 +57,10 @@ GDY6J-QPA0M-CG3AT-NZ2XV-8CAY5
 7G8905-SE7FH7-SE5890-G67J90-5SF897
 
 ```
+# Adobe
+[adobe-genp](https://www.cybermania.ws/apps/adobe-genp/)
+
+# JetBrains
+[jetbra](https://3.jetbra.in/)
+[jetbra code](http://jets.idejihuo.com/)
+

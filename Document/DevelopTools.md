@@ -39,6 +39,7 @@ Windows 请注意：安装的nvm路径可以随意，但后面的node路径请�
 安装指定的NodeJS版本：nvm install x.x.x
 卸载对应的NodeJS版本：nvm uninstall x.x.x
 查看当前安装的版本：nvm ls
+Windows安装完成后，请使用nvm ls查看后，然后使用nvm use x.x.x
 
 且推荐使用pnpm安装包，减少本地磁盘的不必要占用
 pnpm安装 https://www.pnpm.cn/installation
@@ -92,15 +93,15 @@ Pycharm 社区版免费 Community
 ## Data Base数据库连接
 [Navicat Premium](https://www.navicat.com.cn/download/navicat-premium)
 ```text
-破解方式请自行搜索，或则和关注公众号
+破解方式请自行搜索，或则和关注公众号【CC NET】
 ```
-## 小程序 开发
-[HbuilderX](https://www.dcloud.io/hbuilderx.html)
+## 小程序 开发 请参考[小程序框架推荐](https://github.com/chao921125/vue-vite)
 [微信小程序](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-[]()
-[]()
-## APP 开发
 [HbuilderX](https://www.dcloud.io/hbuilderx.html)
-[华为 ArkTS](https://developer.harmonyos.com/cn/develop/deveco-studio/#download)
 []()
+[]()
+## APP 开发 请参考[APP框架推荐](https://github.com/chao921125/vue-vite)
+[android studio](https://developer.android.google.cn/studio/)
+[华为 ArkTS](https://developer.harmonyos.com/cn/develop/deveco-studio/#download)
+[HbuilderX](https://www.dcloud.io/hbuilderx.html)
 []()
