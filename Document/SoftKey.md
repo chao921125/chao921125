@@ -64,3 +64,8 @@ GDY6J-QPA0M-CG3AT-NZ2XV-8CAY5
 [jetbra](https://3.jetbra.in/)
 [jetbra code](http://jets.idejihuo.com/)
 
+# Office
+https://github.com/OdysseusYuan/LKY_OfficeTools
+
+https://github.com/massgravel/Microsoft-Activation-Scripts
+
