@@ -1,3 +1,11 @@
+# 自行搭建
+| github                                                                            |
+|-----------------------------------------------------------------------------------|
+| [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) |
+| [stable-diffusion](https://github.com/CompVis/stable-diffusion)                   |
+| [stablediffusion](https://github.com/Stability-AI/stablediffusion)                |
+| [ml-stable-diffusion](https://github.com/apple/ml-stable-diffusion)               |
+
 # 真-免费AI
 | 名称                 | 地址                                                                      |
 |--------------------|-------------------------------------------------------------------------|
@@ -258,5 +266,9 @@ pip3 install -r requirements.txt -q
 pip3 install -q gradio
 python basicsr/setup.py develop
 ```
+```text
+Nova AI 
+模型下载：magnet:?xt=urn:btih:5bde442da86265b670a3e5ea3163afad2c6f8ecc
 
+```
 [//]: # (https://huggingface.co/spaces)
