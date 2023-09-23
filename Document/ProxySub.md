@@ -54,23 +54,21 @@
 【V2ray】https://tt.vg/freev2
 【备用】https://v2ray.neocities.org/v2ray.txt
 
-##### [【双支持 手动选择】](https://github.com/openRunner/clash-freenode)
-【Clash】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
-【V2ray】https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
-
 ##### [【V专用】](https://github.com/freefq/free)
 【V2ray】https://raw.githubusercontent.com/freefq/free/master/v2
 【备用】https://bulinkbulink.com/freefq/free/master/v2
 
-##### [【V专用】](https://github.com/Pawdroid/Free-servers)
+###### 不推荐，基本无可用
+【V2ray】https://sub.sharecentre.online/sub
+
+[【V专用】](https://github.com/Pawdroid/Free-servers)
 【V2ray】https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 【备用】https://ghproxy.com/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 
-###### 不稳定
-【V2ray】https://sub.sharecentre.online/sub
-
-###### 停更
-【~~~双支持~~~】https://github.com/free18/v2ray
+###### 有时无法加载
+[~~~【双支持 手动选择】~~~](https://github.com/openRunner/clash-freenode)
+【Clash】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
+【V2ray】https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
 
 # 其他
 【节点池收集】https://github.com/Leon406/SubCrawler
@@ -186,3 +184,4 @@ https://tz.fovi.tk/
 
 [//]: # (TG 群组 https://cn.tgstat.com/)
 [//]: # (https://github.com/ACL4SSR/ACL4SSR/tree/master)
+【Clash】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml|https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash|https://raw.githubusercontent.com/freefq/free/master/v2
