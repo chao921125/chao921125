@@ -37,6 +37,10 @@
 【备用】https://anaer.github.io/Sub/clash.yaml
 【备用】https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
 
+##### [【V专用】](https://github.com/freefq/free)
+【V2ray】https://raw.githubusercontent.com/freefq/free/master/v2
+【备用】https://bulinkbulink.com/freefq/free/master/v2
+
 ##### [【双支持】](https://github.com/tbbatbb/Proxy)
 【Clash】https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml
 【V2ray】https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt
@@ -45,18 +49,14 @@
 【Clash】https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
 【V2ray】https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub
 
-##### [【双支持】](https://pmsub.me/)
-【Clash】https://sub.pmsub.me/clash.yaml
-【V2ray】https://sub.pmsub.me/base64
-
 ##### [【双支持】](https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash)
 【Clash】https://tt.vg/freeclash
 【V2ray】https://tt.vg/freev2
 【备用】https://v2ray.neocities.org/v2ray.txt
 
-##### [【V专用】](https://github.com/freefq/free)
-【V2ray】https://raw.githubusercontent.com/freefq/free/master/v2
-【备用】https://bulinkbulink.com/freefq/free/master/v2
+##### [【双支持】](https://pmsub.me/)
+【Clash】https://sub.pmsub.me/clash.yaml
+【V2ray】https://sub.pmsub.me/base64
 
 ###### 不推荐，基本无可用
 【V2ray】https://sub.sharecentre.online/sub
