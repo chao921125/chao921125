@@ -183,4 +183,3 @@ https://tz.fovi.tk/
 
 [//]: # (TG 群组 https://cn.tgstat.com/)
 [//]: # (https://github.com/ACL4SSR/ACL4SSR/tree/master)
-【Clash】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml|https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash|https://raw.githubusercontent.com/freefq/free/master/v2
