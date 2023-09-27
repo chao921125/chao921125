@@ -87,7 +87,7 @@ https://github.com/Alvin9999/pac2
 
 https://tz.fovi.tk/
 # 论坛
-| 综合订阅                                                                               |
+| 综合推荐                                                                               |
 |------------------------------------------------------------------------------------|
 | [clashsub](https://clashsub.com/) [Clash Node](https://clashnode.xyz/)             |
 | [免费党](https://www.mfdang.com/)                                                     |
