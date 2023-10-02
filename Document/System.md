@@ -41,6 +41,9 @@
 |-----------------------------------------------------|
 | [codefever](https://github.com/PGYER/codefever)     |
 
+软硬路由
+https://www.lucky666.cn/
+
 1,微PE工具箱
 https://www.wepe.com.cn/
 2,Edgeless
