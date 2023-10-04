@@ -44,6 +44,8 @@
 软硬路由
 https://www.lucky666.cn/
 
+激活：https://massgrave.dev/index.html
+
 1,微PE工具箱
 https://www.wepe.com.cn/
 2,Edgeless
