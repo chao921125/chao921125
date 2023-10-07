@@ -3,22 +3,23 @@
 | Client                                                                                                  |
 |---------------------------------------------------------------------------------------------------------|
 | MacOS & Windows                                                                                         |
-| [clash_for_windows_pkg](https://github.com/Fndroid/clash_for_windows_pkg)                               |
+| [clash_for_windows_pkg 👍推荐](https://github.com/Fndroid/clash_for_windows_pkg)                          |
 | [clash-verge](https://github.com/zzzgydi/clash-verge)                                                   |
 | MacOS                                                                                                   |
 | [clashX Pro 👍推荐](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
 | [clashX](https://github.com/yichengchen/clashX)                                                         |
-| [V2rayU 停更](https://github.com/yanue/V2rayU)                                                            |
 | [ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)                                                 |
+| [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases)                              |
 | Windows                                                                                                 |
 | [v2rayN 👍推荐](https://github.com/2dust/v2rayN)                                                          |
 | [nekoray](https://github.com/MatsuriDayo/nekoray/releases)                                              |
+| [clash](https://github.com/Dreamacro/clash/releases)                                                    |
 | [clash_for_windows_pkg clash_meta](https://github.com/kayaladream/Clash-Core-Change)                    |
 | Android                                                                                                 |
 | [v2rayNG](https://github.com/2dust/v2rayNG)                                                             |
-| [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)                                             |
-| [NekoBoxForAndroid 停更](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)                       |
-| IOS $                                                                                                   |
+| [Clash For Android](https://github.com/Kr328/ClashForAndroid)                                           |
+| [shadowsocks-android](https://github.com/shadowsocks/shadowsocks-android/releases)                      |
+| IOS                                                                                                     |
 | [Shadowrocket GitHub](https://github.com/Shadowrocket)                                                  |
 | [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                                |
 | [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118)                                |
