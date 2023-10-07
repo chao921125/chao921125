@@ -9,25 +9,25 @@ dependencies:
     specifier: ^2.18.1
     version: 2.18.1
   mysql2:
-    specifier: ^3.6.0
-    version: registry.npmmirror.com/mysql2@3.6.0
+    specifier: ^3.6.1
+    version: registry.npmmirror.com/mysql2@3.6.1
   node-rsa:
     specifier: ^1.1.1
     version: 1.1.1
   playwright:
-    specifier: ^1.37.1
-    version: registry.npmmirror.com/playwright@1.37.1
+    specifier: ^1.38.1
+    version: registry.npmmirror.com/playwright@1.38.1
   puppeteer:
-    specifier: ^21.1.1
-    version: registry.npmmirror.com/puppeteer@21.1.1
+    specifier: ^21.3.4
+    version: registry.npmmirror.com/puppeteer@21.3.4(typescript@5.2.2)
   puppeteer-core:
-    specifier: ^21.1.1
-    version: registry.npmmirror.com/puppeteer-core@21.1.1
+    specifier: ^21.3.4
+    version: registry.npmmirror.com/puppeteer-core@21.3.4
 
 devDependencies:
   '@playwright/test':
-    specifier: ^1.37.1
-    version: registry.npmmirror.com/@playwright/test@1.37.1
+    specifier: ^1.38.1
+    version: registry.npmmirror.com/@playwright/test@1.38.1
   typescript:
     specifier: ^5.2.2
     version: registry.npmmirror.com/typescript@5.2.2
@@ -138,30 +138,27 @@ packages:
       js-tokens: registry.npmmirror.com/js-tokens@4.0.0
     dev: false
 
-  registry.npmmirror.com/@playwright/test@1.37.1:
-    resolution: {integrity: sha512-bq9zTli3vWJo8S3LwB91U0qDNQDpEXnw7knhxLM0nwDvexQAwx9tO8iKDZSqqneVq+URd/WIoz+BALMqUTgdSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@playwright/test/-/test-1.37.1.tgz}
+  registry.npmmirror.com/@playwright/test@1.38.1:
+    resolution: {integrity: sha512-NqRp8XMwj3AK+zKLbZShl0r/9wKgzqI/527bkptKXomtuo+dOjU9NdMASQ8DNC9z9zLOMbG53T4eihYr3XR+BQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@playwright/test/-/test-1.38.1.tgz}
     name: '@playwright/test'
-    version: 1.37.1
+    version: 1.38.1
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node@18.16.0
-      playwright-core: registry.npmmirror.com/playwright-core@1.37.1
-    optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents@2.3.2
+      playwright: registry.npmmirror.com/playwright@1.38.1
     dev: true
 
-  registry.npmmirror.com/@puppeteer/browsers@1.7.0:
-    resolution: {integrity: sha512-sl7zI0IkbQGak/+IE3VEEZab5SSOlI5F6558WvzWGC1n3+C722rfewC1ZIkcF9dsoGSsxhsONoseVlNQG4wWvQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@puppeteer/browsers/-/browsers-1.7.0.tgz}
+  registry.npmmirror.com/@puppeteer/browsers@1.7.1:
+    resolution: {integrity: sha512-nIb8SOBgDEMFY2iS2MdnUZOg2ikcYchRrBoF+wtdjieRFKR2uGRipHY/oFLo+2N6anDualyClPzGywTHRGrLfw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@puppeteer/browsers/-/browsers-1.7.1.tgz}
     name: '@puppeteer/browsers'
-    version: 1.7.0
+    version: 1.7.1
     engines: {node: '>=16.3.0'}
     hasBin: true
     dependencies:
       debug: registry.npmmirror.com/debug@4.3.4
       extract-zip: registry.npmmirror.com/extract-zip@2.0.1
       progress: registry.npmmirror.com/progress@2.0.3
-      proxy-agent: registry.npmmirror.com/proxy-agent@6.3.0
+      proxy-agent: registry.npmmirror.com/proxy-agent@6.3.1
       tar-fs: registry.npmmirror.com/tar-fs@3.0.4
       unbzip2-stream: registry.npmmirror.com/unbzip2-stream@1.4.3
       yargs: registry.npmmirror.com/yargs@17.7.1
@@ -179,6 +176,9 @@ packages:
     resolution: {integrity: sha512-BsAaKhB+7X+H4GnSjGhJG9Qi8Tw+inU9nJDwmD5CgOmBLEI6ArdhikpLX7DjbjDRDTbqZzU2LSQNZg8WGPiSZQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.16.0.tgz}
     name: '@types/node'
     version: 18.16.0
+    requiresBuild: true
+    dev: false
+    optional: true
 
   registry.npmmirror.com/@types/yauzl@2.10.0:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/yauzl/-/yauzl-2.10.0.tgz}
@@ -293,16 +293,17 @@ packages:
       supports-color: registry.npmmirror.com/supports-color@5.5.0
     dev: false
 
-  registry.npmmirror.com/chromium-bidi@0.4.22(devtools-protocol@0.0.1159816):
-    resolution: {integrity: sha512-wR7Y9Ioez+cNXT4ZP7VNM1HRTljpNnMSLw4/RnwhhZUP4yCU7kIQND00YiktuHekch68jklGPK1q9Jkb29+fQg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chromium-bidi/-/chromium-bidi-0.4.22.tgz}
-    id: registry.npmmirror.com/chromium-bidi/0.4.22
+  registry.npmmirror.com/chromium-bidi@0.4.28(devtools-protocol@0.0.1179426):
+    resolution: {integrity: sha512-2HZ74QlAApJrEwcGlU/sUu0s4VS+FI3CJ09Toc9aE9VemMyhHZXeaROQgJKNRaYMUTUx6qIv1cLBs3F+vfgjSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chromium-bidi/-/chromium-bidi-0.4.28.tgz}
+    id: registry.npmmirror.com/chromium-bidi/0.4.28
     name: chromium-bidi
-    version: 0.4.22
+    version: 0.4.28
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
-      devtools-protocol: registry.npmmirror.com/devtools-protocol@0.0.1159816
+      devtools-protocol: registry.npmmirror.com/devtools-protocol@0.0.1179426
       mitt: registry.npmmirror.com/mitt@3.0.1
+      urlpattern-polyfill: registry.npmmirror.com/urlpattern-polyfill@9.0.0
     dev: false
 
   registry.npmmirror.com/cliui@8.0.1:
@@ -345,16 +346,23 @@ packages:
     version: 1.1.4
     dev: false
 
-  registry.npmmirror.com/cosmiconfig@8.2.0:
-    resolution: {integrity: sha512-3rTMnFJA1tCOPwRxtgF4wd7Ab2qvDbL8jX+3smjIbS4HlZBagTlpERbdN7iAbWlrfxE3M8c27kTwTawQ7st+OQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cosmiconfig/-/cosmiconfig-8.2.0.tgz}
+  registry.npmmirror.com/cosmiconfig@8.3.6(typescript@5.2.2):
+    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cosmiconfig/-/cosmiconfig-8.3.6.tgz}
+    id: registry.npmmirror.com/cosmiconfig/8.3.6
     name: cosmiconfig
-    version: 8.2.0
+    version: 8.3.6
     engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       import-fresh: registry.npmmirror.com/import-fresh@3.3.0
       js-yaml: registry.npmmirror.com/js-yaml@4.1.0
       parse-json: registry.npmmirror.com/parse-json@5.2.0
       path-type: registry.npmmirror.com/path-type@4.0.0
+      typescript: registry.npmmirror.com/typescript@5.2.2
     dev: false
 
   registry.npmmirror.com/cross-fetch@4.0.0:
@@ -406,10 +414,10 @@ packages:
     engines: {node: '>=0.10'}
     dev: false
 
-  registry.npmmirror.com/devtools-protocol@0.0.1159816:
-    resolution: {integrity: sha512-2cZlHxC5IlgkIWe2pSDmCrDiTzbSJWywjbDDnupOImEBcG31CQgBLV8wWE+5t+C4rimcjHsbzy7CBzf9oFjboA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/devtools-protocol/-/devtools-protocol-0.0.1159816.tgz}
+  registry.npmmirror.com/devtools-protocol@0.0.1179426:
+    resolution: {integrity: sha512-KKC7IGwdOr7u9kTGgjUvGTov/z1s2H7oHi3zKCdR9eSDyCPia5CBi4aRhtp7d8uR7l0GS5UTDw3TjKGu5CqINg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/devtools-protocol/-/devtools-protocol-0.0.1179426.tgz}
     name: devtools-protocol
-    version: 0.0.1159816
+    version: 0.0.1179426
     dev: false
 
   registry.npmmirror.com/emoji-regex@8.0.0:
@@ -532,7 +540,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   registry.npmmirror.com/generate-function@2.3.1:
@@ -598,10 +605,10 @@ packages:
       - supports-color
     dev: false
 
-  registry.npmmirror.com/https-proxy-agent@7.0.0:
-    resolution: {integrity: sha512-0euwPCRyAPSgGdzD1IVN9nJYHtBhJwb6XPfbpQcYbPCwrBidX6GzxmchnaF4sfF/jPb74Ojx5g4yTg3sixlyPw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/https-proxy-agent/-/https-proxy-agent-7.0.0.tgz}
+  registry.npmmirror.com/https-proxy-agent@7.0.2:
+    resolution: {integrity: sha512-NmLNjm6ucYwtcUmL7JQC1ZQ57LmHP4lT15FQ8D61nak1rO6DH+fz5qNK2Ap5UN4ZapYICE3/0KodcLYSPsPbaA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/https-proxy-agent/-/https-proxy-agent-7.0.2.tgz}
     name: https-proxy-agent
-    version: 7.0.0
+    version: 7.0.2
     engines: {node: '>= 14'}
     dependencies:
       agent-base: registry.npmmirror.com/agent-base@7.1.0
@@ -739,10 +746,10 @@ packages:
     version: 2.1.2
     dev: false
 
-  registry.npmmirror.com/mysql2@3.6.0:
-    resolution: {integrity: sha512-EWUGAhv6SphezurlfI2Fpt0uJEWLmirrtQR7SkbTHFC+4/mJBrPiSzHESHKAWKG7ALVD6xaG/NBjjd1DGJGQQQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mysql2/-/mysql2-3.6.0.tgz}
+  registry.npmmirror.com/mysql2@3.6.1:
+    resolution: {integrity: sha512-O7FXjLtNkjcMBpLURwkXIhyVbX9i4lq4nNRCykPNOXfceq94kJ0miagmTEGCZieuO8JtwtXaZ41U6KT4eF9y3g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mysql2/-/mysql2-3.6.1.tgz}
     name: mysql2
-    version: 3.6.0
+    version: 3.6.1
     engines: {node: '>= 8.0'}
     dependencies:
       denque: registry.npmmirror.com/denque@2.1.0
@@ -793,10 +800,10 @@ packages:
       wrappy: registry.npmmirror.com/wrappy@1.0.2
     dev: false
 
-  registry.npmmirror.com/pac-proxy-agent@7.0.0:
-    resolution: {integrity: sha512-t4tRAMx0uphnZrio0S0Jw9zg3oDbz1zVhQ/Vy18FjLfP1XOLNUEjaVxYCYRI6NS+BsMBXKIzV6cTLOkO9AtywA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pac-proxy-agent/-/pac-proxy-agent-7.0.0.tgz}
+  registry.npmmirror.com/pac-proxy-agent@7.0.1:
+    resolution: {integrity: sha512-ASV8yU4LLKBAjqIPMbrgtaKIvxQri/yh2OpI+S6hVa9JRkUI3Y3NPFbfngDtY7oFtSMD3w31Xns89mDa3Feo5A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pac-proxy-agent/-/pac-proxy-agent-7.0.1.tgz}
     name: pac-proxy-agent
-    version: 7.0.0
+    version: 7.0.1
     engines: {node: '>= 14'}
     dependencies:
       '@tootallnate/quickjs-emscripten': registry.npmmirror.com/@tootallnate/quickjs-emscripten@0.23.0
@@ -804,9 +811,9 @@ packages:
       debug: registry.npmmirror.com/debug@4.3.4
       get-uri: registry.npmmirror.com/get-uri@6.0.1
       http-proxy-agent: registry.npmmirror.com/http-proxy-agent@7.0.0
-      https-proxy-agent: registry.npmmirror.com/https-proxy-agent@7.0.0
+      https-proxy-agent: registry.npmmirror.com/https-proxy-agent@7.0.2
       pac-resolver: registry.npmmirror.com/pac-resolver@7.0.0
-      socks-proxy-agent: registry.npmmirror.com/socks-proxy-agent@8.0.1
+      socks-proxy-agent: registry.npmmirror.com/socks-proxy-agent@8.0.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -856,23 +863,23 @@ packages:
     version: 1.2.0
     dev: false
 
-  registry.npmmirror.com/playwright-core@1.37.1:
-    resolution: {integrity: sha512-17EuQxlSIYCmEMwzMqusJ2ztDgJePjrbttaefgdsiqeLWidjYz9BxXaTaZWxH1J95SHGk6tjE+dwgWILJoUZfA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/playwright-core/-/playwright-core-1.37.1.tgz}
+  registry.npmmirror.com/playwright-core@1.38.1:
+    resolution: {integrity: sha512-tQqNFUKa3OfMf4b2jQ7aGLB8o9bS3bOY0yMEtldtC2+spf8QXG9zvXLTXUeRsoNuxEYMgLYR+NXfAa1rjKRcrg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/playwright-core/-/playwright-core-1.38.1.tgz}
     name: playwright-core
-    version: 1.37.1
+    version: 1.38.1
     engines: {node: '>=16'}
     hasBin: true
 
-  registry.npmmirror.com/playwright@1.37.1:
-    resolution: {integrity: sha512-bgUXRrQKhT48zHdxDYQTpf//0xDfDd5hLeEhjuSw8rXEGoT9YeElpfvs/izonTNY21IQZ7d3s22jLxYaAnubbQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/playwright/-/playwright-1.37.1.tgz}
+  registry.npmmirror.com/playwright@1.38.1:
+    resolution: {integrity: sha512-oRMSJmZrOu1FP5iu3UrCx8JEFRIMxLDM0c/3o4bpzU5Tz97BypefWf7TuTNPWeCe279TPal5RtPPZ+9lW/Qkow==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/playwright/-/playwright-1.38.1.tgz}
     name: playwright
-    version: 1.37.1
+    version: 1.38.1
     engines: {node: '>=16'}
     hasBin: true
-    requiresBuild: true
     dependencies:
-      playwright-core: registry.npmmirror.com/playwright-core@1.37.1
-    dev: false
+      playwright-core: registry.npmmirror.com/playwright-core@1.38.1
+    optionalDependencies:
+      fsevents: registry.npmmirror.com/fsevents@2.3.2
 
   registry.npmmirror.com/progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/progress/-/progress-2.0.3.tgz}
@@ -881,20 +888,20 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
-  registry.npmmirror.com/proxy-agent@6.3.0:
-    resolution: {integrity: sha512-0LdR757eTj/JfuU7TL2YCuAZnxWXu3tkJbg4Oq3geW/qFNT/32T0sp2HnZ9O0lMR4q3vwAt0+xCA8SR0WAD0og==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/proxy-agent/-/proxy-agent-6.3.0.tgz}
+  registry.npmmirror.com/proxy-agent@6.3.1:
+    resolution: {integrity: sha512-Rb5RVBy1iyqOtNl15Cw/llpeLH8bsb37gM1FUfKQ+Wck6xHlbAhWGUFiTRHtkjqGTA5pSHz6+0hrPW/oECihPQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/proxy-agent/-/proxy-agent-6.3.1.tgz}
     name: proxy-agent
-    version: 6.3.0
+    version: 6.3.1
     engines: {node: '>= 14'}
     dependencies:
       agent-base: registry.npmmirror.com/agent-base@7.1.0
       debug: registry.npmmirror.com/debug@4.3.4
       http-proxy-agent: registry.npmmirror.com/http-proxy-agent@7.0.0
-      https-proxy-agent: registry.npmmirror.com/https-proxy-agent@7.0.0
+      https-proxy-agent: registry.npmmirror.com/https-proxy-agent@7.0.2
       lru-cache: registry.npmmirror.com/lru-cache@7.18.3
-      pac-proxy-agent: registry.npmmirror.com/pac-proxy-agent@7.0.0
+      pac-proxy-agent: registry.npmmirror.com/pac-proxy-agent@7.0.1
       proxy-from-env: registry.npmmirror.com/proxy-from-env@1.1.0
-      socks-proxy-agent: registry.npmmirror.com/socks-proxy-agent@8.0.1
+      socks-proxy-agent: registry.npmmirror.com/socks-proxy-agent@8.0.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -914,18 +921,18 @@ packages:
       once: registry.npmmirror.com/once@1.4.0
     dev: false
 
-  registry.npmmirror.com/puppeteer-core@21.1.1:
-    resolution: {integrity: sha512-Tlcajcf44zwfa9Sbwv3T8BtaNMJ69wtpHIxwl2NOBTyTK3D1wppQovXTjfw0TDOm3a16eCfQ+5BMi3vRQ4kuAQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer-core/-/puppeteer-core-21.1.1.tgz}
+  registry.npmmirror.com/puppeteer-core@21.3.4:
+    resolution: {integrity: sha512-iaG7ScTXOm9hlsBTBGGtr5dAAsA8IiWTx8E0Ghr0b5Ntl42bdcPS8EXjcERKocDhua2YqdlnFGs/cBxHY+VNyA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer-core/-/puppeteer-core-21.3.4.tgz}
     name: puppeteer-core
-    version: 21.1.1
+    version: 21.3.4
     engines: {node: '>=16.3.0'}
     dependencies:
-      '@puppeteer/browsers': registry.npmmirror.com/@puppeteer/browsers@1.7.0
-      chromium-bidi: registry.npmmirror.com/chromium-bidi@0.4.22(devtools-protocol@0.0.1159816)
+      '@puppeteer/browsers': registry.npmmirror.com/@puppeteer/browsers@1.7.1
+      chromium-bidi: registry.npmmirror.com/chromium-bidi@0.4.28(devtools-protocol@0.0.1179426)
       cross-fetch: registry.npmmirror.com/cross-fetch@4.0.0
       debug: registry.npmmirror.com/debug@4.3.4
-      devtools-protocol: registry.npmmirror.com/devtools-protocol@0.0.1159816
-      ws: registry.npmmirror.com/ws@8.13.0
+      devtools-protocol: registry.npmmirror.com/devtools-protocol@0.0.1179426
+      ws: registry.npmmirror.com/ws@8.14.2
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -933,20 +940,22 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/puppeteer@21.1.1:
-    resolution: {integrity: sha512-2TLntjGA4qLrI9/8N0UK/5OoZJ2Ue7QgphN2SD+RsaHiha12AEiVyMGsB+i6LY1IoPAtEgYIjblQ7lw3kWDNRw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer/-/puppeteer-21.1.1.tgz}
+  registry.npmmirror.com/puppeteer@21.3.4(typescript@5.2.2):
+    resolution: {integrity: sha512-kE67k1KR6hQs3g0Yf/i3GYOhTU8zC2dtcpHhtcSC9bGoVxRgqDo/hwVkDqlNKxJsJHuVX+qviWC7F0FdSjcFTA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer/-/puppeteer-21.3.4.tgz}
+    id: registry.npmmirror.com/puppeteer/21.3.4
     name: puppeteer
-    version: 21.1.1
+    version: 21.3.4
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': registry.npmmirror.com/@puppeteer/browsers@1.7.0
-      cosmiconfig: registry.npmmirror.com/cosmiconfig@8.2.0
-      puppeteer-core: registry.npmmirror.com/puppeteer-core@21.1.1
+      '@puppeteer/browsers': registry.npmmirror.com/@puppeteer/browsers@1.7.1
+      cosmiconfig: registry.npmmirror.com/cosmiconfig@8.3.6(typescript@5.2.2)
+      puppeteer-core: registry.npmmirror.com/puppeteer-core@21.3.4
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - supports-color
+      - typescript
       - utf-8-validate
     dev: false
 
@@ -989,10 +998,10 @@ packages:
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
     dev: false
 
-  registry.npmmirror.com/socks-proxy-agent@8.0.1:
-    resolution: {integrity: sha512-59EjPbbgg8U3x62hhKOFVAmySQUcfRQ4C7Q/D5sEHnZTQRrQlNKINks44DMR1gwXp0p4LaVIeccX2KHTTcHVqQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/socks-proxy-agent/-/socks-proxy-agent-8.0.1.tgz}
+  registry.npmmirror.com/socks-proxy-agent@8.0.2:
+    resolution: {integrity: sha512-8zuqoLv1aP/66PHF5TqwJ7Czm3Yv32urJQHrVyhD7mmA6d61Zv8cIXQYPTWwmg6qlupnPvs/QKDmfa4P/qct2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/socks-proxy-agent/-/socks-proxy-agent-8.0.2.tgz}
     name: socks-proxy-agent
-    version: 8.0.1
+    version: 8.0.2
     engines: {node: '>= 14'}
     dependencies:
       agent-base: registry.npmmirror.com/agent-base@7.1.0
@@ -1110,7 +1119,6 @@ packages:
     version: 5.2.2
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   registry.npmmirror.com/unbzip2-stream@1.4.3:
     resolution: {integrity: sha512-mlExGW4w71ebDJviH16lQLtZS32VKqsSfk80GCfUlwT/4/hNRFsoscrF/c++9xinkMzECL1uL9DDwXqFWkruPg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unbzip2-stream/-/unbzip2-stream-1.4.3.tgz}
@@ -1126,6 +1134,12 @@ packages:
     name: universalify
     version: 0.1.2
     engines: {node: '>= 4.0.0'}
+    dev: false
+
+  registry.npmmirror.com/urlpattern-polyfill@9.0.0:
+    resolution: {integrity: sha512-WHN8KDQblxd32odxeIgo83rdVDE2bvdkb86it7bMhYZwWKJz0+O0RK/eZiHYnM+zgt/U7hAHOlCQGfjjvSkw2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/urlpattern-polyfill/-/urlpattern-polyfill-9.0.0.tgz}
+    name: urlpattern-polyfill
+    version: 9.0.0
     dev: false
 
   registry.npmmirror.com/webidl-conversions@3.0.1:
@@ -1160,10 +1174,10 @@ packages:
     version: 1.0.2
     dev: false
 
-  registry.npmmirror.com/ws@8.13.0:
-    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ws/-/ws-8.13.0.tgz}
+  registry.npmmirror.com/ws@8.14.2:
+    resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ws/-/ws-8.14.2.tgz}
     name: ws
-    version: 8.13.0
+    version: 8.14.2
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1

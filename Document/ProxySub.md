@@ -32,11 +32,6 @@
 | [OpenClash](https://github.com/vernesong/OpenClash)                                                     |
 
 # 订阅地址
-##### [【C专用】](https://github.com/anaer/Sub)
-【Clash】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
-【备用】https://anaer.github.io/Sub/clash.yaml
-【备用】https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
-
 ##### [【双支持】](https://github.com/tbbatbb/Proxy)
 【Clash】https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml
 【V2ray】https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt
@@ -54,23 +49,25 @@
 【V2ray】https://tt.vg/freev2
 【备用】https://v2ray.neocities.org/v2ray.txt
 
-##### [【双支持 手动选择】](https://github.com/openRunner/clash-freenode)
-【Clash】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
-【V2ray】https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
+##### [【C专用】](https://github.com/anaer/Sub)
+【Clash】https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+【备用】https://anaer.github.io/Sub/clash.yaml
+【备用】https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
 
 ##### [【V专用】](https://github.com/freefq/free)
 【V2ray】https://raw.githubusercontent.com/freefq/free/master/v2
 【备用】https://bulinkbulink.com/freefq/free/master/v2
 
-##### [【V专用】](https://github.com/Pawdroid/Free-servers)
+###### 不推荐，基本无可用
+【V2ray】https://sub.sharecentre.online/sub
+
+[【V专用】](https://github.com/Pawdroid/Free-servers)
 【V2ray】https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 【备用】https://ghproxy.com/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 
-###### 不稳定
-【V2ray】https://sub.sharecentre.online/sub
-
-###### 停更
-【~~~双支持~~~】https://github.com/free18/v2ray
+[~~~【双支持 手动选择】~~~](https://github.com/openRunner/clash-freenode)
+【Clash】https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml
+【V2ray】https://raw.githubusercontent.com/openRunner/clash-freenode/main/v2ray.txt
 
 # 其他
 【节点池收集】https://github.com/Leon406/SubCrawler
@@ -90,7 +87,7 @@ https://github.com/Alvin9999/pac2
 
 https://tz.fovi.tk/
 # 论坛
-| 综合订阅                                                                               |
+| 综合推荐                                                                               |
 |------------------------------------------------------------------------------------|
 | [clashsub](https://clashsub.com/) [Clash Node](https://clashnode.xyz/)             |
 | [免费党](https://www.mfdang.com/)                                                     |
