@@ -10,8 +10,8 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.6.1",
     "node-rsa": "^1.1.1",
-    "puppeteer": "^21.3.4",
-    "puppeteer-core": "^21.3.4",
+    "puppeteer": "^21.3.8",
+    "puppeteer-core": "^21.3.8",
     "playwright": "^1.38.1"
   },
   "devDependencies": {

@@ -18,11 +18,11 @@ dependencies:
     specifier: ^1.38.1
     version: registry.npmmirror.com/playwright@1.38.1
   puppeteer:
-    specifier: ^21.3.4
-    version: registry.npmmirror.com/puppeteer@21.3.4(typescript@5.2.2)
+    specifier: ^21.3.8
+    version: registry.npmmirror.com/puppeteer@21.3.8(typescript@5.2.2)
   puppeteer-core:
-    specifier: ^21.3.4
-    version: registry.npmmirror.com/puppeteer-core@21.3.4
+    specifier: ^21.3.8
+    version: registry.npmmirror.com/puppeteer-core@21.3.8
 
 devDependencies:
   '@playwright/test':
@@ -293,11 +293,11 @@ packages:
       supports-color: registry.npmmirror.com/supports-color@5.5.0
     dev: false
 
-  registry.npmmirror.com/chromium-bidi@0.4.28(devtools-protocol@0.0.1179426):
-    resolution: {integrity: sha512-2HZ74QlAApJrEwcGlU/sUu0s4VS+FI3CJ09Toc9aE9VemMyhHZXeaROQgJKNRaYMUTUx6qIv1cLBs3F+vfgjSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chromium-bidi/-/chromium-bidi-0.4.28.tgz}
-    id: registry.npmmirror.com/chromium-bidi/0.4.28
+  registry.npmmirror.com/chromium-bidi@0.4.31(devtools-protocol@0.0.1179426):
+    resolution: {integrity: sha512-OtvEg2JMRQrHsmLx4FV3u1Hf9waYxB5PmL+yM0HkFpc9H2x3TMbUqS+GP2/fC4399hzOO+EQF8uVU43By9ILag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chromium-bidi/-/chromium-bidi-0.4.31.tgz}
+    id: registry.npmmirror.com/chromium-bidi/0.4.31
     name: chromium-bidi
-    version: 0.4.28
+    version: 0.4.31
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
@@ -921,14 +921,14 @@ packages:
       once: registry.npmmirror.com/once@1.4.0
     dev: false
 
-  registry.npmmirror.com/puppeteer-core@21.3.4:
-    resolution: {integrity: sha512-iaG7ScTXOm9hlsBTBGGtr5dAAsA8IiWTx8E0Ghr0b5Ntl42bdcPS8EXjcERKocDhua2YqdlnFGs/cBxHY+VNyA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer-core/-/puppeteer-core-21.3.4.tgz}
+  registry.npmmirror.com/puppeteer-core@21.3.8:
+    resolution: {integrity: sha512-yv12E/+zZ7Lei5tJB4sUkSrsuqKibuYpYxLGbmtLUjjYIqGE5HKz9OUI2I/RFHEvF+pHi2bTbv5bWydeCGJ6Mw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer-core/-/puppeteer-core-21.3.8.tgz}
     name: puppeteer-core
-    version: 21.3.4
+    version: 21.3.8
     engines: {node: '>=16.3.0'}
     dependencies:
       '@puppeteer/browsers': registry.npmmirror.com/@puppeteer/browsers@1.7.1
-      chromium-bidi: registry.npmmirror.com/chromium-bidi@0.4.28(devtools-protocol@0.0.1179426)
+      chromium-bidi: registry.npmmirror.com/chromium-bidi@0.4.31(devtools-protocol@0.0.1179426)
       cross-fetch: registry.npmmirror.com/cross-fetch@4.0.0
       debug: registry.npmmirror.com/debug@4.3.4
       devtools-protocol: registry.npmmirror.com/devtools-protocol@0.0.1179426
@@ -940,17 +940,17 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/puppeteer@21.3.4(typescript@5.2.2):
-    resolution: {integrity: sha512-kE67k1KR6hQs3g0Yf/i3GYOhTU8zC2dtcpHhtcSC9bGoVxRgqDo/hwVkDqlNKxJsJHuVX+qviWC7F0FdSjcFTA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer/-/puppeteer-21.3.4.tgz}
-    id: registry.npmmirror.com/puppeteer/21.3.4
+  registry.npmmirror.com/puppeteer@21.3.8(typescript@5.2.2):
+    resolution: {integrity: sha512-4OrInVIAtDgcznENUV4Du4gYSZhRmbCkckvOoPstXrUH4JsQ3atSegY+9f/tOKCDB2qh7sXaszDcFEn+RymY0g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/puppeteer/-/puppeteer-21.3.8.tgz}
+    id: registry.npmmirror.com/puppeteer/21.3.8
     name: puppeteer
-    version: 21.3.4
+    version: 21.3.8
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': registry.npmmirror.com/@puppeteer/browsers@1.7.1
       cosmiconfig: registry.npmmirror.com/cosmiconfig@8.3.6(typescript@5.2.2)
-      puppeteer-core: registry.npmmirror.com/puppeteer-core@21.3.4
+      puppeteer-core: registry.npmmirror.com/puppeteer-core@21.3.8
     transitivePeerDependencies:
       - bufferutil
       - encoding
