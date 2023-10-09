@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+<div id="chinese"></div>
+<div id="english"></div>
 <script>
   function numberToChinese(number) {
     const chineseNumbers = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
@@ -59,11 +61,12 @@
       chineseResult = chineseResult.slice(1);
     }
 
-    return chineseResult;
+    return chineseResult || chineseNumbers[0]; // 处理零的情况
   }
 
   // 示例用法
-  console.log(numberToChinese(123456789)); // 输出: "一亿二千三百四十五万六千七百八十九"
+  console.log(numberToChinese(123)); // 输出: "一亿二千三百四十五万六千七百八十九"
+  document.querySelector("#chinese").innerHTML = numberToChinese(123);
 
   function numberToWords(number) {
     const units = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
@@ -117,6 +120,7 @@
 
   // 示例用法
   console.log(numberToWords(123456789));
+  document.querySelector("#english").innerHTML = numberToWords(123456789);
 
 </script>
 </body>
