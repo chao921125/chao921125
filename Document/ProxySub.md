@@ -72,6 +72,8 @@
 https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml|https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash|https://raw.githubusercontent.com/yaney01/get_subscribe/main/subscribe/clash.yml
 
 https://raw.githubusercontent.com/freefq/free/master/v2|https://raw.githubusercontent.com/ZywChannel/free/main/sub|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt|https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub|https://raw.githubusercontent.com/yaney01/get_subscribe/main/subscribe/v2ray.txt
+
+[CN|HK|香港]
 ###### 基本无可用（骗取点赞的）
 [【Clash】](https://github.com/aiboboxx/clashfree)
 【Clash】https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml
