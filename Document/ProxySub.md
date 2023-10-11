@@ -69,7 +69,8 @@
 【V2ray】https://raw.githubusercontent.com/ZywChannel/free/main/sub
 【备用】https://raw.fastgit.org/ZywChannel/free/main/sub
 
-https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml|https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash|https://raw.githubusercontent.com/yaney01/get_subscribe/main/subscribe/clash.yml|https://raw.githubusercontent.com/iosoledad/soledadys/main/vless/Toy.vless/Toy.clash/Toy.yaml
+https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/clash.config.yaml|https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash|https://raw.githubusercontent.com/yaney01/get_subscribe/main/subscribe/clash.yml
+
 https://raw.githubusercontent.com/freefq/free/master/v2|https://raw.githubusercontent.com/ZywChannel/free/main/sub|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt|https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub|https://raw.githubusercontent.com/yaney01/get_subscribe/main/subscribe/v2ray.txt
 ###### 基本无可用（骗取点赞的）
 [【Clash】](https://github.com/aiboboxx/clashfree)
