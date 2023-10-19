@@ -73,7 +73,7 @@ https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml|https://raw.githubus
 
 https://raw.githubusercontent.com/freefq/free/master/v2|https://raw.githubusercontent.com/ZywChannel/free/main/sub|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt|https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub|https://raw.githubusercontent.com/yaney01/get_subscribe/main/subscribe/v2ray.txt
 
-[CN|HK|香港]
+[CN|HK|TW|香港|北京|天津|江苏|山东|安徽|福建|浙江|广东|广西|澳门]
 ###### 基本无可用（骗取点赞的）
 [【Clash】](https://github.com/aiboboxx/clashfree)
 【Clash】https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml
