@@ -1,5 +1,9 @@
 https://github.com/hpcaitech/ColossalAI
 
+https://github.com/karpathy/llama2.c
+https://github.com/FlagAlpha/Llama2-Chinese
+
+https://firefly.adobe.com/inspire/images
 # 自行搭建
 | github                                                                            |
 |-----------------------------------------------------------------------------------|
