@@ -37,7 +37,8 @@
 [ermaozi01](https://github.com/ermaozi01/free_clash_vpn) \
 [aiboboxx](https://github.com/aiboboxx/clashfree) \
 https://github.com/yaney01/get_subscribe \
-https://github.com/iosoledad/soledadys
+https://github.com/iosoledad/soledadys \
+https://github.com/Jsnzkpg/Jsnzkpg
 
 # 订阅地址
 | Clash&V2ray                                                               | 订阅地址                                                                                                                    |
