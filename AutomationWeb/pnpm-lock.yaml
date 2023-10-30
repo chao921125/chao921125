@@ -184,8 +184,12 @@ packages:
       supports-color: 5.5.0
     dev: false
 
-  /chromium-bidi@0.4.32(devtools-protocol@0.0.1191157):
-    resolution: {integrity: sha512-RJnw0PW3sNdx1WclINVfVVx8JUH+tWTHZNpnEzlcM+Qgvf40dUH34U7gJq+cc/0LE+rbPxeT6ldqWrCbUf4jeg==}
+  registry.npmmirror.com/chromium-bidi@0.4.31(devtools-protocol@0.0.1179426):
+    resolution: {integrity: sha512-OtvEg2JMRQrHsmLx4FV3u1Hf9waYxB5PmL+yM0HkFpc9H2x3TMbUqS+GP2/fC4399hzOO+EQF8uVU43By9ILag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chromium-bidi/-/chromium-bidi-0.4.31.tgz}
+    id: registry.npmmirror.com/chromium-bidi/0.4.31
+    name: chromium-bidi
+    version: 0.4.31
+
     peerDependencies:
       devtools-protocol: '*'
     dependencies:

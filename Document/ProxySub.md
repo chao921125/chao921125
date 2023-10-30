@@ -96,6 +96,8 @@
 |                                                                           |                                                                                               |
 |                                                                           |                                                                                               |
 
+[CN|HK|TW|香港|北京|天津|江苏|山东|安徽|福建|浙江|广东|广西|澳门]
+
 # 其他
 【节点池收集】https://github.com/Leon406/SubCrawler
 
