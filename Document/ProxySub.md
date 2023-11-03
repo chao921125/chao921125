@@ -1,4 +1,3 @@
-https://www.qilin2.com/api/v1/client/subscribe?token=37fa688c2c03ce09e277c57e5e59d65a
 # google inurl:clash/proxies
 
 | Client                                                                                                  |
