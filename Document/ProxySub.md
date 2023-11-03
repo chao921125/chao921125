@@ -4,7 +4,7 @@ https://www.qilin2.com/api/v1/client/subscribe?token=37fa688c2c03ce09e277c57e5e5
 | Client                                                                                                  |
 |---------------------------------------------------------------------------------------------------------|
 | MacOS & Windows                                                                                         |
-| [clash_for_windows_pkg 👍推荐](https://github.com/Fndroid/clash_for_windows_pkg)                          |
+| [clash_for_windows_pkg 由于一些不可说原因已经删除了，大家找自己替换的吧](https://github.com/Fndroid/clash_for_windows_pkg)      |
 | [clash-verge](https://github.com/zzzgydi/clash-verge)                                                   |
 | MacOS                                                                                                   |
 | [clashX Pro 👍推荐](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
