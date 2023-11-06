@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.18.1
     version: 2.18.1
   mysql2:
-    specifier: ^3.6.2
-    version: 3.6.2
+    specifier: ^3.6.3
+    version: 3.6.3
   node-rsa:
     specifier: ^1.1.1
     version: 1.1.1
@@ -18,11 +18,11 @@ dependencies:
     specifier: ^1.39.0
     version: 1.39.0
   puppeteer:
-    specifier: ^21.4.1
-    version: 21.4.1(typescript@5.2.2)
+    specifier: ^21.5.0
+    version: 21.5.0(typescript@5.2.2)
   puppeteer-core:
-    specifier: ^21.4.1
-    version: 21.4.1
+    specifier: ^21.5.0
+    version: 21.5.0
 
 devDependencies:
   '@playwright/test':
@@ -184,16 +184,12 @@ packages:
       supports-color: 5.5.0
     dev: false
 
-  registry.npmmirror.com/chromium-bidi@0.4.31(devtools-protocol@0.0.1179426):
-    resolution: {integrity: sha512-OtvEg2JMRQrHsmLx4FV3u1Hf9waYxB5PmL+yM0HkFpc9H2x3TMbUqS+GP2/fC4399hzOO+EQF8uVU43By9ILag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chromium-bidi/-/chromium-bidi-0.4.31.tgz}
-    id: registry.npmmirror.com/chromium-bidi/0.4.31
-    name: chromium-bidi
-    version: 0.4.31
-
+  /chromium-bidi@0.4.33(devtools-protocol@0.0.1203626):
+    resolution: {integrity: sha512-IxoFM5WGQOIAd95qrSXzJUv4eXIrh+RvU3rwwqIiwYuvfE7U/Llj4fejbsJnjJMUYCuGtVQsY2gv7oGl4aTNSQ==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
-      devtools-protocol: 0.0.1191157
+      devtools-protocol: 0.0.1203626
       mitt: 3.0.1
       urlpattern-polyfill: 9.0.0
     dev: false
@@ -287,8 +283,8 @@ packages:
     engines: {node: '>=0.10'}
     dev: false
 
-  /devtools-protocol@0.0.1191157:
-    resolution: {integrity: sha512-Fu2mUhX7zkzLHMJZk5wQTiHdl1eJrhK0GypUoSzogUt51MmYEv/46pCz4PtGGFlr0f2ZyYDzzx5CPtbEkuvcTA==}
+  /devtools-protocol@0.0.1203626:
+    resolution: {integrity: sha512-nEzHZteIUZfGCZtTiS1fRpC8UZmsfD1SiyPvaUNvS13dvKf666OAm8YTi0+Ca3n1nLEyu49Cy4+dPWpaHFJk9g==}
     dev: false
 
   /emoji-regex@8.0.0:
@@ -543,8 +539,8 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: false
 
-  /mysql2@3.6.2:
-    resolution: {integrity: sha512-m5erE6bMoWfPXW1D5UrVwlT8PowAoSX69KcZzPuARQ3wY1RJ52NW9PdvdPo076XiSIkQ5IBTis7hxdlrQTlyug==}
+  /mysql2@3.6.3:
+    resolution: {integrity: sha512-qYd/1CDuW1KYZjD4tzg2O8YS3X/UWuGH8ZMHyMeggMTXL3yOdMisbwZ5SNkHzDGlZXKYLAvV8tMrEH+NUMz3fw==}
     engines: {node: '>= 8.0'}
     dependencies:
       denque: 2.1.0
@@ -704,15 +700,15 @@ packages:
       once: 1.4.0
     dev: false
 
-  /puppeteer-core@21.4.1:
-    resolution: {integrity: sha512-Lh0e+oGhUquxVOi1U701gTfFLFvw5gDBFh3CWpnfAvtItmyZKUce4R54VNfOJfi+KKnzhVPdB/lDrg65gdRIng==}
+  /puppeteer-core@21.5.0:
+    resolution: {integrity: sha512-qG0RJ6qKgFz09UUZxDB9IcyTJGypQXMuE8WmEoHk7kgjutmRiOVv5RgsyUkY67AxDdBWx21bn1PHHRJnO/6b4A==}
     engines: {node: '>=16.3.0'}
     dependencies:
       '@puppeteer/browsers': 1.8.0
-      chromium-bidi: 0.4.32(devtools-protocol@0.0.1191157)
+      chromium-bidi: 0.4.33(devtools-protocol@0.0.1203626)
       cross-fetch: 4.0.0
       debug: 4.3.4
-      devtools-protocol: 0.0.1191157
+      devtools-protocol: 0.0.1203626
       ws: 8.14.2
     transitivePeerDependencies:
       - bufferutil
@@ -721,14 +717,14 @@ packages:
       - utf-8-validate
     dev: false
 
-  /puppeteer@21.4.1(typescript@5.2.2):
-    resolution: {integrity: sha512-opJqQeYMjAB3ICG8lCF3wtSs9k05dozmrEMrHgo3ZWbISiy8qbv/yAJz/6Io221qSh3yURfVf6Z7crrlzKZjLQ==}
+  /puppeteer@21.5.0(typescript@5.2.2):
+    resolution: {integrity: sha512-prvy9rdauyIaaEgefQRcw9zhQnYQbl8O1Gj5VJazKJ7kwNx703+Paw/1bwA+b96jj/S+r55hrmF5SfiEG5PUcg==}
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': 1.8.0
       cosmiconfig: 8.3.6(typescript@5.2.2)
-      puppeteer-core: 21.4.1
+      puppeteer-core: 21.5.0
     transitivePeerDependencies:
       - bufferutil
       - encoding

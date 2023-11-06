@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tips</title>
   <style>
     #message_box_outside {
       position: fixed;
@@ -30,7 +30,9 @@
   </style>
 </head>
 <body>
-<div style="height: 500px;">6</div>
+<div style="height: 500px;">
+    <button onclick="test()">test</button>
+</div>
 <script>
   const message = {
     background: '', // 背景颜色
@@ -39,6 +41,21 @@
     insideSetTime: '', // 信息移除setTime
     body: '', // body元素
     time: 0, // 显示时间
+    default(msg = "") {
+      this.run(msg, "info");
+    },
+    info(msg = "") {
+      this.run(msg, "info");
+    },
+    success(msg = "") {
+      this.run(msg, "success");
+    },
+    error(msg = "") {
+      this.run(msg, "error");
+    },
+    warning(msg = "") {
+      this.run(msg, "warning");
+    },
     run(msg = "success", type = 'success', time = 2000) {
       // 显示时间
       this.time = time;
@@ -104,10 +121,9 @@
 
     // 信息区显示
     insideTime(inside, outsideShow) {
-      let insideSetTime = setTimeout(() => {
+      return setTimeout(() => {
         outsideShow.removeChild(inside);
       }, this.time);
-      return insideSetTime;
     },
 
     // 判定显示颜色
@@ -115,13 +131,22 @@
       if (type === 'success') return '#67C23A';
       if (type === 'error') return '#F56C6C';
       if (type === 'warning') return '#E6A23C';
-      // if (type === 'info') return '#909399';
+      if (type === 'info') return '#909399';
       return '#909399'; // 默认级别
     },
   }
 
-  message.run("列表查询成功！");
-  message.run('error', "warning");
+  message.info("列表查询成功！");
+  message.success("列表查询成功！");
+  message.error("列表查询失败！")
+  message.warning("列表查询异常！")
+
+  function test() {
+    message.info("列表查询成功！");
+    message.success("列表查询成功！");
+    message.error("列表查询失败！")
+    message.warning("列表查询异常！")
+  }
 </script>
 </body>
 </html>

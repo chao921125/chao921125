@@ -68,21 +68,26 @@
     </style>
 </head>
 <body>
-    
+    <div>
+        <button onclick="formatPrice(13323.123)">test</button>
+        <div id="test"></div>
+    </div>
     <script>
         // percent 111% currency ￥111,11
         (99999).toLocaleString("zh-cn", {style: "currency", currency: "CNY"});
 
         function formatPrice(price) {
-            return String(price)
+          let priceStart = String(price).split(".")[0];
+          let priceEnd = String(price).split(".")[1];
+            document.querySelector("#test").innerHTML = String(priceStart)
                 .split('')
                 .reverse()
                 .reduce((prev, next, index) => {
                 return (index % 3 ? next : next + ',') + prev;
-                });
+                }) + "." + priceEnd;
         }
 
-        
+
     </script>
     <noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
 </body>
