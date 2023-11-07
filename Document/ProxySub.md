@@ -125,6 +125,8 @@ https://1.1.1.1/
 # 论坛
 | 综合推荐                                                                               |
 |------------------------------------------------------------------------------------|
+|【发布页】https://clashxpro.org/                                                      |
+
 | [clashsub](https://clashsub.com/) [Clash Node](https://clashnode.xyz/)             |
 | [免费党](https://www.mfdang.com/)                                                     |
 | [优质](https://fanqiang.network/)                                                    |
