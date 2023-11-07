@@ -28,7 +28,7 @@ html, body {
 .message-item .text-out {
     overflow: hidden;
     font-size: 16px;
-    white-space: break-spaces;
+    white-space: nowrap;
     width: 100%;
 }
 .message-item:last-child .text-out {
