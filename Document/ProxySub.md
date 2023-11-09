@@ -3,18 +3,18 @@
 | Client                                                                                                  |
 |---------------------------------------------------------------------------------------------------------|
 | MacOS & Windows                                                                                         |
-| clash_for_windows_pkg 由于一些不可说原因已经删除了，大家找自己替换的吧[](https://github.com/Fndroid/clash_for_windows_pkg)      |
+| clash_for_windows_pkg 已删库[](https://github.com/Fndroid/clash_for_windows_pkg)      |
 | [clash-verge](https://github.com/zzzgydi/clash-verge)                                                   |
 | MacOS                                                                                                   |
-| [clashX Pro 👍推荐](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
-| [clashX](https://github.com/yichengchen/clashX)                                                         |
-| [ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)                                                 |
+| clashX Pro 已删库[](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
+| clashX 已删库[](https://github.com/yichengchen/clashX)                                                         |
+| ClashX.Meta 已删库[](https://github.com/MetaCubeX/ClashX.Meta)                                                 |
 | [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases)                              |
 | Windows                                                                                                 |
 | [v2rayN 👍推荐](https://github.com/2dust/v2rayN)                                                          |
 | [nekoray](https://github.com/MatsuriDayo/nekoray/releases)                                              |
-| [clash](https://github.com/Dreamacro/clash/releases)                                                    |
-| [clash_for_windows_pkg clash_meta](https://github.com/kayaladream/Clash-Core-Change)                    |
+| clash 已删库[](https://github.com/Dreamacro/clash/releases)                                                    |
+| [clash_meta 停更](https://github.com/kayaladream/Clash-Core-Change)                    |
 | Android                                                                                                 |
 | [v2rayNG](https://github.com/2dust/v2rayNG)                                                             |
 | [Clash For Android](https://github.com/Kr328/ClashForAndroid)                                           |
@@ -125,6 +125,8 @@ https://1.1.1.1/
 # 论坛
 | 综合推荐                                                                               |
 |------------------------------------------------------------------------------------|
+|【发布页】https://clashxpro.org/                                                      |
+
 | [clashsub](https://clashsub.com/) [Clash Node](https://clashnode.xyz/)             |
 | [免费党](https://www.mfdang.com/)                                                     |
 | [优质](https://fanqiang.network/)                                                    |
