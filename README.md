@@ -38,18 +38,14 @@
 [电影、电视配乐](https://www.tunefind.com/)
 
 # 目录说明
-
+[算法学习 已迁移 点击跳转](https://github.com/chao921125/algorithm)
+[Web基础学习 已迁移 点击跳转](https://github.com/chao921125/web)
+[微软Playwright 谷歌Puppeteer 自动化测试 已迁移 点击跳转](https://github.com/chao921125/automation)
+[WebGL 3D 已迁移 点击跳转](https://github.com/chao921125/web-gl)
 ```text
 Web-Knowledge
-├── Algorithm                   算法学习
-├── Animation                   CSS/JS动画
-├── Basic                       Web基础学习
 ├── Document                    针对前后端框架总结
 ├── Interview                   面试总结
 ├── Knowledge                   知识总结
-├── Playwright                  微软自动化测试
-├── Puppeteer                   谷歌自动化测试
-├── TS                          ts知识总结
-├── WebGL                       3D
-└── 前端知识图谱.xmind
+└── TS                          ts知识总结
 ```

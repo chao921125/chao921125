@@ -1,36 +1,36 @@
 # google inurl:clash/proxies
 
-| Client                                                                                                  |
-|---------------------------------------------------------------------------------------------------------|
-| MacOS & Windows                                                                                         |
-| clash_for_windows_pkg 已删库[](https://github.com/Fndroid/clash_for_windows_pkg)      |
-| [clash-verge](https://github.com/zzzgydi/clash-verge)                                                   |
-| MacOS                                                                                                   |
+| Client                                                                                                 |
+|--------------------------------------------------------------------------------------------------------|
+| MacOS & Windows                                                                                        |
+| clash_for_windows_pkg 已删库[](https://github.com/Fndroid/clash_for_windows_pkg)                          |
+| [clash-verge](https://github.com/zzzgydi/clash-verge)                                                  |
+| MacOS                                                                                                  |
 | clashX Pro 已删库[](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) |
-| clashX 已删库[](https://github.com/yichengchen/clashX)                                                         |
-| ClashX.Meta 已删库[](https://github.com/MetaCubeX/ClashX.Meta)                                                 |
-| [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases)                              |
-| Windows                                                                                                 |
-| [v2rayN 👍推荐](https://github.com/2dust/v2rayN)                                                          |
-| [nekoray](https://github.com/MatsuriDayo/nekoray/releases)                                              |
-| clash 已删库[](https://github.com/Dreamacro/clash/releases)                                                    |
-| [clash_meta 停更](https://github.com/kayaladream/Clash-Core-Change)                    |
-| Android                                                                                                 |
-| [v2rayNG](https://github.com/2dust/v2rayNG)                                                             |
-| [Clash For Android](https://github.com/Kr328/ClashForAndroid)                                           |
-| [shadowsocks-android](https://github.com/shadowsocks/shadowsocks-android/releases)                      |
-| IOS                                                                                                     |
-| [Shadowrocket GitHub](https://github.com/Shadowrocket)                                                  |
-| [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                                |
-| [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118)                                |
-| [Quantumult GitHub](https://github.com/crossutility/Quantumult)                                         |
-| [Quantumult 美](https://apps.apple.com/us/app/quantumult/id1252015438)                                   |
-| [Quantumult 港](https://apps.apple.com/hk/app/quantumult/id1252015438)                                   |
-| [QuantumultX GitHub](https://github.com/crossutility/Quantumult-X)                                      |
-| [QuantumultX 美](https://apps.apple.com/us/app/quantumult-x/id1443988620)                                |
-| [QuantumultX 港](https://apps.apple.com/hk/app/quantumult-x/id1443988620)                                |
-| Route                                                                                                   |
-| [OpenClash](https://github.com/vernesong/OpenClash)                                                     |
+| clashX 已删库[](https://github.com/yichengchen/clashX)                                                    |
+| ClashX.Meta 已删库[](https://github.com/MetaCubeX/ClashX.Meta)                                            |
+| [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases)                             |
+| Windows                                                                                                |
+| [v2rayN 👍推荐](https://github.com/2dust/v2rayN)                                                         |
+| [nekoray](https://github.com/MatsuriDayo/nekoray/releases)                                             |
+| clash 已删库[](https://github.com/Dreamacro/clash/releases)                                               |
+| [clash_meta 停更](https://github.com/kayaladream/Clash-Core-Change)                                      |
+| Android                                                                                                |
+| [v2rayNG](https://github.com/2dust/v2rayNG)                                                            |
+| [Clash For Android](https://github.com/Kr328/ClashForAndroid)                                          |
+| [shadowsocks-android](https://github.com/shadowsocks/shadowsocks-android/releases)                     |
+| IOS                                                                                                    |
+| [Shadowrocket GitHub](https://github.com/Shadowrocket)                                                 |
+| [Shadowrocket 美](https://apps.apple.com/us/app/shadowrocket/id932747118)                               |
+| [Shadowrocket 港](https://apps.apple.com/hk/app/shadowrocket/id932747118)                               |
+| [Quantumult GitHub](https://github.com/crossutility/Quantumult)                                        |
+| [Quantumult 美](https://apps.apple.com/us/app/quantumult/id1252015438)                                  |
+| [Quantumult 港](https://apps.apple.com/hk/app/quantumult/id1252015438)                                  |
+| [QuantumultX GitHub](https://github.com/crossutility/Quantumult-X)                                     |
+| [QuantumultX 美](https://apps.apple.com/us/app/quantumult-x/id1443988620)                               |
+| [QuantumultX 港](https://apps.apple.com/hk/app/quantumult-x/id1443988620)                               |
+| Route                                                                                                  |
+| [OpenClash](https://github.com/vernesong/OpenClash)                                                    |
 
 # github订阅骗赞项目
 [ermaozi](https://github.com/ermaozi/get_subscribe) \
