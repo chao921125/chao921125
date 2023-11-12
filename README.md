@@ -12,6 +12,8 @@ git branch -m master
 
 git push -f origin master
 # 解决部分GitHub项目过大，无法下载问题
+
+# 这个可以省略
 git config --global http.postBuffer 524288000
 
 git clone --depth=1 https://github.com/chao921125/knowledge.git
