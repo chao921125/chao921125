@@ -1,1 +1,3 @@
-# IT互联网中的混子
+# JS+HTML+CSS
+# VUE+React+MiniAPP
+# AI+IT
