@@ -1,3 +1,2 @@
-# JS+HTML+CSS
-# VUE+React+MiniAPP
+# JS+HTML+CSS VUE+React+MiniAPP
 # AI+IT
