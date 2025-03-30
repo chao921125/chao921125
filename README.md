@@ -1,2 +1,1 @@
-# JS+HTML+CSS VUE+React+MiniAPP
-# AI+IT
+# 一个业余的IT人
