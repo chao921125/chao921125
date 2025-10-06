@@ -1,4 +1,6 @@
 # 别让岁月成为遗憾
 ###### 失业啦，所有项目随缘更新
 
-###### 最近接了一些项目做，有资源的朋友可以介绍下呗【本人技术栈：JS/VUE/React/UniApp/Taro/JAVA，技术团队技术栈：JAVA/GO/Python/NodeJS】
+###### 最近接了一些项目做，有资源的朋友可以介绍下呗【技术团队技术栈：JAVA/GO/Python/JS/VUE/React/UniApp/Taro】
+
+###### 有工业建模的小伙伴请联系我，最新在搞物联网项目
