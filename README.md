@@ -1,3 +1,4 @@
 # [我的网站 Demo](https://20480.kstore.space/)
 ## JAVA/Python/JS/VUE/React/UniApp/Taro
-## source项目正式删除，为了保留基础数据以及简化文件，请访问[document](https://github.com/chao921125/document/tree/main/Source)
+## AI Coding Work，project one one one
+## 有做外贸的朋友吗？联系我
